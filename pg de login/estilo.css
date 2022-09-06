@@ -44,15 +44,6 @@ input{
     margin-bottom: 20px;
 }
 
-/*label{
-    position: absolute;
-    left: 22.5em;
-    bottom: 22.5em;
-    color: #fff;
-    transform: translateY(18px);
-    transition: .25s ease-in-out;
-}*/
-
 .usernamel{
     position: absolute;
     left: 22.5em;
@@ -65,7 +56,7 @@ input{
 .passwordl{
     position: absolute;
     left: 22.5em;
-    bottom: 21.5em;
+    bottom: 21.2em;
     color: #fff;
     transform: translateY(18px);
     transition: .25s ease-in-out;
