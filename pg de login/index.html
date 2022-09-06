@@ -6,30 +6,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Tela de login</title>
     </head>
-    <body>
-        <div class="container">
-            <h2>login</h2>
+
+<body>
+    <div class="container">
+        <h2>Login</h2>
+
             <form action="index.html" method="post">
-                <div class="input-field">
-                    <input type="text" id="nome" placeholder="Enter your login">
-                    <label for="nome"> Login</label>
+                <div class="input-field-sucess">
+                    <input type="text" id="username" placeholder="Enter your login">
+                    <label class="usernamel" for="username">Login</label>
+                    <i class="img-success" ><img src="./assets/success-icon.svg" alt=""></i>
+                    <i class="img-error" ><img src="./assets/error-icon.svg" alt=""></i>
+
+                    <small>Error Message</small>
                 </div>
 
-                <div class="input-field">
-                    <input type="password" id="senha" placeholder="Type your password">
-                    <label for="senha">Password</label>
+                <br>
+                <br>
+
+                <div class="input-field-error">
+                    <input type="password" id="password" placeholder="Type your password">
+                    <label class="passwordl" for="password">Password</label>
+                    <i class="img-success" ><img src="./assets/success-icon.svg" alt=""></i>
+                    <i class="img-error" ><img src="./assets/error-icon.svg" alt=""></i>
+
+                    <small>Error Message</small>
                 </div>
 
                 <div class="center">
                     <button>Go</button>
                 </div>
             </form>
+
             <div class="links">
                 <a href=""><p>Forgot your password?</p></a>
                 <a href=""><p>Register Now</p></a>
             </div>
-        </div>
-        <div class="slider-thumb"></div>
+    </div>
 
-    </body>
+    <div class="slider-thumb"></div>
+
+    <script src="./scriptlg.js"></script>
+
+</body>
+
 </html>
