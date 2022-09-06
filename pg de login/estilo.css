@@ -44,10 +44,28 @@ input{
     margin-bottom: 20px;
 }
 
-label{
+/*label{
     position: absolute;
-    top: 0;
-    left: 0;
+    left: 22.5em;
+    bottom: 22.5em;
+    color: #fff;
+    transform: translateY(18px);
+    transition: .25s ease-in-out;
+}*/
+
+.usernamel{
+    position: absolute;
+    left: 22.5em;
+    bottom: 26.5em;
+    color: #fff;
+    transform: translateY(18px);
+    transition: .25s ease-in-out;
+}
+
+.passwordl{
+    position: absolute;
+    left: 22.5em;
+    bottom: 21.5em;
     color: #fff;
     transform: translateY(18px);
     transition: .25s ease-in-out;
@@ -77,6 +95,41 @@ input:not(:placeholder-shown){
 
 input::placeholder{
     color: transparent;
+}
+
+.input-field-sucess i .img-sucess{
+    visibility: visible;
+}
+
+.input-field-error i .img-error{
+    visibility: visible;
+}
+
+.input-field-sucess i{
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.input-field-sucess small{
+    visibility: hidden;
+    position: absolute;
+    margin-top: 5px;
+    font-size: 14px;
+}
+.input-field-error i{
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.input-field-error small{
+    visibility: hidden;
+    position: absolute;
+    margin-top: 5px;
+    font-size: 14px;
 }
 
 button{
