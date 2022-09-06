@@ -29,3 +29,7 @@
 
 </body>
 </html>
+
+<div class="container">
+    <h2>Select your course</h2>
+</div>

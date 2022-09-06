@@ -1,3 +1,13 @@
+.titulo{
+  width: auto;
+  border-radius: 0 0;
+  box-shadow: 1px 2px 10px #000, 3px 6px 20px #000;
+  padding: 50px 300px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
 .card {
     height: 14rem;
     width: 14rem;
