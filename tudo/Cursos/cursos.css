@@ -71,6 +71,17 @@
     z-index: 1;
 }
 
+button{
+  padding: 15px 50px;
+  margin: 20px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
 .card2 {
     height: 14rem;
     width: 14rem;
