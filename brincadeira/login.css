@@ -146,7 +146,7 @@ button:hover{
  appearance: button;
  padding: 15px 50px;
  margin: 20px;
- background-color: #26a96a;
+ background-color: #173540;
  border: none;
  border: 2px solid #fff;
  text-decoration: none;
@@ -155,7 +155,7 @@ button:hover{
 }
 
 a:hover{
-    color: #fff;
+    color: #26a96a;
     text-decoration: none;
     font-family: sans-serif;
     font-weight: 600;
@@ -183,7 +183,7 @@ a:hover{
 
 body {
     height: 100vh;
-     background: linear-gradient(90deg,#e52e71,#ff8a00);
+     background: linear-gradient(90deg,#161F30,#173540);
   
   }
   
