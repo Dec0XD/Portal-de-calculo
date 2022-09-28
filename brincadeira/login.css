@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    border: 0;
     padding: 0%;
     box-sizing: border-box;
 }
@@ -10,7 +11,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    min-width: 100vh;
 }
 
 h2{ 
@@ -39,13 +41,9 @@ input{
     transition: .25s ease-in-out;
 }
 
-.input-field{
-    position: relative;
-    margin-bottom: 20px;
-}
-
 .usernamel{
     position: absolute;
+    top:15.5em;
     left: 22.5em;
     bottom: 26.5em;
     color: #fff;
@@ -55,6 +53,7 @@ input{
 
 .passwordl{
     position: absolute;
+    top:20.3em;
     left: 22.5em;
     bottom: 21.2em;
     color: #fff;
@@ -183,7 +182,7 @@ a:hover{
 
 body {
     height: 100vh;
-     background: linear-gradient(90deg,#161F30,#173540);
+    background: linear-gradient(90deg,#161F30,#173540);
   
   }
   
@@ -218,5 +217,5 @@ body {
       transform: translate3d(0,-3px,0) rotateZ(0.01deg);
     }
   }
-  
+
   
