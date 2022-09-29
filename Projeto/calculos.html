@@ -1,75 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tittle</title>
-    <link rel="stylesheet" href="calculo.css" />
-  </head>
+    <link rel="stylesheet" href="style.css" />
+</head>
 
-  <body>
+<body>
     <header>
-      <div class="titulo">
-      <nav>
-        <a class="logo">Component selection</a>
-        <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-        <ul class="nav-list">
-          <li><a href="#">File</a></li>
-          <li><a href="#">Save</a></li>
-          <li><a href="#">Report</a></li>
-          <li><a href="#">Help</a></li>
-        </ul>
-      </nav>
-    </div>
-
-      <div class="container">
-          <nav class="dp-menu">
-            <ul>
-                <li><a href="#">Shell</a>
-                  <ul>
-                    <li><a><label> <input type="checkbox" class="checkbox style-2 "/>Cilindrical</a></label></li>
-                    <li><a href="#">Conical</a></li>
-                    <li><a href="#">Spherical</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Heads</a>
-                  <ul>
-                    <li><a href="#">Elliptical</a></li>
-                    <li><a href="#">Conical</a></li>
-                    <li><a href="#">Spherical</a></li>
-                    <li><a href="#">Spherical</a></li>
-                    <li><a href="#">Spherical</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Noddles</a>
-                  <ul>
-                    <li><a href="#">Elliptical</a></li>
-                    <li><a href="#">Conical</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Flanges</a></li>
-                <li><a href="#">Suports</a>
-                  <ul>
-                    <li><a href="#">Elliptical</a></li>
-                    <li><a href="#">Conical</a></li>
-                    <li><a href="#">Elliptical</a></li>
-                  </ul>
-                </li>
-            </ul>
-          </nav>
+        <div class="titulo">
+            <nav>
+                <a class="logo">Component selection</a>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#">File</a></li>
+                    <li><a href="#">Save</a></li>
+                    <li><a href="#">Report</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </nav>
         </div>
 
-        
+        <div class="container">
+            <nav class="dp-menu">
+                <ul>
+                    <li><a href="#">Shell</a>
+                        <ul>
+                            <li><a href="#">Cilindrical</a></li>
+                            <li><a href="#">Conical</a></li>
+                            <li><a href="#">Spherical</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Heads</a>
+                        <ul>
+                            <li><a href="#">Elliptical</a></li>
+                            <li><a href="#">Conical</a></li>
+                            <li><a href="#">Spherical</a></li>
+                            <li><a href="#">Spherical</a></li>
+                            <li><a href="#">Spherical</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Noddles</a>
+                        <ul>
+                            <li><a href="#">Elliptical</a></li>
+                            <li><a href="#">Conical</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Flanges</a></li>
+                    <li><a href="#">Suports</a>
+                        <ul>
+                            <li><a href="#">Elliptical</a></li>
+                            <li><a href="#">Conical</a></li>
+                            <li><a href="#">Elliptical</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
 
     </header>
-    <main></main>
+    <main>
+        <div id="bottom-div">
+            <div id="form-side">
+                <input type="text" class="input-area">
+                <input type="button" value="+" class="input-button">
+                <span>1</span>
+                <input type="button" value="-" class="input-button">
+                <br>
+                <input type="text" class="input-area">
+                <input type="button" value="+" class="input-button">
+                <span>1</span>
+                <input type="button" value="-" class="input-button">
+                <br>
+                <input type="text" class="input-area">
+                <input type="button" value="+" class="input-button">
+                <span>1</span>
+                <input type="button" value="-" class="input-button">
+                <br>
+                <input type="text" class="input-area">
+                <input type="button" value="+" class="input-button">
+                <span>1</span>
+                <input type="button" value="-" class="input-button">
+                <br>
+                <input type="text" class="input-area">
+                <input type="button" value="+" class="input-button">
+                <span>1</span>
+                <input type="button" value="-" class="input-button">
+                <br>
+                <input type="text" class="input-area">
+                <input type="button" value="+" class="input-button">
+                <span>1</span>
+                <input type="button" value="-" class="input-button">
+            </div>
+            <div id="pre-view">
+                <img src="assets/X.png" alt="" width="100%" height="100%">
+            </div>
+
+            <div id="bottom-space">
+
+            </div>
+
+            <button id="button-confirm">
+                CONFIRM
+            </button>
+        </div>
+    </main>
     <script src="calculo.js"></script>
 
-    
-  </body>
+
+</body>
+
 </html>
