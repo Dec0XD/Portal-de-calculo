@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- Designed by CodingLab | www.codinglabweb.com-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="testes.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+   </head>
+<body>
+  <div class="button">
+      <div class="content">
+        <i class="bx bx-cloud-download"></i>
+        <span class="button-text">Download</span>
+      </div>
+  </div>
+  <script>
+    const button = document.querySelector(".button");
+    button.addEventListener("click", () =>{
+      button.classList.add("active");
+      setTimeout(()=>{
+        button.classList.remove("active");
+        button.querySelector("i").classList.replace("bx-cloud-download", "bx-check-circle")
+        button.querySelector("span").innerText = "Completed";
+      },6000);
+    });
+  </script>
+</body>
+</html>

@@ -42,3 +42,13 @@ class MobileNavbar {
     ".nav-list li",
   );
   mobileNavbar.init();
+
+  const button = document.querySelector(".button");
+  button.addEventListener("click", () =>{
+    button.classList.add("active");
+    setTimeout(()=>{
+      button.classList.remove("active");
+      button.querySelector("i").classList.replace("bx-cloud-download", "bx-check-circle")
+      button.querySelector("span").innerText = "Completed";
+    },6000);
+  });
