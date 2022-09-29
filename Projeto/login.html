@@ -1,54 +1,54 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        <link rel="stylesheet" href="login.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Login </title>
-    </head>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="./login.css" />
+</head>
 
 <body>
-    <div class="container">
-        <h2>Login</h2>
+    
+  <!-- Visual apenas, quando necessário desenvolver,   -->
+  <!-- adaptar essa estrutura para um forms com submit -->
 
-            <form id="form" action="index.html" method="post">
-                <div class="input-field-sucess">
-                    <input type="text" id="login" placeholder="Enter your login">
-                    <label class="loginl" for="login">Login</label>
-                    <i class="img-success" ><img src="./assets/success-icon.svg" alt=""></i>
-                    <i class="img-error" ><img src="./assets/error-icon.svg" alt=""></i>
+  <div class="container">
 
-                    <small>Error Message</small>
-                </div>
+    <h2>Login</h2>
 
-                <br>
-                <br>
-
-                <div class="input-field-error">
-                    <input type="password" id="password" placeholder="Type your password">
-                    <label class="passwordl" for="password">Password</label>
-                    <i class="img-success" ><img src="./assets/success-icon.svg" alt=""></i>
-                    <i class="img-error" ><img src="./assets/error-icon.svg" alt=""></i>
-
-                    <small>Error Message</small>
-                </div>
-
-                <div class="center">
-                    <a href="./cursos.html">Go</a>
-                </div>
-            </form>
-
-            <div class="links">
-                <a href="#"><p>Forgot your password?</p></a>
-                <br>
-                <a href="#"><p>Register Now</p></a>
-            </div>
+    <div class="inputBox">
+      <input type="text" required="required" />
+      <span>Name</span>
     </div>
 
-    <div class="slider-thumb"></div>
+    <br>
 
-    <script src="./scriptlg.js"></script>
+    <div class="inputBox">
+      <input type="text" required="required" />
+      <span>Login</span>
+    </div>
+
+    <br>
+
+    <div class="inputBox">
+      <input type="password" required="required" />
+      <span>Password</span>
+    </div>
+    <div class="center">
+        <a href="./calculos.html">Go</a>
+      </div>
+  
+      <div class="links">
+        <a href="#">
+          <p>Forgot your password?</p>
+        </a>
+        <br>
+      </div>
+    </div>
 
 </body>
+
 
 </html>
