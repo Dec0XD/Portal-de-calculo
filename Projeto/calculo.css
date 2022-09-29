@@ -168,7 +168,7 @@ background-color: aquamarine;
 
 
 body {
-  height: 100vh;
+  height: 10vh;
   background: linear-gradient(90deg,#161F30,#173540);
 }
   
@@ -186,6 +186,74 @@ body {
   z-index: -1;
   -webkit-animation: sliderShape 5s linear infinite;
   }
+
+#bottom-div{
+  background-color: white;
+  width: 50%;
+  float: left;
+  position: absolute;
+  height: 78vh;
+  margin: 10% 0% 0% 25%;
+}
+
+#pre-view{
+  border-color: black;
+  border-style:inset;
+  position: absolute;
+  width: 40%;
+  height: 30vh;
+  margin: 3% 0% 0% 57%;
+  border-radius: 20px;
+}
+
+
+
+#bottom-space{
+  border-color: black;
+  border-style:inset;
+  position: absolute;
+  width: 40%;
+  height: 25vh;
+  margin: 39% 0% 0% 57%;
+  border-radius: 20px;
+}
+
+#button-confirm{
+  width: 40%;
+  position: absolute;
+  height: 10vh;
+  margin: 68% 0% 0% 57%;
+  border-style: inset;
+  border-radius: 20px;
+  background-color: green;
+  color: white;
+  font-size: 20px;
+}
+
+#button-confirm:hover{
+  background-color: rgb(0, 95, 0);
+}
+
+#form-side{
+  position: absolute;
+  width: 50%;
+}
+
+.input-area{
+  width: 60%;
+  height: 3vh;
+  margin-top: 5%;
+  margin-left: 5%;
+  border-style: none;
+  border-bottom-style: inset;
+  margin-right: 2%;
+}
+
+
+
+.input-button{
+  width: 4%;
+}
 
 @keyframes sliderShape{
   0%,100%{
