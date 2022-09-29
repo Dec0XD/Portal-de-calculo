@@ -14,7 +14,7 @@
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 31px;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
@@ -111,94 +111,96 @@ main {
 }
 
 
-body {
-    height: 100vh;
-     background: linear-gradient(90deg,#161F30,#173540);
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
   
-  }
-  
-  .slider-thumb::before {
-      position: absolute;
-      content: "";
-      left: 34%;
-      top: 20%;
-      width: 500px;
-      height: 500px;
-      border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
-      will-change: border-radius, transform, opacity;
-      animation: sliderShape 5s linear infinite;
-      display: block;
-      z-index: -1;
-      -webkit-animation: sliderShape 5s linear infinite;
-  }
-  @keyframes sliderShape{
-    0%,100%{
-    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-      transform: translate3d(0,0,0) rotateZ(0.01deg);
-    }
-    34%{
-        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
-      transform:  translate3d(0,5px,0) rotateZ(0.01deg);
-    }
-    50%{
-      transform: translate3d(0,0,0) rotateZ(0.01deg);
-    }
-    67%{
-      border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
-      transform: translate3d(0,-3px,0) rotateZ(0.01deg);
-    }
-  }
-  
-  .container{
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  }
-  
-  .dp-menu ul{
+.dp-menu ul{
 list-style-type: none;
 padding: 0;
+}
 
-  }
+.dp-menu ul{
+  background-color: #161F30;
+}
 
-  .dp-menu ul{
-    background-color: #161F30;
-  }
+.dp-menu ul li{
+  display: inline;
+  position: relative;
+}
 
-  .dp-menu ul li{
-    display: inline;
-    position: relative;
-  }
+.dp-menu ul li a{
+  right: 8px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  transition: background .6s;
+}
 
-  .dp-menu ul li a{
-    color: #fff;
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px;
-    transition: background .6s;
-  }
-
-  .dp-menu ul li a:hover{
+.dp-menu ul li a:hover{
 background-color: aquamarine;
-  }
+}
 
   /* sub menu*/
 
-  .dp-menu ul ul{
-    display: none;
-    left: 0;
-    position: absolute;
+.dp-menu ul ul{
+  display: none;
+  left: 0;
+  position: absolute;
+}
+
+.dp-menu ul li:hover ul{
+  display: block;
+}
+
+.dp-menu ul ul{
+  width: 150px;
+}
+
+.dp-menu ul ul li a{
+  display: block;
+}
+
+
+body {
+  height: 100vh;
+  background: linear-gradient(90deg,#161F30,#173540);
+}
+  
+.slider-thumb::before {
+  position: absolute;
+  content: "";
+  left: 34%;
+  top: 20%;
+  width: 500px;
+  height: 500px;
+  border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+  will-change: border-radius, transform, opacity;
+  animation: sliderShape 5s linear infinite;
+  display: block;
+  z-index: -1;
+  -webkit-animation: sliderShape 5s linear infinite;
   }
 
-  .dp-menu ul li:hover ul{
-   display: block;
+@keyframes sliderShape{
+  0%,100%{
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  transform: translate3d(0,0,0) rotateZ(0.01deg);
+}
+  34%{
+    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+}
+  50%{
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
   }
-
-  .dp-menu ul ul{
-   width: 150px;
+  67%{
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+    transform: translate3d(0,-3px,0) rotateZ(0.01deg);
   }
-
-  .dp-menu ul ul li a{
-    display: block;
-  }
+}
