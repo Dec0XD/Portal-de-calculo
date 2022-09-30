@@ -249,6 +249,20 @@ body {
   margin-right: 2%;
 }
 
+.input-area2{
+  width: 20%;
+  height: 3vh;
+  margin-top: 5%;
+  margin-left: 16%;
+  border-style: none;
+  border-bottom-style: inset;
+  margin-right: 2%;
+}
+
+.span-text{
+  margin-left: 5%;
+}
+
 
 
 .input-button{
