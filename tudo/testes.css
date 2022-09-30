@@ -1,66 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
+.container{
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 20px;
 }
-.button{
-  position: absolute;
-  top: 80%;
-  left: 77%;
-  transform: translate(-50%, -50%);
-  height: 50px;
-  width: 200px;
-  background: #26a96a;
-  border-radius: 55px;
+
+.switch{
+  display: flex;
+  float: right;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  overflow: hidden;
+  margin-bottom: 10%;
 }
-.button.active{
-  height: 20px;
-  width: 250px;
+
+.switch .switch-text{
+  padding-right: 0.3rem;
+  font-size: 1.2rem;
+  right: 8px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
 }
-.button::before{
-  content: "";
+
+.switch .switch-wrapper{
+  display: inline-block;
+  width: 55px;
+  height: 25px;
+  position: relative;
+} 
+
+.switch .switch-wrapper .switch-button{
   position: absolute;
   top: 0;
-  left: -100%;
-  height: 100%;
-  width: 100%;
-  background: #161f30;
-  border-radius: 55px;
-  transition: all 6s ease-in-out;
-}
-.button.active::before{
-  animation: layer 6s ease-in-out forwards;
-}
-@keyframes layer {
-  100%{
-    left: 0%;
-  }
-}
-.button .content{
-  height: 100%;
-  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  transition-delay: 0.2s;
+  border-radius: 25px;
+  background-color: #F28705;
 }
-.button.active .content{
-  transform: translateY(60px);
+
+.switch .switch-wrapper input{
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
-.button .content i,
-.button .content .button-text{
-  color: #fff;
-  font-size: 20px;
-  font-weight: 250px;
+
+.switch .switch-wrapper .switch-button::before{
+  content: "";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  transition: .4s all ease;
+  background-color: #012340;
+  }
+
+.switch .switch-wrapper input:checked + .switch-button{
+  background-color: #03A63C;
 }
-.button .content .button-text{
-  font-size: 20px;
-  margin-left: 8px;
+
+.switch .switch-wrapper input:checked + .switch-button::before{
+  transform: translatex(26px);
+}
+
+.dp-menu ul{
+  list-style-type: none;
+  padding: 0;
+  }
+  
+  .dp-menu ul{
+    background-color: #161F30;
+  }
+  
+  .dp-menu ul li{
+    display: inline;
+    position: relative;
+  }
+  
+  .dp-menu ul li a{
+    right: 8px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px;
+    transition: background .6s;
+  }
+  
+.dp-menu ul li a:hover{
+  background-color: aquamarine;
+  }
+    
+  /* sub menu*/
+  
+.dp-menu ul ul{
+  display: none;
+  left: 0;
+  position: absolute;
+}
+    
+.dp-menu ul li:hover ul{
+ display: block;
+}
+    
+  .dp-menu ul ul{
+  width: 150px;
+}
+    
+.dp-menu ul ul li a{
+  display: block;
 }
