@@ -49,29 +49,6 @@ body{
   justify-content: space-between;
 }
 
-.add-button{
-  display: flex;
-  align-items: center;
-}
-
-.add-button button{
-  border: none;
-  background-color: #6c63ff;
-  padding: 0.4rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.add-button button:hover{
-  background-color: #26a96a;
-}
-
-.add-button button a{
-  text-decoration: none;
-  font-weight: 500;
-  color: #fff;
-}
-
 .form-header h1::after{
   content: '';
   display: block;
@@ -127,7 +104,6 @@ box-shadow: 1px 1px 6px #000;
   justify-content: space-between;
   margin-top: 0.62rem;
   padding: 0 0.5rem;
-  margin-right: 2px;
 }
 
 .gender-input{
@@ -146,25 +122,30 @@ box-shadow: 1px 1px 6px #000;
 }
 
 
-
+/*Download*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
 .button{
-  display: flex;
-  margin-top: 2.5rem;
-  border: none;
-  background: #26a96a;
-  padding: 0.62rem;
-  border-radius: 5px;
-  height: 50px;
+  position: absolute;
+  margin-top: 1%;
+  height: 55px;
   width: 200px;
+  background: #7D2AE8;
+  border-radius: 55px;
   cursor: pointer;
+  background: #26a96a;
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   overflow: hidden;
 }
-
 .button.active{
   height: 20px;
-  width: 250px;
+  width: 200px;
 }
 .button::before{
   content: "";
@@ -200,13 +181,14 @@ box-shadow: 1px 1px 6px #000;
 .button .content i,
 .button .content .button-text{
   color: #fff;
-  font-size: 20px;
-  font-weight: 250px;
+  font-size: 30px;
+  font-weight: 200;
 }
 .button .content .button-text{
   font-size: 20px;
   margin-left: 8px;
 }
+/*Download*/
 
 @media screen and (max-width:1330px) {
   .form-img{

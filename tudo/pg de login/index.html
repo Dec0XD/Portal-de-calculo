@@ -1,53 +1,244 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        <link rel="stylesheet" href="estilo.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Login </title>
-    </head>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tittle</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
 
 <body>
-    <div class="container">
-        <h2>Login</h2>
-
-            <form id="form" action="index.html" method="post">
-                <div class="input-field-sucess">
-                    <input type="text" id="username" placeholder="Enter your login">
-                    <label class="usernamel" for="username">Login</label>
-                    <i class="img-success" ><img src="./assets/success-icon.svg" alt=""></i>
-                    <i class="img-error" ><img src="./assets/error-icon.svg" alt=""></i>
-
-                    <small>Error Message</small>
+    <header>
+        <div class="titulo">
+            <nav>
+                <a class="logo">Component selection</a>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
                 </div>
+                <ul class="nav-list">
+                    <li><a href="#">File</a></li>
+                    <li><a href="#">Save</a></li>
+                    <li><a href="#">Report</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </nav>
+        </div>
 
-                <br>
-                <br>
+        <div class="container-dp">
+            <nav class="dp-menu">
+                <ul>
+                    <li><a href="#">Shell</a>
+                        <ul>
+                            <li>
+                                
+                              <label class="switch" >
+                              <span class="switch-text">Cilindrical</span> 
+                              <div class="switch-wrapper" id="teste1">
+                                    <input type="checkbox"  checked=""/>
+                                    <span class="switch-button"></span> 
+                              </div>
+                            </li>
+                            <li>
+                              <label class="switch">
+                              <span class="switch-text">Conical</span>
+                              <div class="switch-wrapper">
+                                <input type="checkbox" id="ativo" name="ativo" value="true" checked="window.location.href='www.google.com'"/>
+                                <span class="switch-button"></span> 
+                            </div>
+                          </li>
+                            <li> <label class="switch">
+                              <span class="switch-text">Spherical</span>
+                              <div class="switch-wrapper">
+                                <input type="checkbox" name="button"/>
+                                <span class="switch-button"></span> 
+                            </div>
+                          </li>
+                            </label>
+                        </ul>
+                    </li>
+                    <li><a href="#">Heads</a>
+                        <ul>
+                            <li> <label class="switch">
+                              <span class="switch-text">Elliptical</span>
+                              <div class="switch-wrapper">
+                                <input type="checkbox" name="button"/>
+                                <span class="switch-button"></span> 
+                            </div>
+                            </li>
+                            <li> <label class="switch">
+                            <span class="switch-text">Conical</span>
+                            <div class="switch-wrapper">
+                                <input type="checkbox" name="button"/>
+                                <span class="switch-button"></span> 
+                            </div>
+                            </li>
+                            <li> <label class="switch">
+                            <span class="switch-text">Spherical</span>
+                            <div class="switch-wrapper">
+                                <input type="checkbox" name="button"/>
+                                <span class="switch-button"></span> 
+                            </div>
+                            </li>
+                            <li> <label class="switch">
+                            <span class="switch-text">Spherical</span>
+                            <div class="switch-wrapper">
+                                <input type="checkbox" name="button"/>
+                                <span class="switch-button"></span> 
+                            </div>
+                            </li>
+                            <li> <label class="switch">
+                            <span class="switch-text">Spherical</span>
+                            <div class="switch-wrapper">
+                                <input type="checkbox" name="button"/>
+                                <span class="switch-button"></span> 
+                            </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Noddles</a>
+                        <ul>
+                            <li> <label class="switch">
+                                <span class="switch-text">Elliptical</span>
+                                <div class="switch-wrapper">
+                                  <input type="checkbox" name="button"/>
+                                  <span class="switch-button"></span> 
+                              </div>
+                            </li>
+                            <li> <label class="switch">
+                               <span class="switch-text">Conical</span>
+                               <div class="switch-wrapper">
+                                  <input type="checkbox" name="button"/>
+                                  <span class="switch-button"></span> 
+                            </div>
+                          </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Flanges</a></li>
+                    <li><a href="#">Suports</a>
+                        <ul>
+                            <li> <label class="switch">
+                                <span class="switch-text">Elliptical</span>
+                                <div class="switch-wrapper">
+                                  <input type="checkbox" name="button"/>
+                                  <span class="switch-button"></span> 
+                              </div>
+                            </li>
+                            <li> <label class="switch">
+                               <span class="switch-text">Conical</span>
+                               <div class="switch-wrapper">
+                                  <input type="checkbox" name="button"/>
+                                  <span class="switch-button"></span> 
+                               </div>
+                            <li> <label class="switch">
+                                <span class="switch-text">Elliptical</span>
+                                <div class="switch-wrapper">
+                                  <input type="checkbox" name="button"/>
+                                  <span class="switch-button"></span> 
+                              </div>
+                            </li>
+        </div>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-                <div class="input-field-error">
-                    <input type="password" id="password" placeholder="Type your password">
-                    <label class="passwordl" for="password">Password</label>
-                    <i class="img-success" ><img src="./assets/success-icon.svg" alt=""></i>
-                    <i class="img-error" ><img src="./assets/error-icon.svg" alt=""></i>
+        <div class="container-form">
 
-                    <small>Error Message</small>
+            <div class="form">
+              <form action="#">
+                <div class="form-header">
+                  <div class="title">
+                    <h1>Shell</h1>
+                  </div>
+        
                 </div>
-
-                <div class="center">
-                    <button><a href="./Cursos/curso.html">Go</a></button>
+                <div class="input-group">
+                    <div class="input-box">
+                      <label for="conta">Qualquer coisa</label>
+                      <input id="contas" type="number" required="">
+                    </div>
                 </div>
-            </form>
-
-            <div class="links">
-                <a href=""><p>Forgot your password?</p></a>
-                <br>
-                <a href=""><p>Register Now</p></a>
+                <div class="input-group">
+                  <div class="input-box">
+                    <label for="conta">Qualquer coisa</label>
+                    <input id="contas" type="number" required="">
+                    
+                  </div>
+                </div>
+                <div class="input-group">
+                  <div class="input-box">
+                    <label for="conta">Qualquer coisa</label>
+                    <input id="contas" type="text" required="">
+                  </div>
+                </div>
+                <div class="input-group">
+                  <div class="input-box">
+                    <label for="conta">Qualquer coisa</label>
+                    <input id="contas" type="text" required="">
+                  </div>
+                </div>
+        
+                <div class="gender-inputs">
+                  <div class="gender-titles">
+                    <h6>Escolha um deles</h6>
+                  </div>
+        
+                  <div class="gender-group">
+                    <div class="gender input">
+                      <input type="radio" id="1" name="gender">
+                      <label for="1">1 opção</label>
+                    </div>
+        
+                    <div class="gender input">
+                      <input type="radio" id="2" name="gender">
+                      <label for="2">2 opção</label>
+                    </div>
+        
+                    <div class="gender input">
+                      <input type="radio" id="3" name="gender">
+                      <label for="3">3 opção</label>
+                    </div>
+        
+                    <div class="gender input">
+                      <input type="radio" id="4" name="gender">
+                      <label for="4">4 opção</label>
+                    </div>
+                  </div>
+                </div>
+                 <!--Download-->
+                 <div class="button">
+                  <div class="content">
+                    <i class="bx bx-cloud-download"></i>
+                    <span class="button-text">Download</span>
+                  </div>
+              </div>
+                  <!--Download-->
+        
+                </div>
+        
+                <div class="form-img">
+                  <img src="./assets/">
+                </div>
+                
+              </form>
             </div>
-    </div>
+          </div>
+      
+              </div>
+    </main>
 
-    <div class="slider-thumb"></div>
 
-    <script src="./scriptlg.js"></script>
+    </header>
+    <main>
+        
+    <script src="calculo.js"></script>
 
 </body>
 

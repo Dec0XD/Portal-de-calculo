@@ -13,9 +13,6 @@
 
     <div class="form">
       <form action="#">
-        <div class="add-button">
-          <button><a href="#">Adicionar Páginas</a></button>
-        </div>
         <div class="form-header">
           <div class="title">
             <h1>Shell</h1>
@@ -32,8 +29,7 @@
           <div class="input-box">
             <label for="conta">Qualquer coisa</label>
             <input id="contas" type="number" required="">
-            <label for="conta">Qualquer coisa</label>
-            <input id="contas" type="text" required="">
+            
           </div>
         </div>
         <div class="input-group">
@@ -77,12 +73,12 @@
           </div>
         </div>
          <!--Download-->
-        <div class="button">
+         <div class="button">
           <div class="content">
             <i class="bx bx-cloud-download"></i>
             <span class="button-text">Download</span>
           </div>
-        </div>
+      </div>
           <!--Download-->
 
         </div>
@@ -94,7 +90,17 @@
       </form>
     </div>
   </div>
-
+  <script>
+    const button = document.querySelector(".button");
+    button.addEventListener("click", () =>{
+      button.classList.add("active");
+      setTimeout(()=>{
+        button.classList.remove("active");
+        button.querySelector("i").classList.replace("bx-cloud-download", "bx-check-circle")
+        button.querySelector("span").innerText = "Completed";
+      },6000);
+    });
+  </script>
 
 
 </body>
