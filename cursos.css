@@ -181,6 +181,38 @@
     color: #e6f700;
   }
   
+  .card-5 .card-footer{
+    background-color: #591C21;
+  }
+  
+  .card-5 .card-local{
+    color: #591C21;
+  }
+
+  .card-6 .card-footer{
+    background-color: #044040;
+  }
+  
+  .card-6 .card-local{
+    color: #044040;
+  }
+
+  .card-7 .card-footer{
+    background-color: #00B3AD;
+  }
+  
+  .card-7 .card-local{
+    color: #00B3AD;
+  }
+
+  .card-8 .card-footer{
+    background-color: #D92525;
+  }
+  
+  .card-8 .card-local{
+    color: #D92525;
+  }
+
   /*Animação Hover*/
   .card:hover{
     transform: scale3d(1.1);

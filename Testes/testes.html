@@ -1,107 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="testes.css">
-  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-  <title>Formulario</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tittle</title>
+    <link rel="stylesheet" href="testes.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"
+		referrerpolicy="no-referrer" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"
+		integrity="sha512-U5C477Z8VvmbYAoV4HDq17tf4wG6HXPC6/KM9+0/wEXQQ13gmKY2Zb0Z2vu0VNUWch4GlJ+Tl/dfoLOH4i2msw==" crossorigin="anonymous"
+		referrerpolicy="no-referrer"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <script>
+        window.onload = function(){
+            document.getElementById("input1").value = "A | B"
+        }
+    </script>
 </head>
+
 <body>
-  <div class="container">
-
-    <div class="form">
-      <form action="#">
-        <div class="form-header">
-          <div class="title">
-            <h1>Shell</h1>
-          </div>
-
-        </div>
-        <div class="input-group">
-            <div class="input-box">
-              <label for="conta">Qualquer coisa</label>
-              <input id="contas" type="number" required="">
-            </div>
-        </div>
-        <div class="input-group">
-          <div class="input-box">
-            <label for="conta">Qualquer coisa</label>
-            <input id="contas" type="number" required="">
-            
-          </div>
-        </div>
-        <div class="input-group">
-          <div class="input-box">
-            <label for="conta">Qualquer coisa</label>
-            <input id="contas" type="text" required="">
-          </div>
-        </div>
-        <div class="input-group">
-          <div class="input-box">
-            <label for="conta">Qualquer coisa</label>
-            <input id="contas" type="text" required="">
-          </div>
+    <header>
+        <div class="titulo">
+            <nav>
+                <a class="logo">Component selection</a>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#">File</a></li>
+                    <li><a href="#">Save</a></li>
+                    <li><a href="#">Report</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </nav>
         </div>
 
-        <div class="gender-inputs">
-          <div class="gender-titles">
-            <h6>Escolha um deles</h6>
-          </div>
-
-          <div class="gender-group">
-            <div class="gender input">
-              <input type="radio" id="1" name="gender">
-              <label for="1">1 opção</label>
-            </div>
-
-            <div class="gender input">
-              <input type="radio" id="2" name="gender">
-              <label for="2">2 opção</label>
-            </div>
-
-            <div class="gender input">
-              <input type="radio" id="3" name="gender">
-              <label for="3">3 opção</label>
-            </div>
-
-            <div class="gender input">
-              <input type="radio" id="4" name="gender">
-              <label for="4">4 opção</label>
-            </div>
-          </div>
+        <div class="container-dp">
+            <nav class="dp-menu">
+                <ul>
+                    <li><a href="#">Shell</a>
+                        <ul>
+                            <li>
+                                
+                              <label class="switch" >
+                              <span class="switch-text">Cilindrical</span> 
+                              <div class="switch-wrapper" id="teste1">
+                                    <input type="checkbox"  checked=""/>
+                                    <span class="switch-button"></span> 
+                              </div>
+                            </li>
+                            <li>
+                              <label class="switch">
+                              <span class="switch-text">Conical</span>
+                              <div class="switch-wrapper">
+                                <input type="checkbox" id="ativo" name="ativo" value="true" checked="window.location.href='www.google.com'"/>
+                                <span class="switch-button"></span> 
+                            </div>
+                          </li>
+                            <li> <label class="switch">
+                              <span class="switch-text">Spherical</span>
+                              <div class="switch-wrapper">
+                                <input type="checkbox" name="button"/>
+                                <span class="switch-button"></span> 
+                            </div>
+                          </li>
+                            </label>
+                        </ul>
+                    </li>
+                    <li><a href="#">Heads</a>
+                        <ul>
+                            <li> <label class="switch">
+                              <span class="switch-text">Elliptical</span>
+                              <div class="switch-wrapper">
+                                <input type="checkbox" name="button"/>
+                                <span class="switch-button"></span> 
+                            </div>
+                            </li>
+                            <li> <label class="switch">
+                            <span class="switch-text">Conical</span>
+                            <div class="switch-wrapper">
+                                <input type="checkbox" name="button"/>
+                                <span class="switch-button"></span> 
+                            </div>
+                            </li>
+                            <li> <label class="switch">
+                            <span class="switch-text">Spherical</span>
+                            <div class="switch-wrapper">
+                                <input type="checkbox" name="button"/>
+                                <span class="switch-button"></span> 
+                            </div>
+                            </li>
+                            <li> <label class="switch">
+                            <span class="switch-text">Spherical</span>
+                            <div class="switch-wrapper">
+                                <input type="checkbox" name="button"/>
+                                <span class="switch-button"></span> 
+                            </div>
+                            </li>
+                            <li> <label class="switch">
+                            <span class="switch-text">Spherical</span>
+                            <div class="switch-wrapper">
+                                <input type="checkbox" name="button"/>
+                                <span class="switch-button"></span> 
+                            </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Noddles</a>
+                        <ul>
+                            <li> <label class="switch">
+                                <span class="switch-text">Elliptical</span>
+                                <div class="switch-wrapper">
+                                  <input type="checkbox" name="button"/>
+                                  <span class="switch-button"></span> 
+                              </div>
+                            </li>
+                            <li> <label class="switch">
+                               <span class="switch-text">Conical</span>
+                               <div class="switch-wrapper">
+                                  <input type="checkbox" name="button"/>
+                                  <span class="switch-button"></span> 
+                            </div>
+                          </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Flanges</a></li>
+                    <li><a href="#">Suports</a>
+                        <ul>
+                            <li> <label class="switch">
+                                <span class="switch-text">Elliptical</span>
+                                <div class="switch-wrapper">
+                                  <input type="checkbox" name="button"/>
+                                  <span class="switch-button"></span> 
+                              </div>
+                            </li>
+                            <li> <label class="switch">
+                               <span class="switch-text">Conical</span>
+                               <div class="switch-wrapper">
+                                  <input type="checkbox" name="button"/>
+                                  <span class="switch-button"></span> 
+                               </div>
+                            <li> <label class="switch">
+                                <span class="switch-text">Elliptical</span>
+                                <div class="switch-wrapper">
+                                  <input type="checkbox" name="button"/>
+                                  <span class="switch-button"></span> 
+                              </div>
+                            </li>
         </div>
-         <!--Download-->
-         <div class="button">
-          <div class="content">
-            <i class="bx bx-cloud-download"></i>
-            <span class="button-text">Download</span>
-          </div>
-      </div>
-          <!--Download-->
-
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
 
-        <div class="form-img">
-          <img src="./pg de login/assets/109602.png">
-        </div>
+        <main>
+          <h3>Open a PDF file</h3>
+          <canvas class="pdf-viewer hidden">
+      
+          </canvas>
+        </main>
+                </div>
+                <footer>
+                  <ul>
+                    <li>
+                      <button id="openPDF">
+                        <span>Open</span> <i class="fas fa-folder-open"></i>
+                      </button>
+                      <input type="file" id="inputFile" hidden>
+                    </li>
+                    <li class="pagination">
+                      <button id="previous"><i class="fas fa-arrow-alt-circle-left"></i></button>
+                      <span id="current_page">0 of 0</span>
+                      <button id="next"><i class="fas fa-arrow-alt-circle-right"></i></button>
+                    </li>
+              
+                    <li>
+                      <span id="zoomValue">150%</span>
+                      <input type="range" id="zoom" name="cowbell" min="100" max="300" value="150" step="50" disabled>
+                    </li>
+                  </ul>
+                </footer>
+              </div>
+
+
+    </header>
+  
         
-      </form>
-    </div>
-  </div>
-  <script>
-    const button = document.querySelector(".button");
-    button.addEventListener("click", () =>{
-      button.classList.add("active");
-      setTimeout(()=>{
-        button.classList.remove("active");
-        button.querySelector("i").classList.replace("bx-cloud-download", "bx-check-circle")
-        button.querySelector("span").innerText = "Completed";
-      },6000);
-    });
-  </script>
-
+    <script src="testes.js"></script>
 
 </body>
+
 </html>
