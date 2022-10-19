@@ -88,3 +88,19 @@ function renderCurrentPage() {
 	currentPage.innerHTML = currentPDF.currentPage + ' of ' + currentPDF.countOfPages;
 }
 
+function getPDF(selector) {
+	kendo.drawing.drawDOM($(selector)).then(function(group){
+	  kendo.drawing.pdf.saveAs(group, 'testing.pdf');
+	});
+  }
+
+
+  window.onchange = function(){ // acho que é assim a sintaxe
+
+	var opcao_escolhida = document.getElementbyId("join") // o id da tag select
+	
+	if(opcao_escolhida == Join_A){
+	
+	}
+	
+	}
