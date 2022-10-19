@@ -437,11 +437,13 @@ box-shadow: 1px 1px 6px #000;
     display: block;
   }
   .container-form{
-    width: 70%;
-    height: 80vh;
-    margin: auto;
-    margin-bottom: auto;
-    display: flex;
+    width: 100%;
+	  min-height: 90vh;
+	  display:flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	  padding: 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
   }
 
@@ -462,4 +464,110 @@ box-shadow: 1px 1px 6px #000;
     flex-direction: row;
     background-color: #fff;
   }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+button{
+	cursor: pointer;
+	padding: 2px 5px;
+	color: #ccc;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
+body{
+	font-family: 'Lato', sans-serif;
+	background-color: #171717;
+}
+
+main{
+	width: 100%;
+	min-height: 90vh;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	
+}
+
+main h3{
+	text-align: center;
+	width: 100%;
+	word-spacing: 0.5rem;
+	font-size: 2rem;
+	color: #bbbbbb;
+}
+
+.pdf-viewer{
+	background-color: #333;
+	background-color: #fff;
+	margin: auto;
+}
+
+.hidden{
+	display:none;
+}
+
+footer{
+  display: flex;
+	position:relative;
+	bottom:30;
+	height: 10vh;
+  align-items: center;
+  margin-bottom: 20px;
+	background-color:#23232e;
+}
+
+.pagination{
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 20px;
+  padding: 16px;
+  align-content: center;
+  color: #fff;
+}
+
+.pagination span{
+	font-size: 1.1rem;
+	margin: 0 10px;
+}
+
+.pagination button{
+	font-size: 1.5rem;
+}
+
+button:active > *{
+	color: #8d8d8d;
+}
+
+footer ul{
+	list-style-type: none;
+	width: 100%;
+	height: 100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	position: absolute;
+}
+
+footer ul li:first-child{
+	margin-left: 20px;
+}
+
+footer ul li:last-child{
+	margin-right: 20px;
+}
+
+#zoomValue{
+	display:inline-block;
+	font-size: 0.9rem;
+	width: 60px;
+	vertical-align:center;
+  color: #fff;
 }

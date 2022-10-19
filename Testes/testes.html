@@ -7,23 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tittle</title>
     <link rel="stylesheet" href="testes.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"
-		referrerpolicy="no-referrer" />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"
-		integrity="sha512-U5C477Z8VvmbYAoV4HDq17tf4wG6HXPC6/KM9+0/wEXQQ13gmKY2Zb0Z2vu0VNUWch4GlJ+Tl/dfoLOH4i2msw==" crossorigin="anonymous"
-		referrerpolicy="no-referrer"></script>
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-
-    <script>
-        window.onload = function(){
-            document.getElementById("input1").value = "A | B"
-        }
-    </script>
+    <script src="testes.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2017.1.223/js/jszip.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2017.1.223/js/kendo.all.min.js"></script>
+   
 </head>
 
 <body>
     <header>
+      
         <div class="titulo">
             <nav>
                 <a class="logo">Component selection</a>
@@ -35,7 +28,7 @@
                 <ul class="nav-list">
                     <li><a href="#">File</a></li>
                     <li><a href="#">Save</a></li>
-                    <li><a href="#">Report</a></li>
+                    <li><a id="pdf-generate">Report</a></li>
                     <li><a href="#">Help</a></li>
                 </ul>
             </nav>
@@ -76,8 +69,22 @@
                     <li><a href="#">Heads</a>
                         <ul>
                             <li> <label class="switch">
-                              <span class="switch-text">Elliptical</span>
+                              <span class="switch-text">Ellipsoidal</span>
                               <div class="switch-wrapper">
+                                <input type="checkbox" name="button"/>
+                                <span class="switch-button"></span> 
+                            </div>
+                            </li>
+                            <li> <label class="switch">
+                            <span class="switch-text">Toriesférico</span>
+                            <div class="switch-wrapper">
+                                <input type="checkbox" name="button"/>
+                                <span class="switch-button"></span> 
+                            </div>
+                            </li>
+                            <li> <label class="switch">
+                            <span class="switch-text">Hemispherical</span>
+                            <div class="switch-wrapper">
                                 <input type="checkbox" name="button"/>
                                 <span class="switch-button"></span> 
                             </div>
@@ -90,21 +97,7 @@
                             </div>
                             </li>
                             <li> <label class="switch">
-                            <span class="switch-text">Spherical</span>
-                            <div class="switch-wrapper">
-                                <input type="checkbox" name="button"/>
-                                <span class="switch-button"></span> 
-                            </div>
-                            </li>
-                            <li> <label class="switch">
-                            <span class="switch-text">Spherical</span>
-                            <div class="switch-wrapper">
-                                <input type="checkbox" name="button"/>
-                                <span class="switch-button"></span> 
-                            </div>
-                            </li>
-                            <li> <label class="switch">
-                            <span class="switch-text">Spherical</span>
+                            <span class="switch-text">Toriconical</span>
                             <div class="switch-wrapper">
                                 <input type="checkbox" name="button"/>
                                 <span class="switch-button"></span> 
@@ -112,17 +105,17 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#">Noddles</a>
+                    <li><a href="#">Nozzles</a>
                         <ul>
                             <li> <label class="switch">
-                                <span class="switch-text">Elliptical</span>
+                                <span class="switch-text">in shell</span>
                                 <div class="switch-wrapper">
                                   <input type="checkbox" name="button"/>
                                   <span class="switch-button"></span> 
                               </div>
                             </li>
                             <li> <label class="switch">
-                               <span class="switch-text">Conical</span>
+                               <span class="switch-text">in Heads</span>
                                <div class="switch-wrapper">
                                   <input type="checkbox" name="button"/>
                                   <span class="switch-button"></span> 
@@ -131,23 +124,24 @@
                         </ul>
                     </li>
                     <li><a href="#">Flanges</a></li>
+
                     <li><a href="#">Suports</a>
                         <ul>
                             <li> <label class="switch">
-                                <span class="switch-text">Elliptical</span>
+                                <span class="switch-text">Legs</span>
                                 <div class="switch-wrapper">
                                   <input type="checkbox" name="button"/>
                                   <span class="switch-button"></span> 
                               </div>
                             </li>
                             <li> <label class="switch">
-                               <span class="switch-text">Conical</span>
+                               <span class="switch-text">Skirt</span>
                                <div class="switch-wrapper">
                                   <input type="checkbox" name="button"/>
                                   <span class="switch-button"></span> 
                                </div>
                             <li> <label class="switch">
-                                <span class="switch-text">Elliptical</span>
+                                <span class="switch-text">Saddle</span>
                                 <div class="switch-wrapper">
                                   <input type="checkbox" name="button"/>
                                   <span class="switch-button"></span> 
@@ -161,40 +155,468 @@
         </div>
 
         <main>
-          <h3>Open a PDF file</h3>
-          <canvas class="pdf-viewer hidden">
-      
-          </canvas>
-        </main>
+          <div class="form">
+              <div class="page-container hidden-on-narrow">
+                <div class="pdf-page size-a4">
+                    <page size="A4">
+                       <!-- PDF COMEÇA AQUI -->
+       
+              <form action="#">
+                <div class="form-header">
+                  <div class="title"> 
+                      <div class="container-img-r">
+                      <h1>WISECALC</h1>
+                      <img src="/Testes/docs/r.png" alt="teste">
+                      </div>
+                  </div>
                 </div>
-                <footer>
-                  <ul>
-                    <li>
-                      <button id="openPDF">
-                        <span>Open</span> <i class="fas fa-folder-open"></i>
-                      </button>
-                      <input type="file" id="inputFile" hidden>
-                    </li>
-                    <li class="pagination">
-                      <button id="previous"><i class="fas fa-arrow-alt-circle-left"></i></button>
-                      <span id="current_page">0 of 0</span>
-                      <button id="next"><i class="fas fa-arrow-alt-circle-right"></i></button>
-                    </li>
-              
-                    <li>
-                      <span id="zoomValue">150%</span>
-                      <input type="range" id="zoom" name="cowbell" min="100" max="300" value="150" step="50" disabled>
-                    </li>
-                  </ul>
-                </footer>
+
+                
+                <table border>
+                  <th>PROJECT INFORMATION </th><br>
+                  <td>
+                    <div class="container-img-img">
+                      <img src="/Testes/docs/img1.png" alt="teste">
+                    </div>
+                  </td>
+                
+                  <tr>
+                    <th>JOB NAME</th>
+                    <td> 
+                      <div class="input-group">
+                        <div class="input-box">
+                          <input id="contas" type="text" required="">
+                        </div>
+                      </div>
+                    </td>
+
+                  </tr>
+
+                  <tr>
+                    <th>JOB NUMBER</th>
+                    <td> 
+                      <div class="input-group">
+                        <div class="input-box">
+                          <input id="contas" type="number" required="">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>TAG NUMBER</th>
+                    <td> 
+                      <div class="input-group">
+                        <div class="input-box">
+                          <input id="contas" type="number" required="">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                
+     
+                <tr>
+                  <th>EQUIPAMENT DESCRIPTION</th>
+                  <td> 
+                    <div class="input-group">
+                      <div class="input-box">
+                        <input id="contas" type="text" required="">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th>CLIENT</th>
+                  <td> 
+                    <div class="input-group">
+                      <div class="input-box">
+                        <input id="contas" type="text" required="">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th>DOCUMENT NUMBER</th>
+                  <td> 
+                    <div class="input-group">
+                      <div class="input-box">
+                        <input id="contas" type="number" required="">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th>PREPARED BY</th>
+                  <td> 
+                    <div class="input-group">
+                      <div class="input-box">
+                        <input id="contas" type="text" required="">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th>CHECKED BY</th>
+                  <td> 
+                    <div class="input-group">
+                      <div class="input-box">
+                        <input id="contas" type="text" required="">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                
+              <tr>
+                <th>APPROVED BY</th>
+                <td> 
+                  <div class="input-group">
+                    <div class="input-box">
+                      <input id="contas" type="text" required="">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+            <tr>
+              <th>REVIEW DATE</th>
+              <td> 
+                <div class="input-group">
+                  <div class="input-box">
+                    <input id="contas" type="date" required="">
+                  </div>
+                </div>
+              </td>
+            </tr>
+   
+            <tr>
+              <th>VESSEL INFORMATION</th>
+            </tr>
+      
+            <tr>
+              <th>CODE DESIGN</th>
+              <td>         </td>
+              <th>ASME VIII division 1</th>
+              <td>         </td>
+            </tr>
+
+            <tr>
+              <th>DESIGN DATA</th>
+            </tr>
+      
+            <tr>
+              <th></th>
+              <td></td>
+              <th>VALUE</th>
+              <th>UNITS</th>
+            </tr>
+
+            <tr>
+              <td>DESIGN INTERNAL PRESSURE</td>
+              <th>Pint</th>
+              <td> 
+                <div class="input-group">
+                  <div class="input-box">
+                    <input id="contas" type="text" required="">
+                  </div>
+                </div>
+              </td>
+              <td>MPa</td>
+            </tr>
+
+            <tr>
+              <td>DESIGN EXTERNAL PRESSURE</td>
+              <th>Pext</th>
+              <td> 
+                <div class="input-group">
+                  <div class="input-box">
+                    <input id="contas" type="text" required="">
+                  </div>
+                </div>
+              </td>
+              <td>MPa</td>
+            </tr>
+
+            <tr>
+              <td>DESIGN TEMPERATURE</td>
+              <th>DT ≤</th>
+              <td> 
+                  <select>
+                    <option>37,78</option>
+                    <option>65,56</option>
+                    <option>93,33</option>
+                    <option>121,11</option>
+                    <option>148,89</option>
+                    <option>204,44</option>
+                    <option>260,00</option>
+                  </select>
+              </td>
+              <td>°C</td>
+            </tr>
+
+            <tr>
+              <td>ROOM TEMPERATURE</td>
+              <th>RT</th>
+              <td> 
+                <div class="input-group">
+                  <div class="input-box">
+                    <input id="contas" type="number" required="">
+                  </div>
+              </td>
+              <td>--</td>
+            </tr>
+
+            <tr>
+              <td>FLUID</td>
+              <th>--</th>
+              <td> 
+                <div class="input-group">
+                  <div class="input-box">
+                    <input id="contas" type="text" required="">
+                  </div>
+              </td>
+              <td>--</td>
+            </tr>
+
+            <tr>
+              <td>DENSITY</td>
+              <th>dens</th>
+              <td> 
+                <div class="input-group">
+                  <div class="input-box">
+                    <input id="contas" type="text" required="">
+                  </div>
+              </td>
+              <td>kg/m^3</td>
+            </tr>
+
+            <tr>
+              <td>POSITION</td>
+              <th>-</th>
+              <td> 
+                  <select>
+                    <option>Vertical</option>
+                    <option>Horizontal</option>
+                    <option>Inclined</option>
+                    <option>-</option>
+                  </select>
+              </td>
+              <td>-</td>
+            </tr>
+
+            <tr>
+              <td>CORROSION ALLOWANCE</td>
+              <th>CA</th>
+              <td> 
+                <div class="input-group">
+                  <div class="input-box">
+                    <input id="contas" type="text" required="">
+                  </div>
+              </td>
+              <td>mm</td>
+            </tr>
+
+            <tr>
+              <td>WELDED JOINT LOCATION</td>
+              <th>-</th>
+              <td> 
+                  <select>
+                    <div id="join">
+                      <option>join_A</option>
+                      <option>Join_B</option>
+                      <option>Join_C</option>
+                      <option>Join_D</option>
+                  </div>
+                  </select>
+              </td>
+              <td>-</td>
+            </tr>
+
+            <tr>
+              <td>RADIOGRAPHY</td>
+              <th>-</th>
+              <td> 
+                  <select>
+                    <option>Full_A</option>
+                    <option>Spot_A</option>
+                    <option>None_A</option>
+                  </select>
+              </td>
+              <td>--</td>
+            </tr>
+
+            <tr>
+              <td>POST WELD HEAT TREATMENT</td>
+              <th>-</th>
+              <td> 
+                  <select>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>-</option>
+                  </select>
+              </td>
+              <td>--</td>
+            </tr>
+
+            <tr>
+              <td>WIND LOAD (NBR-6123)</td>
+              <th>-</th>
+              <td> 
+                  <select>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>-</option>
+                  </select>
+              </td>
+              <td>--</td>
+            </tr>
+
+          </table>
+    </form>
+  </page>
+</div> 
+ </div>
+</div>
+</main>
+          <!-- PDF TERMINA AQUI -->
+</div>
+
+</main>
+
+<main>
+<div id="example">
+  <div class="box wide hidden-on-narrow">
+  </div>
+</div>
+
+<div class="form">
+<div class="Shell_Cilind">
+  <div class="page-container hidden-on-narrow">
+      <div class="pdf-page size-a4">
+          <page size="A4">
+             
+             <!-- PDF COMEÇA AQUI -->
+
+             <form action="#">
+              <div class="form-header">
+                <div class="title"> 
+                    <div class="container-img-r">
+                    <h1>WISECALC</h1>
+                    <img src="/Testes/docs/r.png" alt="teste">
+                    </div>
+                </div>
               </div>
 
+              
+              <table border>
+                <th>CYLINDRICAL SHELL UNDER INTERNAL PRESSURE ACCORDING TO ASME VIII DIV.1 (UG - 27)
+                  <div class="container-img-img">
+                    <img src="/Testes/docs/cilindro.png" alt="teste">
+                  </div>
+                </th><br>
+               
+              
 
-    </header>
-  
-        
-    <script src="testes.js"></script>
+             <table border>
+              <th>DESIGN DATA</th>
+              <th>SYMBOLS USED IN THE FORMULAS AND DRAWING</th>
+             </table>
 
+             <table border>
+              <th>MATERIAL SPECIFICATION (ASME II part D)</th>
+              <td> 
+                <div class="input-group">
+                  <div class="input-box">
+                    <input id="contas" type="text" required="">
+                  </div>
+                </div>
+              </td>
+              <th></th>
+
+              <tr>
+                <th>NOMINAL COMPOSITION</th>
+                <td>Carbon steel</td>
+                <th></th>
+              </tr>
+
+              <tr>
+                <th>PRODUCT FORM</th>
+                <td>Plate</td>
+                <th>UNITS</th>
+              </tr>
+
+              <tr>
+                <th>ALLOY DESIG./UNS No.</th>
+                <td>K01700</td>
+                <th></th>
+              </tr>
+
+              <tr>
+                <th>CLASS/CONDITION/TEMPER</th>
+                <td>…</td>
+                <th></th>
+              </tr>
+
+              <tr>
+                <th>P-No.</th>
+                <td>1</td>
+                <th></th>
+              </tr>
+
+              <tr>
+                <th>GROUP No.</th>
+                <td>1</td>
+                <th></th>
+              </tr>
+
+              <tr>
+                <th>MIN. TENSILE STRENGTH</th>
+                <td>310,3</td>
+                <th>MPa</th>
+              </tr>
+
+              <tr>
+                <th>MIN. YIELD STRENGTH</th>
+                <td>165,5</td>
+                <th>MPa</th>
+              </tr>
+
+              <tr>
+                <th>VIII-1—Applic, and Max, Temp, Limit (°C)</th>
+                <td>NP</td>
+                <th></th>
+              </tr>
+
+              <tr>
+                <th>DESIGN TEMPERATURE</th>
+                <td>DT</td>
+                <th>NP</th>
+                <td>°C</td>
+              </tr>
+
+             </table>
+             </form>
+             <!-- PDF TERMINA AQUI -->
+
+          </page>
+      </div>
+  </div>
+</div>
+</div>
+</main>
+
+
+  </header>
 </body>
-
 </html>
+
+
+<script type="text/javascript">
+  $('#pdf-generate').click(function(){
+    getPDF('.pdf-page');
+  })
+</script>
+
