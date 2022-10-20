@@ -4,16 +4,6 @@ function getPDF(selector) {
 	});
   }
 
-
-  window.onchange = function(){ // acho que é assim a sintaxe
-
-	var opcao_escolhida = document.getElementbyId("join") // o id da tag select
-	
-	if(opcao_escolhida == Join_A){
-	
-	}
-}
-
 // local save//
 function salvar(){
 	localStorage.info = document.getElementById("JOBNAME").value;
@@ -35,3 +25,24 @@ function openModal(){
 function closeModal() {
 	modal.classList.remove('active')
 }
+
+
+var campo_opcao = document.getElementById("select_join")
+campo_opcao.addEventListener('change', function () {
+	document.getElementById("opt_A").style = "display:none;"
+	document.getElementById("opt_B").style = "display:none;"
+	document.getElementById("opt_C").style = "display:none;"
+	document.getElementById("opt_D").style = "display:none;"
+	if(campo_opcao.value=="Join_A"){
+		document.getElementById("opt_A").style = "display:block;"
+	}
+	if(campo_opcao.value=="Join_B"){
+		document.getElementById("opt_B").style = "display:block;"
+	}
+	if(campo_opcao.value=="Join_C"){
+		document.getElementById("opt_C").style = "display:block;"
+	}
+	if(campo_opcao.value=="Join_D"){
+		document.getElementById("opt_D").style = "display:block;"
+	}
+})
