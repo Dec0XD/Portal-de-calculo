@@ -371,6 +371,9 @@ td {
   margin-top: 30px;
 }
 
+h1 {
+  margin: auto;
+}
 .modal {
   display: flex;
   flex-direction: column;
@@ -404,7 +407,7 @@ td {
 }
 
 .modal-container form {
-  background: #38B2AC;
+  background: linear-gradient(90deg,#161F30,#173540);
   border-radius: 5px;
   box-shadow: 0 1px 2px #ccc;
   display: flex;
