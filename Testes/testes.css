@@ -359,3 +359,74 @@ td {
   color: #000;
 }
 
+/* pop up*/
+
+.modal-container {
+  width: 100vh;
+  position: fixed;
+  top: 30px;
+  display: none;
+  z-index: 999;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.active {
+  display: flex;
+}
+
+.active .modal{
+  animation: .4s;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.modal-container h1 {
+  color: #666;
+}
+
+.modal-container form {
+  background: #38B2AC;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 10px;
+  padding: 20px;
+}
+
+.modal-container input, textarea, button {
+  background-color: #f7f7f7;
+  border: none;
+  border-radius: 5px;
+  color: #777;
+  font-size: 18px;
+  outline: none;
+  padding: 15px;
+  width: 100%;
+}
+
+.modal-container button {
+  color: #777;
+  cursor: pointer;
+  font-weight: bold;
+}
