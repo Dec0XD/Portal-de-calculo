@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tittle</title>
-  <link rel="stylesheet" href="testes.css" />
+  <link rel="stylesheet" href="calculo.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://kendo.cdn.telerik.com/2017.1.223/js/jszip.min.js"></script>
   <script src="https://kendo.cdn.telerik.com/2017.1.223/js/kendo.all.min.js"></script>
@@ -564,6 +564,344 @@
               </div>
 
 
+            <table border>
+              <th>CYLINDRICAL SHELL UNDER INTERNAL PRESSURE ACCORDING TO ASME VIII DIV.1 (UG - 27)
+                <div class="container-img-img">
+                  <img src="/Testes/docs/cilindro.png" alt="teste">
+                </div>
+              </th><br>
+
+
+
+              <table border>
+                <th>DESIGN DATA</th>
+                <th>SYMBOLS USED IN THE FORMULAS AND DRAWING</th>
+              </table>
+
+              <table border>
+                <th>MATERIAL SPECIFICATION (ASME II part D)</th>
+                <td>
+                  <select>
+                    <option>37,78</option>
+                    <option>65,56</option>
+                    <option>93,33</option>
+                    <option>121,11</option>
+                    <option>148,89</option>
+                    <option>204,44</option>
+                    <option>260,00</option>
+                  </select>
+      </div>
+      </td>
+      <th></th>
+
+      <tr>
+        <th>NOMINAL COMPOSITION</th>
+        <td>Carbon steel</td>
+        <th></th>
+      </tr>
+
+      <tr>
+        <th>PRODUCT FORM</th>
+        <td>Plate</td>
+        <th>UNITS</th>
+      </tr>
+
+      <tr>
+        <th>ALLOY DESIG./UNS No.</th>
+        <td>K01700</td>
+        <th></th>
+      </tr>
+
+      <tr>
+        <th>CLASS/CONDITION/TEMPER</th>
+        <td>…</td>
+        <th></th>
+      </tr>
+
+      <tr>
+        <th>P-No.</th>
+        <td>1</td>
+        <th></th>
+      </tr>
+
+      <tr>
+        <th>GROUP No.</th>
+        <td>1</td>
+        <th></th>
+      </tr>
+
+      <tr>
+        <th>MIN. TENSILE STRENGTH</th>
+        <td>310,3</td>
+        <th>MPa</th>
+      </tr>
+
+      <tr>
+        <th>MIN. YIELD STRENGTH</th>
+        <td>165,5</td>
+        <th>MPa</th>
+      </tr>
+
+      <tr>
+        <th>VIII-1—Applic, and Max, Temp, Limit (°C)</th>
+        <td>NP</td>
+        <th></th>
+      </tr>
+
+      <tr>
+        <th>DESIGN TEMPERATURE</th>
+        <td>DT</td>
+        <th>260,00</th>
+        <td>°C</td>
+      </tr>
+
+      <tr>
+        <th>INSIDE DIAMETER</th>
+        <td>DI</td>
+        <td>
+          <div class="input-group">
+            <div class="input-box">
+              <input id="INSIDE_DIAMETER _VALUE" type="number" required="">
+            </div>
+          </div>
+        </td>
+        <td>mm</td>
+      </tr>
+
+      <tr>
+        <th>LIQUID COLUMN</th>
+        <td>H</td>
+        <td>
+          <div class="input-group">
+            <div class="input-box">
+              <input id="LIQUID_COLUMN_VALUE" type="number" required="">
+            </div>
+          </div>
+        </td>
+        <td>m</td>
+      </tr>
+
+      <tr>
+        <th>FLUID DENSITY</th>
+        <td>ρ</td>
+        <td>1000</td>
+        <td>kg/m^3</td>
+      </tr>
+
+      <tr>
+        <th>DESIGN PRESSURE ON THE TOP OF THE VESSEL</th>
+        <td>Pint</td>
+        <td>2</td>
+        <td>MPa</td>
+      </tr>
+
+      <tr>
+        <th>DESIGN PRESSURE</th>
+        <td>P</td>
+        <td>2</td>
+        <td>MPa</td>
+      </tr>
+
+      <tr>
+        <th>ADMISSIBLE STRESS @ DESIGN TEMPERATURE</th>
+        <td>Sh</td>
+        <td>88,94</td>
+        <td>MPa</td>
+      </tr>
+
+      <tr>
+        <th>ADMISSIBLE STRESS @ ROOM TEMPERATURE</th>
+        <td>Sc</td>
+        <td>88,94</td>
+        <td>MPa</td>
+      </tr>
+
+      <tr>
+        <th>INSIDE RADIUS</th>
+        <td>Ri</td>
+        <td>410</td>
+        <td>mm</td>
+      </tr>
+
+      <tr>
+        <th>INSIDE RADIUS CORRODED</th>
+        <td>Ric</td>
+        <td>413</td>
+        <td>mm</td>
+      </tr>
+
+      <tr>
+        <th>CORROSION ALLOWANCE</th>
+        <td>CA</td>
+        <td>3</td>
+        <td>mm</td>
+      </tr>
+
+      <tr>
+        <th>NOMINAL THICKNESS minus Corrosion Allowance</th>
+        <td>t'</td>
+        <td>12,9</td>
+        <td>mm</td>
+      </tr>
+
+      <tr>
+        <th>WELDED JOINT EFFICIENCY</th>
+        <td>E</td>
+        <td>
+          <select>
+            <option>1</option>
+            <option>0,90</option>
+        </td>
+        <td>coef.</td>
+      </tr>
+
+      <tr>
+        <th>NOMINAL THICKNESS</th>
+        <td>tn</td>
+        <td>
+          <select>
+            <option>ASTM_A20</option>
+            <option>4,76</option>
+            <option>6,35</option>
+            <option>7,94</option>
+            <option>9,53</option>
+            <option>11,11</option>
+            <option>12,7</option>
+            <option>14,29</option>
+        </td>
+        <td>coef.</td>
+      </tr>
+
+      <tr>
+        <th>DESIGN VALIDATION</th>
+        <td>-</td>
+        <td>INVALID NOMINAL THICKNESS</td> <!-- "VALID NOMINAL THICKNESS"; "INVALID NOMINAL THICKNESS"-->
+        <td>-</td>
+      </tr>
+
+      </table>
+      </form>
+      <!-- PDF TERMINA AQUI -->
+
+      </page>
+      </div>
+    </main>
+
+    <main id="cilindrical_page2" style="display:none;">
+
+      <div class="pdf-page size-a4">
+        <page size="A4">
+          <!-- PDF COMEÇA AQUI -->
+
+          <form action="#">
+            <div class="form-header">
+
+              <table border>
+                <tr>
+                  <th>DESIGN VALIDATION</th>
+                  <td>-</td>
+                  <td>FOR MAXIMUM CIRCUMFERENTIAL STRESS</td>
+                  <td>-</td>
+                </tr>
+
+                <tr>
+                  <th>DESIGN THICKNESS </th>
+                </tr>
+
+                <tr>
+                  <td>FOR MAXIMUM CIRCUMFERENTIAL STRESS</td>
+                </tr>
+
+
+                <tr>
+                  <td>LONGITUDINAL JOINTS
+                    <div class="container-img-calc">
+                      <img src="/Testes/docs/calc 1.png" alt="teste">
+                    </div>
+                  </td>
+                  <td>t</td>
+                  <td>13,476</td>
+                  <td>mm</td>
+                </tr>
+
+                <tr>
+                  <th>WORKING MAXIMUM ALLOWABLE PRESSURE</th>
+                </tr>
+
+
+                <tr>
+                  <td>LONGITUDINAL JOINTS
+                    <div class="container-img-calc">
+                      <img src="/Testes/docs/calc 2.png" alt="teste">
+                    </div>
+                  </td>
+                  <td>MAWPc</td>
+                  <td>0.951</td>
+                  <td>MPa</td>
+                </tr>
+
+                <tr>
+                  <th>HIDROSTATIC TEST PRESSURE</th>
+                </tr>
+
+                <tr>
+                  <td>LONGITUDINAL JOINTS
+                    <div class="container-img-calc">
+                      <img src="/Testes/docs/calc 3.png" alt="teste">
+                    </div>
+                  </td>
+                  <td>HTP</td>
+                  <td>10,949</td>
+                  <td>MPa</td>
+                </tr>
+
+                <tr>
+                  <td>PNEUMATIC TEST PRESSURE
+                    <div class="container-img-calc">
+                      <img src="/Testes/docs/calc 4.png" alt="teste">
+                    </div>
+                  </td>
+                  <td>PTP</td>
+                  <td>9,262</td>
+                  <td>MPa</td>
+                </tr>
+
+
+
+
+              </table>
+            </div>
+          </form>
+        </page>
+      </div>
+
+    </main>
+
+    <main id="conical_page" style="display:none;">
+      <div id="example">
+        <div class="box wide hidden-on-narrow">
+        </div>
+      </div>
+
+      <div class="form">
+
+
+        <div class="pdf-page size-a4">
+          <page size="A4">
+
+            <!-- PDF COMEÇA AQUI -->
+
+            <form action="#">
+              <div class="form-header">
+                <div class="title">
+                  <div class="container-img-r">
+                    <h1>WISECALC</h1>
+                    <img src="/Testes/docs/r.png" alt="teste">
+                  </div>
+                </div>
+              </div>
+
+
               <table border>
                 <th>CYLINDRICAL SHELL UNDER INTERNAL PRESSURE ACCORDING TO ASME VIII DIV.1 (UG - 27)
                   <div class="container-img-img">
@@ -581,303 +919,85 @@
                 <table border>
                   <th>MATERIAL SPECIFICATION (ASME II part D)</th>
                   <td>
-                    <select>
-                      <option>37,78</option>
-                      <option>65,56</option>
-                      <option>93,33</option>
-                      <option>121,11</option>
-                      <option>148,89</option>
-                      <option>204,44</option>
-                      <option>260,00</option>
-                    </select>
-            </div>
-            </td>
-            <th></th>
+                    <div class="input-group">
+                      <div class="input-box">
+                        <input id="contas" type="text" required="">
+                      </div>
+                    </div>
+                  </td>
+                  <th></th>
 
-            <tr>
-              <th>NOMINAL COMPOSITION</th>
-              <td>Carbon steel</td>
-              <th></th>
-            </tr>
+                  <tr>
+                    <th>NOMINAL COMPOSITION</th>
+                    <td>Carbon steel</td>
+                    <th></th>
+                  </tr>
 
-            <tr>
-              <th>PRODUCT FORM</th>
-              <td>Plate</td>
-              <th>UNITS</th>
-            </tr>
+                  <tr>
+                    <th>PRODUCT FORM</th>
+                    <td>Plate</td>
+                    <th>UNITS</th>
+                  </tr>
 
-            <tr>
-              <th>ALLOY DESIG./UNS No.</th>
-              <td>K01700</td>
-              <th></th>
-            </tr>
+                  <tr>
+                    <th>ALLOY DESIG./UNS No.</th>
+                    <td>K01700</td>
+                    <th></th>
+                  </tr>
 
-            <tr>
-              <th>CLASS/ CONDITION/ TEMPER</th>
-              <td>…</td>
-              <th></th>
-            </tr>
+                  <tr>
+                    <th>CLASS/CONDITION/TEMPER</th>
+                    <td>…</td>
+                    <th></th>
+                  </tr>
 
-            <tr>
-              <th>P-No.</th>
-              <td>1</td>
-              <th></th>
-            </tr>
+                  <tr>
+                    <th>P-No.</th>
+                    <td>1</td>
+                    <th></th>
+                  </tr>
 
-            <tr>
-              <th>GROUP No.</th>
-              <td>1</td>
-              <th></th>
-            </tr>
+                  <tr>
+                    <th>GROUP No.</th>
+                    <td>1</td>
+                    <th></th>
+                  </tr>
 
-            <tr>
-              <th>MIN. TENSILE STRENGTH</th>
-              <td>310,3</td>
-              <th>MPa</th>
-            </tr>
+                  <tr>
+                    <th>MIN. TENSILE STRENGTH</th>
+                    <td>310,3</td>
+                    <th>MPa</th>
+                  </tr>
 
-            <tr>
-              <th>MIN. YIELD STRENGTH</th>
-              <td>165,5</td>
-              <th>MPa</th>
-            </tr>
+                  <tr>
+                    <th>MIN. YIELD STRENGTH</th>
+                    <td>165,5</td>
+                    <th>MPa</th>
+                  </tr>
 
-            <tr>
-              <th>VIII-1—Applic, and Max, Temp, Limit (°C)</th>
-              <td>NP</td>
-              <th></th>
-            </tr>
+                  <tr>
+                    <th>VIII-1—Applic, and Max, Temp, Limit (°C)</th>
+                    <td>NP</td>
+                    <th></th>
+                  </tr>
 
-            <tr>
-              <th>DESIGN TEMPERATURE</th>
-              <td>DT</td>
-              <th>260,00</th>
-              <td>°C</td>
-            </tr>
+                  <tr>
+                    <th>DESIGN TEMPERATURE</th>
+                    <td>DT</td>
+                    <th>NP</th>
+                    <td>°C</td>
+                  </tr>
 
-            <tr>
-              <th>INSIDE DIAMETER</th>
-              <td>DI</td>
-              <td>
-                <div class="input-group">
-                  <div class="input-box">
-                    <input id="INSIDE_DIAMETER _VALUE" type="number" required="">
-                  </div>
-                </div>
-              </td>
-              <td>mm</td>
-            </tr>
-
-            <tr>
-              <th>LIQUID COLUMN</th>
-              <td>H</td>
-              <td>
-                <div class="input-group">
-                  <div class="input-box">
-                    <input id="LIQUID_COLUMN_VALUE" type="number" required="">
-                  </div>
-                </div>
-              </td>
-              <td>m</td>
-            </tr>
-
-            <tr>
-              <th>FLUID DENSITY</th>
-              <td>ρ</td>
-              <td>1000</td>
-              <td>kg/m^3</td>
-            </tr>
-
-            <tr>
-              <th>DESIGN PRESSURE ON THE TOP OF THE VESSEL</th>
-              <td>Pint</td>
-              <td>2</td>
-              <td>MPa</td>
-            </tr>
-
-            <tr>
-              <th>DESIGN PRESSURE</th>
-              <td>P</td>
-              <td>2</td>
-              <td>MPa</td>
-            </tr>
-
-            <tr>
-              <th>ADMISSIBLE STRESS @ DESIGN TEMPERATURE</th>
-              <td>Sh</td>
-              <td>88,94</td>
-              <td>MPa</td>
-            </tr>
-
-            <tr>
-              <th>ADMISSIBLE STRESS @ ROOM TEMPERATURE</th>
-              <td>Sc</td>
-              <td>88,94</td>
-              <td>MPa</td>
-            </tr>
-
-            <tr>
-              <th>INSIDE RADIUS</th>
-              <td>Ri</td>
-              <td>410</td>
-              <td>mm</td>
-            </tr>
-
-            <tr>
-              <th>INSIDE RADIUS CORRODED</th>
-              <td>Ric</td>
-              <td>413</td>
-              <td>mm</td>
-            </tr>
-
-            <tr>
-              <th>CORROSION ALLOWANCE</th>
-              <td>CA</td>
-              <td>3</td>
-              <td>mm</td>
-            </tr>
-
-
-
-            </table>
-          </form>
-          <!-- PDF TERMINA AQUI -->
-
-        </page>
-      </div>
-    </main>
-
-    <main id="cilindrical_page2" style="display:none; ">
-      <div id="example">
-        <div class="box wide hidden-on-narrow">
+                </table>
+              </div>
+            </form>
+            <!-- PDF TERMINA AQUI -->
+          </page>
         </div>
       </div>
-      <div class="form">
-        <page size="A4">
-
-          <!-- PDF COMEÇA AQUI -->
-
-          <form action="#" id="form2">
-            <table border>
-
-              <tr>
-                <th>NOMINAL THICKNESS minus Corrosion Allowance</th>
-                <td>t'</td>
-                <td>12,9</td>
-                <td>mm</td>
-              </tr>
-
-              <tr>
-                <th>WELDED JOINT EFFICIENCY</th>
-                <td>E</td>
-                <td>
-                  <select>
-                    <option>1</option>
-                    <option>0,90</option>
-                </td>
-                <td>coef.</td>
-              </tr>
-
-              <tr>
-                <th>NOMINAL THICKNESS</th>
-                <td>tn</td>
-                <td>
-                  <select>
-                    <option>ASTM_A20</option>
-                    <option>4,76</option>
-                    <option>6,35</option>
-                    <option>7,94</option>
-                    <option>9,53</option>
-                    <option>11,11</option>
-                    <option>12,7</option>
-                    <option>14,29</option>
-                </td>
-                <td>coef.</td>
-              </tr>
-
-              <tr>
-                <th>DESIGN VALIDATION</th>
-                <td>-</td>
-                <td>INVALID NOMINAL THICKNESS</td> <!-- "VALID NOMINAL THICKNESS"; "INVALID NOMINAL THICKNESS"-->
-                <td>-</td>
-              </tr>
-              <tr>
-                <th>DESIGN VALIDATION</th>
-                <td>-</td>
-                <td>FOR MAXIMUM CIRCUMFERENTIAL STRESS</td>
-                <td>-</td>
-              </tr>
-
-              <tr>
-                <th>DESIGN THICKNESS </th>
-              </tr>
-
-              <tr>
-                <td>FOR MAXIMUM CIRCUMFERENTIAL STRESS</td>
-              </tr>
-
-
-              <tr>
-                <td>LONGITUDINAL JOINTS
-                  <div class="container-img-calc">
-                    <img src="/Testes/docs/calc 1.png" alt="teste">
-                  </div>
-                </td>
-                <td>t</td>
-                <td>13,476</td>
-                <td>mm</td>
-              </tr>
-
-              <tr>
-                <th>WORKING MAXIMUM ALLOWABLE PRESSURE</th>
-              </tr>
-
-
-              <tr>
-                <td>LONGITUDINAL JOINTS
-                  <div class="container-img-calc">
-                    <img src="/Testes/docs/calc 2.png" alt="teste">
-                  </div>
-                </td>
-                <td>MAWPc</td>
-                <td>0.951</td>
-                <td>MPa</td>
-              </tr>
-
-              <tr>
-                <th>HIDROSTATIC TEST PRESSURE</th>
-              </tr>
-
-              <tr>
-                <td>LONGITUDINAL JOINTS
-                  <div class="container-img-calc">
-                    <img src="/Testes/docs/calc 3.png" alt="teste">
-                  </div>
-                </td>
-                <td>HTP</td>
-                <td>10,949</td>
-                <td>MPa</td>
-              </tr>
-
-              <tr>
-                <td>PNEUMATIC TEST PRESSURE
-                  <div class="container-img-calc">
-                    <img src="/Testes/docs/calc 4.png" alt="teste">
-                  </div>
-                </td>
-                <td>PTP</td>
-                <td>9,262</td>
-                <td>MPa</td>
-              </tr>
-
-            </table>
-          </form>
-          <!-- PDF TERMINA AQUI -->
-        </page>
-      </div>
     </main>
 
-    <main id="conical_page" style="display:none; ">
+    <main id="spherical_page" style="display:none;">
       <div id="example">
         <div class="box wide hidden-on-narrow">
         </div>
@@ -885,24 +1005,26 @@
 
       <div class="form">
 
-        <page size="A4">
+        <div class="pdf-page size-a4">
+          <page size="A4">
 
-          <!-- PDF COMEÇA AQUI -->
+            <!-- PDF COMEÇA AQUI -->
 
-          <form action="#">
-            <div class="form-header">
-              <div class="title">
-                <div class="container-img-r">
-                  <h1>WISECALC</h1>
-                  <img src="/Testes/docs/r.png" alt="teste">
+            <form action="#">
+              <div class="form-header">
+                <div class="title">
+                  <div class="container-img-r">
+                    <h1>WISECALC</h1>
+                    <img src="/Testes/docs/r.png" alt="teste">
+                  </div>
                 </div>
               </div>
 
 
               <table border>
-                <th>CONICAL SHELL/HEADS UNDER PRESSURE ON CONCAVE SIDE ACCORDING TO ASME VIII DIV.1 (UG - 32 (f))
+                <th>CYLINDRICAL SHELL UNDER INTERNAL PRESSURE ACCORDING TO ASME VIII DIV.1 (UG - 27)
                   <div class="container-img-img">
-                    <img src="/Testes/docs/CONICAL SHELL.png" alt="teste">
+                    <img src="/Testes/docs/cilindro.png" alt="teste">
                   </div>
                 </th><br>
 
@@ -916,658 +1038,83 @@
                 <table border>
                   <th>MATERIAL SPECIFICATION (ASME II part D)</th>
                   <td>
-                    <select>
-                      <option>SA-312 TP316H</option>
-                      <option>SA-249 TP316H</option>
-                      <option>SA-240 316H</option>
-                      <option>SA-213 TP316H</option>
-                      <option>SA/JIS G4303 SUS316</option>
-                      <option>SA-814 TP316</option>
-                      <option>SA-813 TP316</option>
-                    </select>
-            </div>
-            </td>
-            <th></th>
+                    <div class="input-group">
+                      <div class="input-box">
+                        <input id="contas" type="text" required="">
+                      </div>
+                    </div>
+                  </td>
+                  <th></th>
 
-            <tr>
-              <th>NOMINAL COMPOSITION</th>
-              <td>16Cr–12Ni–2Mo</td>
-              <th></th>
-            </tr>
+                  <tr>
+                    <th>NOMINAL COMPOSITION</th>
+                    <td>Carbon steel</td>
+                    <th></th>
+                  </tr>
 
-            <tr>
-              <th>PRODUCT FORM</th>
-              <td>Wld. pipe</td>
-              <td></td>
-              <th>UNITS</th>
-            </tr>
+                  <tr>
+                    <th>PRODUCT FORM</th>
+                    <td>Plate</td>
+                    <th>UNITS</th>
+                  </tr>
 
-            <tr>
-              <th>ALLOY DESIG./UNS No.</th>
-              <td>S31600</td>
-              <th></th>
-            </tr>
+                  <tr>
+                    <th>ALLOY DESIG./UNS No.</th>
+                    <td>K01700</td>
+                    <th></th>
+                  </tr>
 
-            <tr>
-              <th>CLASS/ CONDITION/ TEMPER</th>
-              <td>…</td>
-              <th></th>
-            </tr>
+                  <tr>
+                    <th>CLASS/CONDITION/TEMPER</th>
+                    <td>…</td>
+                    <th></th>
+                  </tr>
 
-            <tr>
-              <th>P-No.</th>
-              <td>8</td>
-              <th></th>
-            </tr>
+                  <tr>
+                    <th>P-No.</th>
+                    <td>1</td>
+                    <th></th>
+                  </tr>
 
-            <tr>
-              <th>GROUP No.</th>
-              <td>8</td>
-              <th></th>
-            </tr>
+                  <tr>
+                    <th>GROUP No.</th>
+                    <td>1</td>
+                    <th></th>
+                  </tr>
 
-            <tr>
-              <th>MIN. TENSILE STRENGTH</th>
-              <td>517,1</td>
-              <td></td>
-              <th>MPa</th>
-            </tr>
+                  <tr>
+                    <th>MIN. TENSILE STRENGTH</th>
+                    <td>310,3</td>
+                    <th>MPa</th>
+                  </tr>
 
-            <tr>
-              <th>MIN. YIELD STRENGTH</th>
-              <td>206,8</td>
-              <td></td>
-              <th>MPa</th>
-            </tr>
+                  <tr>
+                    <th>MIN. YIELD STRENGTH</th>
+                    <td>165,5</td>
+                    <th>MPa</th>
+                  </tr>
 
-            <tr>
-              <th>VIII-1—Applic, and Max, Temp, Limit (°C)</th>
-              <td>NP</td>
-              <td></td>
-              <th></th>
-            </tr>
+                  <tr>
+                    <th>VIII-1—Applic, and Max, Temp, Limit (°C)</th>
+                    <td>NP</td>
+                    <th></th>
+                  </tr>
 
-            <tr>
-              <th>DESIGN TEMPERATURE</th>
-              <td>DT</td>
-              <th>NP</th>
-              <td>°C</td>
-            </tr>
-
-            <tr>
-              <th>INSIDE DIAMETER</th>
-              <td>DI</td>
-              <td>
-                <div class="input-group">
-                  <div class="input-box">
-                    <input id="INSIDE_DIAMETER _VALUE" type="number" required="">
-                  </div>
-                </div>
-              </td>
-              <td>mm</td>
-            </tr>
-
-            <tr>
-              <th>LIQUID COLUMN</th>
-              <td>H</td>
-              <td>
-                <div class="input-group">
-                  <div class="input-box">
-                    <input id="LIQUID_COLUMN_VALUE" type="number" required="">
-                  </div>
-                </div>
-              </td>
-              <td>m</td>
-            </tr>
-
-            <tr>
-              <th>FLUID DENSITY</th>
-              <td>ρ</td>
-              <td>1000</td>
-              <td>kg/m^3</td>
-            </tr>
-
-            <tr>
-              <th>DESIGN PRESSURE ON THE TOP OF THE VESSEL</th>
-              <td>Pint</td>
-              <td>2</td>
-              <td>MPa</td>
-            </tr>
-
-            <tr>
-              <th>DESIGN PRESSURE</th>
-              <td>P</td>
-              <td>2</td>
-              <td>MPa</td>
-            </tr>
-
-            <tr>
-              <th>ADMISSIBLE STRESS @ DESIGN TEMPERATURE</th>
-              <td>Sh</td>
-              <td>124,11</td>
-              <td>MPa</td>
-            </tr>
-
-            <tr>
-              <th>ADMISSIBLE STRESS @ ROOM TEMPERATURE</th>
-              <td>Sc</td>
-              <td>137,90</td>
-              <td>MPa</td>
-            </tr>
-
-            <tr>
-              <th>INSIDE RADIUS</th>
-              <td>Ri</td>
-              <td>410</td>
-              <td>mm</td>
-            </tr>
-
-            <tr>
-              <th>INSIDE RADIUS CORRODED</th>
-              <td>Ric</td>
-              <td>413</td>
-              <td>mm</td>
-            </tr>
-
-            <tr>
-              <th>HALF APLE-AXE ANGLE</th>
-              <td>α</td>
-              <td>
-                <div class="input-group">
-                  <div class="input-box">
-                    <input id="LIQUID_COLUMN_VALUE" type="number" required="">
-                  </div>
-                </div>
-              </td>
-              <td>◦</td>
-            </tr>
-
-            </table>
-          </form>
-          <!-- PDF TERMINA AQUI -->
-
-        </page>
-      </div>
-    </main>
-
-    <main id="conical_page2" style="display:none; ">
-      <div id="example">
-        <div class="box wide hidden-on-narrow">
-        </div>
-      </div>
-      <div class="form">
-        <page size="A4">
-
-          <!-- PDF COMEÇA AQUI -->
-
-          <form action="#" id="form2">
-            <table border>
-
-              <tr>
-                <th>HALF APLE-AXE ANGLE</th>
-                <td></td>
-                <td>0,524</td>
-                <td>rad</td>
-              </tr>
-
-              <tr>
-                <th>CORROSION ALLOWANCE</th>
-                <td>CA</td>
-                <td>3</td>
-                <td>mm</td>
-              </tr>
-
-              <tr>
-                <th>NOMINAL THICKNESS minus Corrosion Allowance</th>
-                <td>t'</td>
-                <td>9,7</td>
-                <td>mm</td>
-              </tr>
-
-              <tr>
-                <th>WELDED JOINT EFFICIENCY</th>
-                <td>E</td>
-                <td>
-                  <select>
-                    <option>1,0</option>
-                    <option>0,9</option>
-                </td> <!-- "VALID NOMINAL THICKNESS"; "INVALID NOMINAL THICKNESS"-->
-                <td>-</td>
-              </tr>
-              <tr>
-                <th>NOMINAL THICKNESS</th>
-                <td>tn</td>
-                <td>
-                  <option>ASTM_A20</option>
-                  <option>4,76</option>
-                  <option>7,94</option>
-                  <option>9,53</option>
-                </td>
-                <td>-</td>
-              </tr>
-
-              <tr>
-                <th>DESIGN VALIDATION</th>
-                <td>-</td>
-                <td>VALID NOMINAL THICKNESS</td>
-                <td>-</td>
-              </tr>
-
-              <tr>
-                <td>"DESIGN THICKNESS </td>
-              </tr>
-
-              <tr>
-                <td>FOR MAXIMUM CIRCUMFERENTIAL STRESS"</td>
-              </tr>
-
-              <tr>
-                <th>WORKING MAXIMUM ALLOWABLE PRESSURE CORRODED AND HOT</th>
-                <th></th>
-              </tr>
-
-              <tr>
-                <td>LONGITUDINAL JOINTS
-                  <div class="container-conical_calc">
-                    <img src="/Testes/docs/conical calc1.png" alt="teste">
-                  </div>
-                </td>
-                <td>t</td>
-                <td>7,704</td>
-                <td>mm</td>
-              </tr>
-
-              <tr>
-                <th>WORKING MAXIMUM ALLOWABLE PRESSURE CORRODED AND HOT</th>
-              </tr>
-
-
-              <tr>
-                <td>LONGITUDINAL JOINTS
-                  <div class="container-conical_calc">
-                    <img src="/Testes/docs/conical calc2.png" alt="teste">
-                  </div>
-                </td>
-                <td>MAWPc</td>
-                <td>2,512</td>
-                <td>MPa</td>
-              </tr>
-
-              <tr>
-                <th>HIDROSTATIC TEST PRESSURE</th>
-              </tr>
-
-              <tr>
-                <td>
-                  <div class="container-conical_calc">
-                    <img src="/Testes/docs/conical calc3.png" alt="teste">
-                  </div>
-                </td>
-                <td>HTP</td>
-                <td>3,628</td>
-                <td>MPa</td>
-              </tr>
-
-              <tr>
-                <th>PNEUMATIC TEST PRESSURE</th>
-              </tr>
-
-              <tr>
-                <td>
-                  <div class="container-conical_calc">
-                    <img src="/Testes/docs/conical calc4.png" alt="teste">
-                  </div>
-                </td>
-                <td>PTP</td>
-                <td>3,070</td>
-                <td>MPa</td>
-              </tr>
-
-            </table>
-          </form>
-          <!-- PDF TERMINA AQUI -->
-        </page>
-      </div>
-    </main>
-
-    <main id="SPHERICAL_page" style="display:none; ">
-      <div id="example">
-        <div class="box wide hidden-on-narrow">
-        </div>
-      </div>
-
-      <div class="form">
-
-        <page size="A4">
-
-          <!-- PDF COMEÇA AQUI -->
-
-          <form action="#">
-            <div class="form-header">
-              <div class="title">
-                <div class="container-img-r">
-                  <h1>WISECALC</h1>
-                  <img src="/Testes/docs/r.png" alt="teste">
-                </div>
-              </div>
-
-
-              <table border>
-                <th>SPHERICAL SHELL/HEADS UNDER PRESSURE ON CONCAVE SIDE ACCORDING TO ASME VIII DIV.1 (UG - 27)		
-                  <div class="container-img-img">
-                    <img src="/Testes/docs/SPHERICAL SHELL.png" alt="teste">
-                  </div>
-                </th><br>
-
-
-
-                <table border>
-                  <th>DESIGN DATA</th>
-                  <th>SYMBOLS USED IN THE FORMULAS AND DRAWING</th>
+                  <tr>
+                    <th>DESIGN TEMPERATURE</th>
+                    <td>DT</td>
+                    <th>NP</th>
+                    <td>°C</td>
+                  </tr>
                 </table>
-
-                <table border>
-                  <th>MATERIAL SPECIFICATION (ASME II part D)</th>
-                  <td>
-                    <select>
-                      <option>SA-312 TP316H</option>
-                      <option>SA-249 TP316H</option>
-                      <option>SA-240 316H</option>
-                      <option>SA-213 TP316H</option>
-                      <option>SA/JIS G4303 SUS316</option>
-                      <option>SA-814 TP316</option>
-                      <option>SA-813 TP316</option>
-                    </select>
-            </div>
-            </td>
-            <th></th>
-
-            <tr>
-              <th>NOMINAL COMPOSITION</th>
-              <td>Carbon steel</td>
-              <th></th>
-            </tr>
-
-            <tr>
-              <th>PRODUCT FORM</th>
-              <td>Plate</td>
-              <td></td>
-              <th>UNITS</th>
-            </tr>
-
-            <tr>
-              <th>ALLOY DESIG./UNS No.</th>
-              <td>K02100</td>
-              <th></th>
-            </tr>
-
-            <tr>
-              <th>CLASS/ CONDITION/ TEMPER</th>
-              <td>…</td>
-              <th></th>
-            </tr>
-
-            <tr>
-              <th>P-No.</th>
-              <td>1</td>
-              <th></th>
-            </tr>
-
-            <tr>
-              <th>GROUP No.</th>
-              <td>1</td>
-              <th></th>
-            </tr>
-
-            <tr>
-              <th>MIN. TENSILE STRENGTH</th>
-              <td>413,7</td>
-              <td></td>
-              <th>MPa</th>
-            </tr>
-
-            <tr>
-              <th>MIN. YIELD STRENGTH</th>
-              <td>220,6</td>
-              <td></td>
-              <th>MPa</th>
-            </tr>
-
-            <tr>
-              <th>VIII-1—Applic, and Max, Temp, Limit (°C)</th>
-              <td>537,8</td>
-              <td></td>
-              <th></th>
-            </tr>
-
-            <tr>
-              <th>DESIGN TEMPERATURE</th>
-              <td>DT</td>
-              <th>260,00</th>
-              <td>°C</td>
-            </tr>
-
-            <tr>
-              <th>INSIDE DIAMETER</th>
-              <td>DI</td>
-              <td>
-                <div class="input-group">
-                  <div class="input-box">
-                    <input id="INSIDE_DIAMETER _VALUE" type="number" required="">
-                  </div>
-                </div>
-              </td>
-              <td>mm</td>
-            </tr>
-
-            <tr>
-              <th>LIQUID COLUMN</th>
-              <td>H</td>
-              <td>
-                <div class="input-group">
-                  <div class="input-box">
-                    <input id="LIQUID_COLUMN_VALUE" type="number" required="">
-                  </div>
-                </div>
-              </td>
-              <td>m</td>
-            </tr>
-
-            <tr>
-              <th>FLUID DENSITY</th>
-              <td>ρ</td>
-              <td>1000</td>
-              <td>kg/m^3</td>
-            </tr>
-
-            <tr>
-              <th>DESIGN PRESSURE ON THE TOP OF THE VESSEL</th>
-              <td>Pint</td>
-              <td>2</td>
-              <td>MPa</td>
-            </tr>
-
-            <tr>
-              <th>DESIGN PRESSURE</th>
-              <td>P</td>
-              <td>2</td>
-              <td>MPa</td>
-            </tr>
-
-            <tr>
-              <th>ADMISSIBLE STRESS @ DESIGN TEMPERATURE</th>
-              <td>Sh</td>
-              <td>117,90</td>
-              <td>MPa</td>
-            </tr>
-
-            <tr>
-              <th>ADMISSIBLE STRESS @ ROOM TEMPERATURE</th>
-              <td>Sc</td>
-              <td>117,90</td>
-              <td>MPa</td>
-            </tr>
-
-            <tr>
-              <th>INSIDE RADIUS</th>
-              <td>Ri</td>
-              <td>410</td>
-              <td>mm</td>
-            </tr>
-
-            <tr>
-              <th>INSIDE RADIUS CORRODED</th>
-              <td>Ric</td>
-              <td>413</td>
-              <td>mm</td>
-            </tr>
-
-            <tr>
-              <th>CORROSION ALLOWANCE</th>
-              <td>CA</td>
-              <td>
-                <div class="input-group">
-                  <div class="input-box">
-                    <input id="LIQUID_COLUMN_VALUE" type="number" required="">
-                  </div>
-                </div>
-              </td>
-              <td>◦</td>
-            </tr>
-
-            </table>
-          </form>
-          <!-- PDF TERMINA AQUI -->
-
-        </page>
-      </div>
-    </main>
-
-    <main id="SPHERICAL_page2" style="display:none; ">
-      <div id="example">
-        <div class="box wide hidden-on-narrow">
+            </form>
+            <!-- PDF TERMINA AQUI -->
+          </page>
         </div>
       </div>
-      <div class="form">
-        <page size="A4">
-
-          <!-- PDF COMEÇA AQUI -->
-
-          <form action="#" id="form2">
-            <table border>
-
-              <tr>
-                <th>NOMINAL THICKNESS minus Corrosion Allowance</th>
-                <td>t'</td>
-                <td>9,7</td>
-                <td>mm</td>
-              </tr>
-
-              <tr>
-                <th>WELDED JOINT EFFICIENCY</th>
-                <td>E</td>
-                <td>
-                  <select>
-                    <option>1,0</option>
-                    <option>0,9</option>
-                </td> 
-                <td>-</td>
-              </tr>
-
-              <tr>
-                <th>NOMINAL THICKNESS</th>
-                <td>tn</td>
-                <td>
-                  <option>ASTM_A20</option>
-                  <option>4,76</option>
-                  <option>7,94</option>
-                  <option>9,53</option>
-                </td>
-                <td>mm</td>
-              </tr>
-
-              <tr>
-                <th>DESIGN VALIDATION</th>
-                <td>-</td>
-                <td>VALID NOMINAL THICKNESS</td>
-                <td>-</td>
-              </tr>
-
-              <tr>
-                <th>"DESIGN THICKNESS </th>
-              </tr>
-
-              <tr>
-                <td>FOR MAXIMUM CIRCUMFERENTIAL STRESS"</td>
-              </tr>
-
-              <tr>
-                <td>LONGITUDINAL JOINTS
-                  <div class="container-spherical_calc">
-                    <img src="/Testes/docs/spherical calc1.png" alt="teste">
-                  </div>
-                </td>
-                <td>t</td>
-                <td>6,509</td>
-                <td>mm</td>
-              </tr>
-              
-              <tr>
-                <th>WORKING MAXIMUM ALLOWABLE PRESSURE CORRODED AND HOT</th>
-                <th></th>
-              </tr>
-
-
-              <tr>
-                <td>LONGITUDINAL JOINTS
-                  <div class="container-spherical_calc">
-                    <img src="/Testes/docs/spherical calc2.png" alt="teste">
-                  </div>
-                </td>
-                <td>5,512</td>
-                <td>2,512</td>
-                <td>MPa</td>
-              </tr>
-
-              <tr>
-                <th>HIDROSTATIC TEST PRESSURE</th>
-              </tr>
-
-              <tr>
-                <td>
-                  <div class="container-spherical_calc">
-                    <img src="/Testes/docs/spherical calc3.png" alt="teste">
-                  </div>
-                </td>
-                <td>HTP</td>
-                <td>7,166</td>
-                <td>MPa</td>
-              </tr>
-
-              <tr>
-                <th>PNEUMATIC TEST PRESSURE</th>
-              </tr>
-
-              <tr>
-                <td>
-                  <div class="container-spherical_calc">
-                    <img src="/Testes/docs/spherical calc4.png" alt="teste">
-                  </div>
-                </td>
-                <td>PTP</td>
-                <td>6,064</td>
-                <td>MPa</td>
-              </tr>
-
-            </table>
-          </form>
-          <!-- PDF TERMINA AQUI -->
-        </page>
-      </div>
     </main>
 
-
-    <script src="testes.js"></script>
+    <script src="calculo.js"></script>
   </header>
 </body>
 
