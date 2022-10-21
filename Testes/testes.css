@@ -392,3 +392,29 @@ td {
   cursor: pointer;
   font-weight: bold;
 }
+
+@media screen and (max-width:1064px){
+  page[size="A4"] {  
+    width: 490px;
+    height: 1000PX; 
+    }
+    
+    table{
+      width: 100%;
+      text-align:  center;
+      font-size: 10PX;
+    }
+    
+    table select{
+      width: 100%;
+    }
+    
+    table select option{
+      align-items: center;
+    }
+    
+    td {
+      padding: 2px;
+    }
+
+}

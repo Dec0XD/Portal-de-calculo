@@ -46,9 +46,6 @@
             </form>
           </div>
         </div>
-       
-
-      
                 </ul>
             </nav>
         </div>
@@ -174,10 +171,17 @@
         </div>
 
         <main>
+          <div id="example">
+            <div class="box wide hidden-on-narrow">
+            </div>
+          </div>
+          
           <div class="form">
-              <div class="page-container hidden-on-narrow">
+          <div class="Shell_Cilind">
+            <div class="page-container hidden-on-narrow">
                 <div class="pdf-page size-a4">
                     <page size="A4">
+                       
                        <!-- PDF COMEÇA AQUI -->
        
               <form action="#">
@@ -192,13 +196,14 @@
 
                 
                 <table border>
-                  <th>PROJECT INFORMATION </th><br>
-                  <td>
+                  <th>PROJECT INFORMATION
                     <div class="container-img-img">
                       <img src="/Testes/docs/img1.png" alt="teste">
                     </div>
-                  </td>
+                  </th><br>
+                </table>
                 
+                <table border>
                   <tr>
                     <th>JOB NAME</th>
                     <td> 
@@ -208,7 +213,6 @@
                         </div>
                       </div>
                     </td>
-
                   </tr>
 
                   <tr>
@@ -232,8 +236,7 @@
                       </div>
                     </td>
                   </tr>
-                
-     
+
                 <tr>
                   <th>EQUIPAMENT DESCRIPTION</th>
                   <td> 
@@ -266,6 +269,7 @@
                     </div>
                   </td>
                 </tr>
+
 
                 <tr>
                   <th>PREPARED BY</th>
@@ -493,13 +497,33 @@
               <td>--</td>
             </tr>
 
+            <tr>
+              <td>Media</td>
+              <th>
+                <div class="input-group">
+                  <div class="input-box">
+                    <input id="num1" type="number" onclick="media()">
+                  </div>
+                </div>
+              </th>
+              <td> 
+                <div class="input-group">
+                  <div class="input-box">
+                    <input id="num2" type="number" onclick="media()">
+                  </div>
+                </div>
+              </td>
+              <td>
+                <span id="resp"></span>
+              </td>
+            </tr>
+
           </table>
     </form>
   </page>
 </div> 
  </div>
 </div>
-</main>
           <!-- PDF TERMINA AQUI -->
 </div>
 
