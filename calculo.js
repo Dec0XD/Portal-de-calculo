@@ -58,8 +58,10 @@ button_cilindrical.addEventListener('change', function() {
 	console.log(i)
 	if(i%2==0){
 		document.getElementById("cilindrical_page").style = "display:none;"
+		document.getElementById("cilindrical_page2").style = "display:none;"
 	} else {
 		document.getElementById("cilindrical_page").style = "display:flex;"
+		document.getElementById("cilindrical_page2").style = "display:flex;"
 	}
 })
 button_conical.addEventListener('change', function() {
