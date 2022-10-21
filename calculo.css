@@ -428,3 +428,28 @@ button {
     padding: 2px;
   }
 }
+
+@media screen and (max-width:480px) {
+  page[size="A4"] {
+    width: 430px;
+    height: 1000PX;
+  }
+
+  table {
+    width: 430px;
+    text-align: center;
+    font-size: 10PX;
+  }
+
+  table select {
+    width: 100%;
+  }
+
+  table select option {
+    align-items: center;
+  }
+
+  td {
+    padding: 2px;
+  }
+}

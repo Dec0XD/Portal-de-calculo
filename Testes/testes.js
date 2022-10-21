@@ -58,24 +58,30 @@ button_cilindrical.addEventListener('change', function() {
 	console.log(i)
 	if(i%2==0){
 		document.getElementById("cilindrical_page").style = "display:none;"
+		document.getElementById("cilindrical_page2").style = "display:none;"
 	} else {
 		document.getElementById("cilindrical_page").style = "display:flex;"
+		document.getElementById("cilindrical_page2").style = "display:flex;"
 	}
 })
 button_conical.addEventListener('change', function() {
 	j++
 	if(j%2==0){
 		document.getElementById("conical_page").style = "display:none;"
+		document.getElementById("conical_page2").style = "display:none;"
 	} else {
 		document.getElementById("conical_page").style = "display:flex;"
+		document.getElementById("conical_page2").style = "display:flex;"
 	}
 })
 button_spherical.addEventListener('change', function() {
 	k++
 	if(k%2==0){
-		document.getElementById("spherical_page").style = "display:none;"
+		document.getElementById("SPHERICAL_page").style = "display:none;"
+		document.getElementById("SPHERICAL_page2").style = "display:none;"
 	} else {
-		document.getElementById("spherical_page").style = "display:flex;"
+		document.getElementById("SPHERICAL_page").style = "display:flex;"
+		document.getElementById("SPHERICAL_page2").style = "display:flex;"
 	}
 })
 //contas - teste//

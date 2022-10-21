@@ -257,28 +257,23 @@ main {
   height: 130px;
 }
 
-table {
-  width: 95%;
-  margin: auto;
-  align-items: center;
+.container-img-calc {
+  display: flex;
   justify-self: center;
-  text-align: center;
+  height: 37px;
 }
 
-table select {
-  width: 100%;
+.container-conical_calc{
+  display: flex;
+  justify-self: center;
+  height: 50px;
 }
 
-table select option {
-  align-items: center;
+.container-spherical_calc{
+  display: flex;
+  justify-self: center;
+  height: 44px;
 }
-
-td {
-  padding: 2px;
-}
-
-
-
 .form-header h1::after {
   content: '';
   display: flex;
@@ -375,7 +370,7 @@ td {
 }
 
 .modal-container form {
-  background: #38B2AC;
+  background: linear-gradient(90deg, #161F30, #173540);
   border-radius: 5px;
   box-shadow: 0 1px 2px #ccc;
   display: flex;
@@ -404,27 +399,102 @@ button {
   font-weight: bold;
 }
 
-@media screen and (max-width:1064px) {
+
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  margin: auto;
+  table-layout: fixed;
+}
+
+.cilindrical_page2 table{
+  margin-top: 10px;
+}
+
+table caption {
+  font-size: 0.3px;
+  margin: 0.5em 0 0.75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 0.35em;
+}
+
+table th,
+table td {
+  padding: 0.625px;
+  text-align: center;
+}
+
+table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
   page[size="A4"] {
-    width: 490px;
-    height: 1000PX;
+    width: 430px;
+    height: 1000px;
   }
 
+  page {
+    display: flex;
+    position: relative;
+
+  }
   table {
-    width: 80%;
-    text-align: center;
-    font-size: 10PX;
+    width: auto;
+    border: 0;
   }
 
-  table select {
-    width: 100%;
+  table caption {
+    font-size: 1.3em;
   }
 
-  table select option {
-    align-items: center;
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
   }
 
-  td {
-    padding: 2px;
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
   }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
 }
