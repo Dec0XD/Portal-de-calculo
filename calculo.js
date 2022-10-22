@@ -2,7 +2,7 @@ function getPDF(selector) {
 	kendo.drawing.drawDOM($(selector)).then(function(group){
 	  kendo.drawing.pdf.saveAs(group, 'testing.pdf');
 	});
-  }
+  } 
 
 // local save//
 function salvar(){
