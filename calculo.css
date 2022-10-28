@@ -439,9 +439,9 @@ table th {
 }
 
 @media screen and (max-width: 600px) {
-  page[size="A4"] {
-    width: 430px;
-    height: 1000px;
+  page[size="A4"] {  
+    width: 21cm;
+    height: 29.7cm; 
   }
 
   page {
