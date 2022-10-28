@@ -96,19 +96,27 @@
 	var num1 = document.querySelector("#num1");
 	var num2 = document.querySelector("#num2");
 	var resultado = document.querySelector("#resp")
-
-	function media() {
+	
+	document.getElementById("num1").addEventListener("keyup", function(){
 		resultado.innerHTML = (parseFloat(num1.value) + parseFloat(num2.value)) / 2
-	}
+	})
+	document.getElementById("num2").addEventListener("keyup", function(){
+		resultado.innerHTML = (parseFloat(num1.value) + parseFloat(num2.value)) / 2
+	})
+
 
 	//print//
 	$('#btn-print-pdf').click(function () {
+		document.getElementById("divheader").style = "display: none;"	
+
 		$(".container").hide();
 		$('#pdfDocument').attr('src', 'https://connect-hm.top/pdf/test.pdf');
 		print();
 		setTimeout(function () {
 			$(".container").show();
 		}, 1000);
+
+		document.getElementById("divheader").style = "display: block;"	
 	});
 
 
