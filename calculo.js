@@ -128,34 +128,33 @@
      });
 
      document.getElementById("select-asme").addEventListener("change", function () {
-		var option = document.getElementById("select-asme").value
-     	fetch("https://api.apispreadsheets.com/data/hyfPZdEpeiRkXond/", {
+     	var option = document.getElementById("select-asme").value
+     	fetch("https://api.apispreadsheets.com/data/TKn49vQz9XA74Jlg/", {
      		method: "POST",
      		body: JSON.stringify({
      			"data": {
-     				"ValorEscolhido": option
+     				"Choosed": option
      			},
-     			"query": "select * from hyfPZdEpeiRkXond where ValorEscolhido<>''"
+     			"query": "select * from TKn49vQz9XA74Jlg where Choosed<>''"
      		}),
      	}).then(res => {
      		if (res.status === 201) {
-				console.log("Success")
+     			console.log("Success")
      		} else {
-				console.log("Error")
+     			console.log("Error")
      		}
      	})
 
-		 fetch("https://api.apispreadsheets.com/data/hyfPZdEpeiRkXond/?dataFormat=column").then(res=>{
-			if (res.status === 200){
-				// SUCCESS
-				res.json().then(data=>{
-					const yourData = data
+     	fetch("https://api.apispreadsheets.com/data/TKn49vQz9XA74Jlg/?dataFormat=column&query=select Desc from TKn49vQz9XA74Jlg").then(res => {
+     		if (res.status === 200) {
+     			// SUCCESS
+     			res.json().then(data => {
+     				const yourData = data
 					console.log(yourData)
-				}).catch(err => console.log(err))
-			}
-			else{
-				// ERROR
-			}
-		})
-		
+     			}).catch(err => console.log(err))
+     		} else {
+     			// ERROR
+     		}
+     	})
+
      })
