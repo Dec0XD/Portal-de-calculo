@@ -1,4 +1,6 @@
-<html class="k-webkit k-webkit105"><head>
+<html class="k-webkit k-webkit105">
+
+<head>
 	<title>WISECALC®</title>
 	<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.common.min.css">
 	<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.black.min.css">
@@ -7,12 +9,7 @@
 	<script src="https://kendo.cdn.telerik.com/2017.1.223/js/jquery.min.js"></script>
 	<script src="https://kendo.cdn.telerik.com/2017.1.223/js/jszip.min.js"></script>
 	<script src="https://kendo.cdn.telerik.com/2017.1.223/js/kendo.all.min.js"></script>
-	<style type="text/css">
-		@page {
-			margin: 0;
-			border: 0;
-		}
-	</style>
+
 </head>
 
 
@@ -35,7 +32,8 @@
 								<input type="text" name="name" placeholder="What is your name?" required="">
 								<input type="email" name="email" placeholder="Enter your e-mail" required="">
 
-								<textarea cols="30" rows="10" name="message" placeholder="What is the problem?" required=""></textarea>
+								<textarea cols="30" rows="10" name="message" placeholder="What is the problem?"
+									required=""></textarea>
 
 								<button type="submit">ENVIAR</button>
 								<button class="btnClose" type="submit" onclick="closeModal()">BACK</button>
@@ -64,22 +62,22 @@
 										<input type="checkbox" name="button" id="cilindrical_button">
 										<span class="switch-button"></span>
 									</div>
-							</label></li>
+								</label></li>
 							<li> <label class="switch">
 									<span class="switch-text">Conical</span>
 									<div class="switch-wrapper">
 										<input type="checkbox" name="button" id="conical_button">
 										<span class="switch-button"></span>
 									</div>
-							</label></li>
+								</label></li>
 							<li> <label class="switch">
 									<span class="switch-text">Spherical</span>
 									<div class="switch-wrapper">
 										<input type="checkbox" name="button" id="spherical_button">
 										<span class="switch-button"></span>
 									</div>
-							</label></li>
-							
+								</label></li>
+
 						</ul>
 					</li>
 					<li><a href="#">Heads</a>
@@ -90,35 +88,35 @@
 										<input type="checkbox" name="button" id="button_ellipsoidal_heads">
 										<span class="switch-button"></span>
 									</div>
-							</label></li>
+								</label></li>
 							<li> <label class="switch">
 									<span class="switch-text">Toriesférico</span>
 									<div class="switch-wrapper">
 										<input type="checkbox" name="button" id="button_TORISPHERICAL_heads">
 										<span class="switch-button"></span>
 									</div>
-							</label></li>
+								</label></li>
 							<li> <label class="switch">
 									<span class="switch-text">Hemispherical</span>
 									<div class="switch-wrapper">
 										<input type="checkbox" name="button">
 										<span class="switch-button"></span>
 									</div>
-							</label></li>
+								</label></li>
 							<li> <label class="switch">
 									<span class="switch-text">Conical</span>
 									<div class="switch-wrapper">
 										<input type="checkbox" name="button">
 										<span class="switch-button"></span>
 									</div>
-							</label></li>
+								</label></li>
 							<li> <label class="switch">
 									<span class="switch-text">Toriconical</span>
 									<div class="switch-wrapper">
 										<input type="checkbox" name="button">
 										<span class="switch-button"></span>
 									</div>
-							</label></li>
+								</label></li>
 						</ul>
 					</li>
 					<li><a href="#">Nozzles</a>
@@ -129,14 +127,14 @@
 										<input type="checkbox" name="button">
 										<span class="switch-button"></span>
 									</div>
-							</label></li>
+								</label></li>
 							<li> <label class="switch">
 									<span class="switch-text">in Heads</span>
 									<div class="switch-wrapper">
 										<input type="checkbox" name="button">
 										<span class="switch-button"></span>
 									</div>
-							</label></li>
+								</label></li>
 						</ul>
 					</li>
 					<li><a href="#">Flanges</a></li>
@@ -149,21 +147,26 @@
 										<input type="checkbox" name="button">
 										<span class="switch-button"></span>
 									</div>
-							</label></li>
+								</label></li>
 							<li> <label class="switch">
 									<span class="switch-text">Skirt</span>
 									<div class="switch-wrapper">
 										<input type="checkbox" name="button">
 										<span class="switch-button"></span>
 									</div>
-							</label></li><li> <label class="switch">
+								</label></li>
+							<li> <label class="switch">
 									<span class="switch-text">Saddle</span>
 									<div class="switch-wrapper">
 										<input type="checkbox" name="button">
 										<span class="switch-button"></span>
 									</div>
-							</label></li>
-		</ul></li></ul></nav></div>
+								</label></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
 
 		<!--
 		<div class="box wide hidden-on-narrow">
@@ -179,11 +182,12 @@
 		-->
 
 
-		<div class="contatoBtMais" id="divheader" style="display: block;">Adicionar</div>
+
 	</header>
 
 	<div class="pdf-page size-a4" id="design_page">
 		<main>
+
 			<div class="titulo-pagina">
 				<span class="company-logo">
 					WISECALC®
@@ -192,358 +196,387 @@
 
 
 			<div class="pdf-body">
-				<br><table border="">
-					<tbody><tr><th>PROJECT INFORMATION </th>
-					<td>
-						<div class="container-img-img">
-							<img src="/Testes/docs/img1.png" alt="teste">
-						</div>
-					</td>
-
-					</tr><tr>
-						<th>JOB NAME</th>
-						<td>
-							<div class="input-group">
-								<div class="input-box">
-									<input id="JOBNAME" type="text" required="">
+				<br>
+				<table border="">
+					<tbody>
+						<tr>
+							<th>PROJECT INFORMATION </th>
+							<td>
+								<div class="container-img-img">
+									<img src="/Testes/docs/img1.png" alt="teste">
 								</div>
-							</div>
-						</td>
+							</td>
 
-					</tr>
-
-					<tr>
-						<th>JOB NUMBER</th>
-						<td>
-							<div class="input-group">
-								<div class="input-box">
-									<input id="contas" type="number" required="">
+						</tr>
+						<tr>
+							<th>JOB NAME</th>
+							<td>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="JOBNAME" type="text" required="">
+									</div>
 								</div>
-							</div>
-						</td>
-					</tr>
+							</td>
 
-					<tr>
-						<th>TAG NUMBER</th>
-						<td>
-							<div class="input-group">
-								<div class="input-box">
-									<input id="contas" type="number" required="">
+						</tr>
+
+						<tr>
+							<th>JOB NUMBER</th>
+							<td>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="contas" type="text" required="">
+									</div>
 								</div>
-							</div>
-						</td>
-					</tr>
+							</td>
+						</tr>
 
-
-					<tr>
-						<th>EQUIPAMENT DESCRIPTION</th>
-						<td>
-							<div class="input-group">
-								<div class="input-box">
-									<input id="contas" type="text" required="">
+						<tr>
+							<th>TAG NUMBER</th>
+							<td>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="contas" type="text" required="">
+									</div>
 								</div>
-							</div>
-						</td>
-					</tr>
+							</td>
+						</tr>
 
-					<tr>
-						<th>CLIENT</th>
-						<td>
-							<div class="input-group">
-								<div class="input-box">
-									<input id="contas" type="text" required="">
+
+						<tr>
+							<th>EQUIPAMENT DESCRIPTION</th>
+							<td>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="contas" type="text" required="">
+									</div>
 								</div>
-							</div>
-						</td>
-					</tr>
+							</td>
+						</tr>
 
-					<tr>
-						<th>DOCUMENT NUMBER</th>
-						<td>
-							<div class="input-group">
-								<div class="input-box">
-									<input id="contas" type="number" required="">
+						<tr>
+							<th>CLIENT</th>
+							<td>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="contas" type="text" required="">
+									</div>
 								</div>
-							</div>
-						</td>
-					</tr>
+							</td>
+						</tr>
 
-					<tr>
-						<th>PREPARED BY</th>
-						<td>
-							<div class="input-group">
-								<div class="input-box">
-									<input id="contas" type="text" required="">
+						<tr>
+							<th>DOCUMENT NUMBER</th>
+							<td>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="contas" type="text" required="">
+									</div>
 								</div>
-							</div>
-						</td>
-					</tr>
+							</td>
+						</tr>
 
-					<tr>
-						<th>CHECKED BY</th>
-						<td>
-							<div class="input-group">
-								<div class="input-box">
-									<input id="contas" type="text" required="">
+						<tr>
+							<th>PREPARED BY</th>
+							<td>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="contas" type="text" required="">
+									</div>
 								</div>
-							</div>
-						</td>
-					</tr>
+							</td>
+						</tr>
 
-					<tr>
-						<th>APPROVED BY</th>
-						<td>
-							<div class="input-group">
-								<div class="input-box">
-									<input id="contas" type="text" required="">
+						<tr>
+							<th>CHECKED BY</th>
+							<td>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="contas" type="text" required="">
+									</div>
 								</div>
-							</div>
-						</td>
-					</tr>
+							</td>
+						</tr>
 
-					<tr>
-						<th>REVIEW DATE</th>
-						<td>
-							<div class="input-group">
-								<div class="input-box">
-									<input id="contas" type="date" required="">
+						<tr>
+							<th>APPROVED BY</th>
+							<td>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="contas" type="text" required="">
+									</div>
 								</div>
-							</div>
-						</td>
-					</tr>
+							</td>
+						</tr>
 
-					<tr>
-						<th>VESSEL INFORMATION</th>
-					</tr>
-
-					<tr>
-						<th>CODE DESIGN</th>
-						<td> </td>
-						<th>ASME VIII division 1</th>
-						<td> </td>
-					</tr>
-
-					<tr>
-						<th>DESIGN DATA</th>
-					</tr>
-
-					<tr>
-						<th></th>
-						<td></td>
-						<th>VALUE</th>
-						<th>UNITS</th>
-					</tr>
-
-					<tr>
-						<td>DESIGN INTERNAL PRESSURE</td>
-						<th>Pint</th>
-						<td>
-							<div class="input-group">
-								<div class="input-box">
-									<input id="contas" type="text" required="">
+						<tr>
+							<th>REVIEW DATE</th>
+							<td>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="contas" type="date" required="">
+									</div>
 								</div>
-							</div>
-						</td>
-						<td>MPa</td>
-					</tr>
+							</td>
+						</tr>
 
-					<tr>
-						<td>DESIGN EXTERNAL PRESSURE</td>
-						<th>Pext</th>
-						<td>
-							<div class="input-group">
-								<div class="input-box">
-									<input id="contas" type="text" required="">
+						<tr>
+							<th>VESSEL INFORMATION</th>
+						</tr>
+
+						<tr>
+							<th>CODE DESIGN</th>
+							<td> </td>
+							<th>ASME VIII division 1</th>
+							<td> </td>
+						</tr>
+
+						<tr>
+							<th>DESIGN DATA</th>
+						</tr>
+
+						<tr>
+							<th></th>
+							<td></td>
+							<th>VALUE</th>
+							<th>UNITS</th>
+						</tr>
+
+						<tr>
+							<td>DESIGN INTERNAL PRESSURE</td>
+							<th>Pint</th>
+							<td>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="contas" type="text" required="">
+									</div>
 								</div>
-							</div>
-						</td>
-						<td>MPa</td>
-					</tr>
+							</td>
+							<td>MPa</td>
+						</tr>
 
-					<tr>
-						<td>DESIGN TEMPERATURE</td>
-						<th>DT ≤</th>
-						<td>
-							<select>
-								<option>37,78</option>
-								<option>65,56</option>
-								<option>93,33</option>
-								<option>121,11</option>
-								<option>148,89</option>
-								<option>204,44</option>
-								<option>260,00</option>
-							</select>
-						</td>
-						<td>°C</td>
-					</tr>
-
-					<tr>
-						<td>ROOM TEMPERATURE</td>
-						<th>RT</th>
-						<td>
-							<div class="input-group">
-								<div class="input-box">
-									<input id="contas" type="number" required="">
-								</div>
-						</div></td>
-						<td>--</td>
-					</tr>
-
-					<tr>
-						<td>FLUID</td>
-						<th>--</th>
-						<td>
-							<div class="input-group">
+						<tr>
+							<td>DESIGN EXTERNAL PRESSURE</td>
+							<th>Pext</th>
+							<td>
 								<div class="input-box">
 									<input id="contas" type="text" required="">
 								</div>
-						</div></td>
-						<td>--</td>
-					</tr>
+							</td>
+							<td>MPa</td>
+						</tr>
 
-					<tr>
-						<td>DENSITY</td>
-						<th>dens</th>
-						<td>
-							<div class="input-group">
-								<div class="input-box">
-									<input id="contas" type="text" required="">
+						<tr>
+							<td>DESIGN TEMPERATURE</td>
+							<th>DT ≤</th>
+							<td>
+								<select>
+									<option>37,78</option>
+									<option>65,56</option>
+									<option>93,33</option>
+									<option>121,11</option>
+									<option>148,89</option>
+									<option>204,44</option>
+									<option>260,00</option>
+									<option>315,56</option>
+									<option>343,33</option>
+									<option>371,11</option>
+									<option>398,89</option>
+									<option>426,67</option>
+									<option>454,44</option>
+									<option>482,22</option>
+									<option>510,00</option>
+									<option>537,78</option>
+									<option>565,56</option>
+									<option>593,33</option>
+									<option>621,11</option>
+									<option>648,89</option>
+									<option>676,67</option>
+									<option>704,44</option>
+									<option>732,22</option>
+									<option>760,00</option>
+									<option>787,78</option>
+									<option>815,56</option>
+									<option>843,33</option>
+									<option>871,11</option>
+									<option>898,89</option>
+								</select>
+							</td>
+							<td>°C</td>
+						</tr>
+
+						<tr>
+							<td>ROOM TEMPERATURE</td>
+							<th>RT</th>
+							<td>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="contas" type="number" required="">
+									</div>
 								</div>
-						</div></td>
-						<td>kg/m^3</td>
-					</tr>
+							</td>
+							<td>--</td>
+						</tr>
 
-					<tr>
-						<td>POSITION</td>
-						<th>-</th>
-						<td>
-							<select>
-								<option>Vertical</option>
-								<option>Horizontal</option>
-								<option>Inclined</option>
-								<option>-</option>
-							</select>
-						</td>
-						<td>-</td>
-					</tr>
-
-					<tr>
-						<td>CORROSION ALLOWANCE</td>
-						<th>CA</th>
-						<td>
-							<div class="input-group">
-								<div class="input-box">
-									<input id="contas" type="text" required="">
+						<tr>
+							<td>FLUID</td>
+							<th>--</th>
+							<td>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="contas" type="text" required="">
+									</div>
 								</div>
-						</div></td>
-						<td>mm</td>
-					</tr>
+							</td>
+							<td>--</td>
+						</tr>
 
-					<tr>
-						<td>WELDED JOINT LOCATION</td>
-						<th>-</th>
-						<td>
-							<select id="select_join">
-								
+						<tr>
+							<td>DENSITY</td>
+							<th>dens</th>
+							<td>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="contas" type="text" required="">
+									</div>
+								</div>
+							</td>
+							<td>kg/m^3</td>
+						</tr>
+
+						<tr>
+							<td>POSITION</td>
+							<th>-</th>
+							<td>
+								<select>
+									<option>Vertical</option>
+									<option>Horizontal</option>
+									<option>Inclined</option>
+									<option>-</option>
+								</select>
+							</td>
+							<td>-</td>
+						</tr>
+
+						<tr>
+							<td>CORROSION ALLOWANCE</td>
+							<th>CA</th>
+							<td>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="contas" type="text" required="">
+									</div>
+								</div>
+							</td>
+							<td>mm</td>
+						</tr>
+
+						<tr>
+							<td>WELDED JOINT LOCATION</td>
+							<th>-</th>
+							<td>
+								<select id="select_join">
+
 									<option>Join_A</option>
 									<option>Join_B</option>
 									<option>Join_C</option>
 									<option>Join_D</option>
-								
-							</select>
-						</td>
-						<td>-</td>
-					</tr>
 
-					<tr>
-						<td>RADIOGRAPHY</td>
-						<th>-</th>
-						<td>
-							<div id="opt_A">
-								<select>
-									<option>Full_A</option>
-									<option>Spot_A</option>
-									<option>None_A</option>
 								</select>
-							</div>
-							<div id="opt_B" style="display: none;">
-								<select>
-									<option>Full_B</option>
-									<option>Spot_B</option>
-									<option>None_B</option>
-								</select>
-							</div>
-							<div id="opt_C" style="display: none;">
-								<select>
-									<option>Full_C</option>
-									<option>Spot_C</option>
-									<option>None_C</option>
-								</select>
-							</div>
-							<div id="opt_D" style="display: none;">
-								<select>
-									<option>Full_D</option>
-									<option>Spot_D</option>
-									<option>None_D</option>
-								</select>
-							</div>
-						</td>
-						<td>--</td>
-					</tr>
+							</td>
+							<td>-</td>
+						</tr>
 
-					<tr>
-						<td>POST WELD HEAT TREATMENT</td>
-						<th>-</th>
-						<td>
-							<select>
-								<option>Yes</option>
-								<option>No</option>
-								<option>-</option>
-							</select>
-						</td>
-						<td>--</td>
-					</tr>
-
-					<tr>
-						<td>WIND LOAD (NBR-6123)</td>
-						<th>-</th>
-						<td>
-							<select>
-								<option>Yes</option>
-								<option>No</option>
-								<option>-</option>
-							</select>
-						</td>
-						<td>--</td>
-					</tr>
-
-					<tr>
-						<td>Media</td>
-						<th>
-							<div class="input-group">
-								<div class="input-box">
-									<input id="num1" type="number">
+						<tr>
+							<td>RADIOGRAPHY</td>
+							<th>-</th>
+							<td>
+								<div id="opt_A">
+									<select>
+										<option>Full_A</option>
+										<option>Spot_A</option>
+										<option>None_A</option>
+									</select>
 								</div>
-							</div>
-						</th>
-						<td>
-							<div class="input-group">
-								<div class="input-box">
-									<input id="num2" type="number">
+								<div id="opt_B" style="display: none;">
+									<select>
+										<option>Full_B</option>
+										<option>Spot_B</option>
+										<option>None_B</option>
+									</select>
 								</div>
-							</div>
-						</td>
-						<td>
-							<span id="resp"></span>
-						</td>
-					</tr>
+								<div id="opt_C" style="display: none;">
+									<select>
+										<option>Full_C</option>
+										<option>Spot_C</option>
+										<option>None_C</option>
+									</select>
+								</div>
+								<div id="opt_D" style="display: none;">
+									<select>
+										<option>Full_D</option>
+										<option>Spot_D</option>
+										<option>None_D</option>
+									</select>
+								</div>
+							</td>
+							<td>--</td>
+						</tr>
 
-				</tbody></table>
+						<tr>
+							<td>POST WELD HEAT TREATMENT</td>
+							<th>-</th>
+							<td>
+								<select>
+									<option>Yes</option>
+									<option>No</option>
+									<option>-</option>
+								</select>
+							</td>
+							<td>--</td>
+						</tr>
+
+						<tr>
+							<td>WIND LOAD (NBR-6123)</td>
+							<th>-</th>
+							<td>
+								<select>
+									<option>Yes</option>
+									<option>No</option>
+									<option>-</option>
+								</select>
+							</td>
+							<td>--</td>
+						</tr>
+
+						<tr>
+							<td>Media</td>
+							<th>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="num1" type="number">
+									</div>
+								</div>
+							</th>
+							<td>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="num2" type="number">
+									</div>
+								</div>
+							</td>
+							<td>
+								<span id="resp"></span>
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
 			</div>
 
-	</main></div>
+		</main>
+	</div>
 
-			
 	<div class="pdf-page size-a4" id="cilindrical_page" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
@@ -553,182 +586,197 @@
 			</div>
 
 			<div class="pdf-body">
-				<br><table border="">
-					<tbody><tr><th>CYLINDRICAL SHELL UNDER INTERNAL PRESSURE ACCORDING TO ASME VIII DIV.1 (UG - 27)
-						<div class="container-img-img">
-							<img src="/Testes/docs/cilindro.png" alt="teste">
-						</div>
-					</th>
+				<br>
+				<table border="">
+					<tbody>
+						<tr>
+							<th>CYLINDRICAL SHELL UNDER INTERNAL PRESSURE ACCORDING TO ASME VIII DIV.1 (UG - 27)
+								<div class="container-img-img">
+									<img src="/Testes/docs/cilindro.png" alt="teste">
+								</div>
+							</th>
 
 
 
-					</tr></tbody></table><table border="">
-						<tbody><tr><th>DESIGN DATA</th>
-						<th>SYMBOLS USED IN THE FORMULAS AND DRAWING</th>
-					</tr></tbody></table>
+						</tr>
+					</tbody>
+				</table>
+				<table border="">
+					<tbody>
+						<tr>
+							<th>DESIGN DATA</th>
+							<th>SYMBOLS USED IN THE FORMULAS AND DRAWING</th>
+						</tr>
+					</tbody>
+				</table>
 
-					<table border="">
-						<tbody><tr><th>MATERIAL SPECIFICATION (ASME II part D)</th>
-						<td>
-							<select>
-								<option>37,78</option>
-								<option>65,56</option>
-								<option>93,33</option>
-								<option>121,11</option>
-								<option>148,89</option>
-								<option>204,44</option>
-								<option>260,00</option>
-							</select>
+				<table border="">
+					<tbody>
+						<tr>
+							<th>MATERIAL SPECIFICATION (ASME II part D)</th>
+							<td>
+								<select>
+									<option>37,78</option>
+									<option>65,56</option>
+									<option>93,33</option>
+									<option>121,11</option>
+									<option>148,89</option>
+									<option>204,44</option>
+									<option>260,00</option>
+								</select>
 
 
 
-							</td></tr><tr>
-								<th>NOMINAL COMPOSITION</th>
-								<td>Carbon steel</td>
-								<th></th>
-							</tr>
+							</td>
+						</tr>
+						<tr>
+							<th>NOMINAL COMPOSITION</th>
+							<td>Carbon steel</td>
+							<th></th>
+						</tr>
 
-							<tr>
-								<th>PRODUCT FORM</th>
-								<td>Plate</td>
-								<th>UNITS</th>
-							</tr>
+						<tr>
+							<th>PRODUCT FORM</th>
+							<td>Plate</td>
+							<th>UNITS</th>
+						</tr>
 
-							<tr>
-								<th>ALLOY DESIG./UNS No.</th>
-								<td>K01700</td>
-								<th></th>
-							</tr>
+						<tr>
+							<th>ALLOY DESIG./UNS No.</th>
+							<td>K01700</td>
+							<th></th>
+						</tr>
 
-							<tr>
-								<th>CLASS/ CONDITION/ TEMPER</th>
-								<td>…</td>
-								<th></th>
-							</tr>
+						<tr>
+							<th>CLASS/ CONDITION/ TEMPER</th>
+							<td>…</td>
+							<th></th>
+						</tr>
 
-							<tr>
-								<th>P-No.</th>
-								<td>1</td>
-								<th></th>
-							</tr>
+						<tr>
+							<th>P-No.</th>
+							<td>1</td>
+							<th></th>
+						</tr>
 
-							<tr>
-								<th>GROUP No.</th>
-								<td>1</td>
-								<th></th>
-							</tr>
+						<tr>
+							<th>GROUP No.</th>
+							<td>1</td>
+							<th></th>
+						</tr>
 
-							<tr>
-								<th>MIN. TENSILE STRENGTH</th>
-								<td>310,3</td>
-								<th>MPa</th>
-							</tr>
+						<tr>
+							<th>MIN. TENSILE STRENGTH</th>
+							<td>310,3</td>
+							<th>MPa</th>
+						</tr>
 
-							<tr>
-								<th>MIN. YIELD STRENGTH</th>
-								<td>165,5</td>
-								<th>MPa</th>
-							</tr>
+						<tr>
+							<th>MIN. YIELD STRENGTH</th>
+							<td>165,5</td>
+							<th>MPa</th>
+						</tr>
 
-							<tr>
-								<th>VIII-1—Applic, and Max, Temp, Limit (°C)</th>
-								<td>NP</td>
-								<th></th>
-							</tr>
+						<tr>
+							<th>VIII-1—Applic, and Max, Temp, Limit (°C)</th>
+							<td>NP</td>
+							<th></th>
+						</tr>
 
-							<tr>
-								<th>DESIGN TEMPERATURE</th>
-								<td>DT</td>
-								<th>260,00</th>
-								<td>°C</td>
-							</tr>
+						<tr>
+							<th>DESIGN TEMPERATURE</th>
+							<td>DT</td>
+							<th>260,00</th>
+							<td>°C</td>
+						</tr>
 
-							<tr>
-								<th>INSIDE DIAMETER</th>
-								<td>DI</td>
-								<td>
-									<div class="input-group">
-										<div class="input-box">
-											<input id="INSIDE_DIAMETER _VALUE" type="number" required="">
-										</div>
+						<tr>
+							<th>INSIDE DIAMETER</th>
+							<td>DI</td>
+							<td>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="INSIDE_DIAMETER _VALUE" type="number" required="">
 									</div>
-								</td>
-								<td>mm</td>
-							</tr>
+								</div>
+							</td>
+							<td>mm</td>
+						</tr>
 
-							<tr>
-								<th>LIQUID COLUMN</th>
-								<td>H</td>
-								<td>
-									<div class="input-group">
-										<div class="input-box">
-											<input id="LIQUID_COLUMN_VALUE" type="number" required="">
-										</div>
+						<tr>
+							<th>LIQUID COLUMN</th>
+							<td>H</td>
+							<td>
+								<div class="input-group">
+									<div class="input-box">
+										<input id="LIQUID_COLUMN_VALUE" type="number" required="">
 									</div>
-								</td>
-								<td>m</td>
-							</tr>
+								</div>
+							</td>
+							<td>m</td>
+						</tr>
 
-							<tr>
-								<th>FLUID DENSITY</th>
-								<td>ρ</td>
-								<td>1000</td>
-								<td>kg/m^3</td>
-							</tr>
+						<tr>
+							<th>FLUID DENSITY</th>
+							<td>ρ</td>
+							<td>1000</td>
+							<td>kg/m^3</td>
+						</tr>
 
-							<tr>
-								<th>DESIGN PRESSURE ON THE TOP OF THE VESSEL</th>
-								<td>Pint</td>
-								<td>2</td>
-								<td>MPa</td>
-							</tr>
+						<tr>
+							<th>DESIGN PRESSURE ON THE TOP OF THE VESSEL</th>
+							<td>Pint</td>
+							<td>2</td>
+							<td>MPa</td>
+						</tr>
 
-							<tr>
-								<th>DESIGN PRESSURE</th>
-								<td>P</td>
-								<td>2</td>
-								<td>MPa</td>
-							</tr>
+						<tr>
+							<th>DESIGN PRESSURE</th>
+							<td>P</td>
+							<td>2</td>
+							<td>MPa</td>
+						</tr>
 
-							<tr>
-								<th>ADMISSIBLE STRESS @ DESIGN TEMPERATURE</th>
-								<td>Sh</td>
-								<td>88,94</td>
-								<td>MPa</td>
-							</tr>
+						<tr>
+							<th>ADMISSIBLE STRESS @ DESIGN TEMPERATURE</th>
+							<td>Sh</td>
+							<td>88,94</td>
+							<td>MPa</td>
+						</tr>
 
-							<tr>
-								<th>ADMISSIBLE STRESS @ ROOM TEMPERATURE</th>
-								<td>Sc</td>
-								<td>88,94</td>
-								<td>MPa</td>
-							</tr>
+						<tr>
+							<th>ADMISSIBLE STRESS @ ROOM TEMPERATURE</th>
+							<td>Sc</td>
+							<td>88,94</td>
+							<td>MPa</td>
+						</tr>
 
-							<tr>
-								<th>INSIDE RADIUS</th>
-								<td>Ri</td>
-								<td>410</td>
-								<td>mm</td>
-							</tr>
+						<tr>
+							<th>INSIDE RADIUS</th>
+							<td>Ri</td>
+							<td>410</td>
+							<td>mm</td>
+						</tr>
 
-							<tr>
-								<th>INSIDE RADIUS CORRODED</th>
-								<td>Ric</td>
-								<td>413</td>
-								<td>mm</td>
-							</tr>
+						<tr>
+							<th>INSIDE RADIUS CORRODED</th>
+							<td>Ric</td>
+							<td>413</td>
+							<td>mm</td>
+						</tr>
 
-							<tr>
-								<th>CORROSION ALLOWANCE</th>
-								<td>CA</td>
-								<td>3</td>
-								<td>mm</td>
-							</tr>
+						<tr>
+							<th>CORROSION ALLOWANCE</th>
+							<td>CA</td>
+							<td>3</td>
+							<td>mm</td>
+						</tr>
 
 
 
-					</tbody></table>
-					<!-- PDF TERMINA AQUI -->
+					</tbody>
+				</table>
+				<!-- PDF TERMINA AQUI -->
 
 			</div>
 		</main>
@@ -745,118 +793,120 @@
 			<div class="pdf-body">
 				<table border="">
 
-					<tbody><tr>
-						<th>NOMINAL THICKNESS minus Corrosion Allowance</th>
-						<td>t'</td>
-						<td>12,9</td>
-						<td>mm</td>
-					</tr>
+					<tbody>
+						<tr>
+							<th>NOMINAL THICKNESS minus Corrosion Allowance</th>
+							<td>t'</td>
+							<td>12,9</td>
+							<td>mm</td>
+						</tr>
 
-					<tr>
-						<th>WELDED JOINT EFFICIENCY</th>
-						<td>E</td>
-						<td>
-							<select>
-								<option>1</option>
-								<option>0,90</option>
-						</select></td>
-						<td>coef.</td>
-					</tr>
+						<tr>
+							<th>WELDED JOINT EFFICIENCY</th>
+							<td>E</td>
+							<td>
+								<select>
+									<option>1</option>
+									<option>0,90</option>
+								</select></td>
+							<td>coef.</td>
+						</tr>
 
-					<tr>
-						<th>NOMINAL THICKNESS</th>
-						<td>tn</td>
-						<td>
-							<select>
-								<option>ASTM_A20</option>
-								<option>4,76</option>
-								<option>6,35</option>
-								<option>7,94</option>
-								<option>9,53</option>
-								<option>11,11</option>
-								<option>12,7</option>
-								<option>14,29</option>
-						</select></td>
-						<td>coef.</td>
-					</tr>
+						<tr>
+							<th>NOMINAL THICKNESS</th>
+							<td>tn</td>
+							<td>
+								<select>
+									<option>ASTM_A20</option>
+									<option>4,76</option>
+									<option>6,35</option>
+									<option>7,94</option>
+									<option>9,53</option>
+									<option>11,11</option>
+									<option>12,7</option>
+									<option>14,29</option>
+								</select></td>
+							<td>coef.</td>
+						</tr>
 
-					<tr>
-						<th>DESIGN VALIDATION</th>
-						<td>-</td>
-						<td>INVALID NOMINAL THICKNESS</td>
-						<!-- "VALID NOMINAL THICKNESS"; "INVALID NOMINAL THICKNESS"-->
-						<td>-</td>
-					</tr>
-					<tr>
-						<th>DESIGN VALIDATION</th>
-						<td>-</td>
-						<td>FOR MAXIMUM CIRCUMFERENTIAL STRESS</td>
-						<td>-</td>
-					</tr>
+						<tr>
+							<th>DESIGN VALIDATION</th>
+							<td>-</td>
+							<td>INVALID NOMINAL THICKNESS</td>
+							<!-- "VALID NOMINAL THICKNESS"; "INVALID NOMINAL THICKNESS"-->
+							<td>-</td>
+						</tr>
+						<tr>
+							<th>DESIGN VALIDATION</th>
+							<td>-</td>
+							<td>FOR MAXIMUM CIRCUMFERENTIAL STRESS</td>
+							<td>-</td>
+						</tr>
 
-					<tr>
-						<th>DESIGN THICKNESS </th>
-					</tr>
+						<tr>
+							<th>DESIGN THICKNESS </th>
+						</tr>
 
-					<tr>
-						<td>FOR MAXIMUM CIRCUMFERENTIAL STRESS</td>
-					</tr>
-
-
-					<tr>
-						<td>LONGITUDINAL JOINTS
-							<div class="container-img-calc">
-								<img src="/Testes/docs/calc 1.png" alt="teste">
-							</div>
-						</td>
-						<td>t</td>
-						<td>13,476</td>
-						<td>mm</td>
-					</tr>
-
-					<tr>
-						<th>WORKING MAXIMUM ALLOWABLE PRESSURE</th>
-					</tr>
+						<tr>
+							<td>FOR MAXIMUM CIRCUMFERENTIAL STRESS</td>
+						</tr>
 
 
-					<tr>
-						<td>LONGITUDINAL JOINTS
-							<div class="container-img-calc">
-								<img src="/Testes/docs/calc 2.png" alt="teste">
-							</div>
-						</td>
-						<td>MAWPc</td>
-						<td>0.951</td>
-						<td>MPa</td>
-					</tr>
+						<tr>
+							<td>LONGITUDINAL JOINTS
+								<div class="container-img-calc">
+									<img src="/Testes/docs/calc 1.png" alt="teste">
+								</div>
+							</td>
+							<td>t</td>
+							<td>13,476</td>
+							<td>mm</td>
+						</tr>
 
-					<tr>
-						<th>HIDROSTATIC TEST PRESSURE</th>
-					</tr>
+						<tr>
+							<th>WORKING MAXIMUM ALLOWABLE PRESSURE</th>
+						</tr>
 
-					<tr>
-						<td>LONGITUDINAL JOINTS
-							<div class="container-img-calc">
-								<img src="/Testes/docs/calc 3.png" alt="teste">
-							</div>
-						</td>
-						<td>HTP</td>
-						<td>10,949</td>
-						<td>MPa</td>
-					</tr>
 
-					<tr>
-						<td>PNEUMATIC TEST PRESSURE
-							<div class="container-img-calc">
-								<img src="/Testes/docs/calc 4.png" alt="teste">
-							</div>
-						</td>
-						<td>PTP</td>
-						<td>9,262</td>
-						<td>MPa</td>
-					</tr>
+						<tr>
+							<td>LONGITUDINAL JOINTS
+								<div class="container-img-calc">
+									<img src="/Testes/docs/calc 2.png" alt="teste">
+								</div>
+							</td>
+							<td>MAWPc</td>
+							<td>0.951</td>
+							<td>MPa</td>
+						</tr>
 
-				</tbody></table>
+						<tr>
+							<th>HIDROSTATIC TEST PRESSURE</th>
+						</tr>
+
+						<tr>
+							<td>LONGITUDINAL JOINTS
+								<div class="container-img-calc">
+									<img src="/Testes/docs/calc 3.png" alt="teste">
+								</div>
+							</td>
+							<td>HTP</td>
+							<td>10,949</td>
+							<td>MPa</td>
+						</tr>
+
+						<tr>
+							<td>PNEUMATIC TEST PRESSURE
+								<div class="container-img-calc">
+									<img src="/Testes/docs/calc 4.png" alt="teste">
+								</div>
+							</td>
+							<td>PTP</td>
+							<td>9,262</td>
+							<td>MPa</td>
+						</tr>
+
+					</tbody>
+				</table>
 			</div>
 			<!-- PDF TERMINA AQUI -->
 
@@ -872,38 +922,51 @@
 			</div>
 
 			<div class="pdf-body">
-				<br><table border="">
-					<tbody><tr><th>CONICAL SHELL/HEADS UNDER PRESSURE ON CONCAVE SIDE ACCORDING TO ASME VIII DIV.1 (UG - 32
-						(f))
-						<div class="container-img-img">
-							<img src="/Testes/docs/CONICAL SHELL.png" alt="teste">
-						</div>
-					</th>
+				<br>
+				<table border="">
+					<tbody>
+						<tr>
+							<th>CONICAL SHELL/HEADS UNDER PRESSURE ON CONCAVE SIDE ACCORDING TO ASME VIII DIV.1 (UG - 32
+								(f))
+								<div class="container-img-img">
+									<img src="/Testes/docs/CONICAL SHELL.png" alt="teste">
+								</div>
+							</th>
 
 
 
-					</tr></tbody></table><table border="">
-						<tbody><tr><th>DESIGN DATA</th>
-						<th>SYMBOLS USED IN THE FORMULAS AND DRAWING</th>
-					</tr></tbody></table>
+						</tr>
+					</tbody>
+				</table>
+				<table border="">
+					<tbody>
+						<tr>
+							<th>DESIGN DATA</th>
+							<th>SYMBOLS USED IN THE FORMULAS AND DRAWING</th>
+						</tr>
+					</tbody>
+				</table>
 
-					<table border="">
-						<tbody><tr><th>MATERIAL SPECIFICATION (ASME II part D)</th>
-						<td>
-							<select>
-								<option>SA-312 TP316H</option>
-								<option>SA-249 TP316H</option>
-								<option>SA-240 316H</option>
-								<option>SA-213 TP316H</option>
-								<option>SA/JIS G4303 SUS316</option>
-								<option>SA-814 TP316</option>
-								<option>SA-813 TP316</option>
-							</select>
+				<table border="">
+					<tbody>
+						<tr>
+							<th>MATERIAL SPECIFICATION (ASME II part D)</th>
+							<td>
+								<select>
+									<option>SA-312 TP316H</option>
+									<option>SA-249 TP316H</option>
+									<option>SA-240 316H</option>
+									<option>SA-213 TP316H</option>
+									<option>SA/JIS G4303 SUS316</option>
+									<option>SA-814 TP316</option>
+									<option>SA-813 TP316</option>
+								</select>
 
-						</td>
-						<th></th>
+							</td>
+							<th></th>
 
-						</tr><tr>
+						</tr>
+						<tr>
 							<th>NOMINAL COMPOSITION</th>
 							<td>16Cr–12Ni–2Mo</td>
 							<th></th>
@@ -1056,7 +1119,8 @@
 							<td>◦</td>
 						</tr>
 
-					</tbody></table>
+					</tbody>
+				</table>
 			</div>
 		</main>
 	</div>
@@ -1071,127 +1135,129 @@
 			<div class="pdf-body">
 				<table border="">
 
-					<tbody><tr>
-						<th>HALF APLE-AXE ANGLE</th>
-						<td></td>
-						<td>0,524</td>
-						<td>rad</td>
-					</tr>
+					<tbody>
+						<tr>
+							<th>HALF APLE-AXE ANGLE</th>
+							<td></td>
+							<td>0,524</td>
+							<td>rad</td>
+						</tr>
 
-					<tr>
-						<th>CORROSION ALLOWANCE</th>
-						<td>CA</td>
-						<td>3</td>
-						<td>mm</td>
-					</tr>
+						<tr>
+							<th>CORROSION ALLOWANCE</th>
+							<td>CA</td>
+							<td>3</td>
+							<td>mm</td>
+						</tr>
 
-					<tr>
-						<th>NOMINAL THICKNESS minus Corrosion Allowance</th>
-						<td>t'</td>
-						<td>9,7</td>
-						<td>mm</td>
-					</tr>
+						<tr>
+							<th>NOMINAL THICKNESS minus Corrosion Allowance</th>
+							<td>t'</td>
+							<td>9,7</td>
+							<td>mm</td>
+						</tr>
 
-					<tr>
-						<th>WELDED JOINT EFFICIENCY</th>
-						<td>E</td>
-						<td>
-							<select>
-								<option>1,0</option>
-								<option>0,9</option>
-						</select></td> <!-- "VALID NOMINAL THICKNESS"; "INVALID NOMINAL THICKNESS"-->
-						<td>-</td>
-					</tr>
-					<tr>
-						<th>NOMINAL THICKNESS</th>
-						<td>tn</td>
-						<td>
-							<option>ASTM_A20</option>
-							<option>4,76</option>
-							<option>7,94</option>
-							<option>9,53</option>
-						</td>
-						<td>-</td>
-					</tr>
+						<tr>
+							<th>WELDED JOINT EFFICIENCY</th>
+							<td>E</td>
+							<td>
+								<select>
+									<option>1,0</option>
+									<option>0,9</option>
+								</select></td> <!-- "VALID NOMINAL THICKNESS"; "INVALID NOMINAL THICKNESS"-->
+							<td>-</td>
+						</tr>
+						<tr>
+							<th>NOMINAL THICKNESS</th>
+							<td>tn</td>
+							<td>
+								<option>ASTM_A20</option>
+								<option>4,76</option>
+								<option>7,94</option>
+								<option>9,53</option>
+							</td>
+							<td>-</td>
+						</tr>
 
-					<tr>
-						<th>DESIGN VALIDATION</th>
-						<td>-</td>
-						<td>VALID NOMINAL THICKNESS</td>
-						<td>-</td>
-					</tr>
+						<tr>
+							<th>DESIGN VALIDATION</th>
+							<td>-</td>
+							<td>VALID NOMINAL THICKNESS</td>
+							<td>-</td>
+						</tr>
 
-					<tr>
-						<td>"DESIGN THICKNESS </td>
-					</tr>
+						<tr>
+							<td>"DESIGN THICKNESS </td>
+						</tr>
 
-					<tr>
-						<td>FOR MAXIMUM CIRCUMFERENTIAL STRESS"</td>
-					</tr>
+						<tr>
+							<td>FOR MAXIMUM CIRCUMFERENTIAL STRESS"</td>
+						</tr>
 
-					<tr>
-						<th>WORKING MAXIMUM ALLOWABLE PRESSURE CORRODED AND HOT</th>
-						<th></th>
-					</tr>
+						<tr>
+							<th>WORKING MAXIMUM ALLOWABLE PRESSURE CORRODED AND HOT</th>
+							<th></th>
+						</tr>
 
-					<tr>
-						<td>LONGITUDINAL JOINTS
-							<div class="container-conical_calc">
-								<img src="/Testes/docs/conical calc1.png" alt="teste">
-							</div>
-						</td>
-						<td>t</td>
-						<td>7,704</td>
-						<td>mm</td>
-					</tr>
+						<tr>
+							<td>LONGITUDINAL JOINTS
+								<div class="container-conical_calc">
+									<img src="/Testes/docs/conical calc1.png" alt="teste">
+								</div>
+							</td>
+							<td>t</td>
+							<td>7,704</td>
+							<td>mm</td>
+						</tr>
 
-					<tr>
-						<th>WORKING MAXIMUM ALLOWABLE PRESSURE CORRODED AND HOT</th>
-					</tr>
+						<tr>
+							<th>WORKING MAXIMUM ALLOWABLE PRESSURE CORRODED AND HOT</th>
+						</tr>
 
 
-					<tr>
-						<td>LONGITUDINAL JOINTS
-							<div class="container-conical_calc">
-								<img src="/Testes/docs/conical calc2.png" alt="teste">
-							</div>
-						</td>
-						<td>MAWPc</td>
-						<td>2,512</td>
-						<td>MPa</td>
-					</tr>
+						<tr>
+							<td>LONGITUDINAL JOINTS
+								<div class="container-conical_calc">
+									<img src="/Testes/docs/conical calc2.png" alt="teste">
+								</div>
+							</td>
+							<td>MAWPc</td>
+							<td>2,512</td>
+							<td>MPa</td>
+						</tr>
 
-					<tr>
-						<th>HIDROSTATIC TEST PRESSURE</th>
-					</tr>
+						<tr>
+							<th>HIDROSTATIC TEST PRESSURE</th>
+						</tr>
 
-					<tr>
-						<td>
-							<div class="container-conical_calc">
-								<img src="/Testes/docs/conical calc3.png" alt="teste">
-							</div>
-						</td>
-						<td>HTP</td>
-						<td>3,628</td>
-						<td>MPa</td>
-					</tr>
+						<tr>
+							<td>
+								<div class="container-conical_calc">
+									<img src="/Testes/docs/conical calc3.png" alt="teste">
+								</div>
+							</td>
+							<td>HTP</td>
+							<td>3,628</td>
+							<td>MPa</td>
+						</tr>
 
-					<tr>
-						<th>PNEUMATIC TEST PRESSURE</th>
-					</tr>
+						<tr>
+							<th>PNEUMATIC TEST PRESSURE</th>
+						</tr>
 
-					<tr>
-						<td>
-							<div class="container-conical_calc">
-								<img src="/Testes/docs/conical calc4.png" alt="teste">
-							</div>
-						</td>
-						<td>PTP</td>
-						<td>3,070</td>
-						<td>MPa</td>
-					</tr>
+						<tr>
+							<td>
+								<div class="container-conical_calc">
+									<img src="/Testes/docs/conical calc4.png" alt="teste">
+								</div>
+							</td>
+							<td>PTP</td>
+							<td>3,070</td>
+							<td>MPa</td>
+						</tr>
 
-				</tbody></table>
+					</tbody>
+				</table>
 			</div>
 		</main>
 	</div>
@@ -1205,38 +1271,51 @@
 			</div>
 
 			<div class="pdf-body">
-				<br><table border="">
-					<tbody><tr><th>SPHERICAL SHELL/HEADS UNDER PRESSURE ON CONCAVE SIDE ACCORDING TO ASME VIII DIV.1 (UG -
-						27)
-						<div class="container-img-img">
-							<img src="/Testes/docs/SPHERICAL SHELL.png" alt="teste">
-						</div>
-					</th>
+				<br>
+				<table border="">
+					<tbody>
+						<tr>
+							<th>SPHERICAL SHELL/HEADS UNDER PRESSURE ON CONCAVE SIDE ACCORDING TO ASME VIII DIV.1 (UG -
+								27)
+								<div class="container-img-img">
+									<img src="/Testes/docs/SPHERICAL SHELL.png" alt="teste">
+								</div>
+							</th>
 
 
 
-					</tr></tbody></table><table border="">
-						<tbody><tr><th>DESIGN DATA</th>
-						<th>SYMBOLS USED IN THE FORMULAS AND DRAWING</th>
-					</tr></tbody></table>
+						</tr>
+					</tbody>
+				</table>
+				<table border="">
+					<tbody>
+						<tr>
+							<th>DESIGN DATA</th>
+							<th>SYMBOLS USED IN THE FORMULAS AND DRAWING</th>
+						</tr>
+					</tbody>
+				</table>
 
-					<table border="">
-						<tbody><tr><th>MATERIAL SPECIFICATION (ASME II part D)</th>
-						<td>
-							<select>
-								<option>SA-312 TP316H</option>
-								<option>SA-249 TP316H</option>
-								<option>SA-240 316H</option>
-								<option>SA-213 TP316H</option>
-								<option>SA/JIS G4303 SUS316</option>
-								<option>SA-814 TP316</option>
-								<option>SA-813 TP316</option>
-							</select>
+				<table border="">
+					<tbody>
+						<tr>
+							<th>MATERIAL SPECIFICATION (ASME II part D)</th>
+							<td>
+								<select>
+									<option>SA-312 TP316H</option>
+									<option>SA-249 TP316H</option>
+									<option>SA-240 316H</option>
+									<option>SA-213 TP316H</option>
+									<option>SA/JIS G4303 SUS316</option>
+									<option>SA-814 TP316</option>
+									<option>SA-813 TP316</option>
+								</select>
 
-						</td>
-						<th></th>
+							</td>
+							<th></th>
 
-						</tr><tr>
+						</tr>
+						<tr>
 							<th>NOMINAL COMPOSITION</th>
 							<td>Carbon steel</td>
 							<th></th>
@@ -1389,7 +1468,8 @@
 							<td>◦</td>
 						</tr>
 
-					</tbody></table>
+					</tbody>
+				</table>
 			</div>
 		</main>
 	</div>
@@ -1405,110 +1485,112 @@
 			<div class="pdf-body">
 				<table border="">
 
-					<tbody><tr>
-						<th>NOMINAL THICKNESS minus Corrosion Allowance</th>
-						<td>t'</td>
-						<td>9,7</td>
-						<td>mm</td>
-					</tr>
+					<tbody>
+						<tr>
+							<th>NOMINAL THICKNESS minus Corrosion Allowance</th>
+							<td>t'</td>
+							<td>9,7</td>
+							<td>mm</td>
+						</tr>
 
-					<tr>
-						<th>WELDED JOINT EFFICIENCY</th>
-						<td>E</td>
-						<td>
-							<select>
-								<option>1,0</option>
-								<option>0,9</option>
-						</select></td>
-						<td>-</td>
-					</tr>
+						<tr>
+							<th>WELDED JOINT EFFICIENCY</th>
+							<td>E</td>
+							<td>
+								<select>
+									<option>1,0</option>
+									<option>0,9</option>
+								</select></td>
+							<td>-</td>
+						</tr>
 
-					<tr>
-						<th>NOMINAL THICKNESS</th>
-						<td>tn</td>
-						<td>
-							<option>ASTM_A20</option>
-							<option>4,76</option>
-							<option>7,94</option>
-							<option>9,53</option>
-						</td>
-						<td>mm</td>
-					</tr>
+						<tr>
+							<th>NOMINAL THICKNESS</th>
+							<td>tn</td>
+							<td>
+								<option>ASTM_A20</option>
+								<option>4,76</option>
+								<option>7,94</option>
+								<option>9,53</option>
+							</td>
+							<td>mm</td>
+						</tr>
 
-					<tr>
-						<th>DESIGN VALIDATION</th>
-						<td>-</td>
-						<td>VALID NOMINAL THICKNESS</td>
-						<td>-</td>
-					</tr>
+						<tr>
+							<th>DESIGN VALIDATION</th>
+							<td>-</td>
+							<td>VALID NOMINAL THICKNESS</td>
+							<td>-</td>
+						</tr>
 
-					<tr>
-						<th>"DESIGN THICKNESS </th>
-					</tr>
+						<tr>
+							<th>"DESIGN THICKNESS </th>
+						</tr>
 
-					<tr>
-						<td>FOR MAXIMUM CIRCUMFERENTIAL STRESS"</td>
-					</tr>
+						<tr>
+							<td>FOR MAXIMUM CIRCUMFERENTIAL STRESS"</td>
+						</tr>
 
-					<tr>
-						<td>LONGITUDINAL JOINTS
-							<div class="container-spherical_calc">
-								<img src="/Testes/docs/spherical calc1.png" alt="teste">
-							</div>
-						</td>
-						<td>t</td>
-						<td>6,509</td>
-						<td>mm</td>
-					</tr>
+						<tr>
+							<td>LONGITUDINAL JOINTS
+								<div class="container-spherical_calc">
+									<img src="/Testes/docs/spherical calc1.png" alt="teste">
+								</div>
+							</td>
+							<td>t</td>
+							<td>6,509</td>
+							<td>mm</td>
+						</tr>
 
-					<tr>
-						<th>WORKING MAXIMUM ALLOWABLE PRESSURE CORRODED AND HOT</th>
-						<th></th>
-					</tr>
+						<tr>
+							<th>WORKING MAXIMUM ALLOWABLE PRESSURE CORRODED AND HOT</th>
+							<th></th>
+						</tr>
 
 
-					<tr>
-						<td>LONGITUDINAL JOINTS
-							<div class="container-spherical_calc">
-								<img src="/Testes/docs/spherical calc2.png" alt="teste">
-							</div>
-						</td>
-						<td>5,512</td>
-						<td>2,512</td>
-						<td>MPa</td>
-					</tr>
+						<tr>
+							<td>LONGITUDINAL JOINTS
+								<div class="container-spherical_calc">
+									<img src="/Testes/docs/spherical calc2.png" alt="teste">
+								</div>
+							</td>
+							<td>5,512</td>
+							<td>2,512</td>
+							<td>MPa</td>
+						</tr>
 
-					<tr>
-						<th>HIDROSTATIC TEST PRESSURE</th>
-					</tr>
+						<tr>
+							<th>HIDROSTATIC TEST PRESSURE</th>
+						</tr>
 
-					<tr>
-						<td>
-							<div class="container-spherical_calc">
-								<img src="/Testes/docs/spherical calc3.png" alt="teste">
-							</div>
-						</td>
-						<td>HTP</td>
-						<td>7,166</td>
-						<td>MPa</td>
-					</tr>
+						<tr>
+							<td>
+								<div class="container-spherical_calc">
+									<img src="/Testes/docs/spherical calc3.png" alt="teste">
+								</div>
+							</td>
+							<td>HTP</td>
+							<td>7,166</td>
+							<td>MPa</td>
+						</tr>
 
-					<tr>
-						<th>PNEUMATIC TEST PRESSURE</th>
-					</tr>
+						<tr>
+							<th>PNEUMATIC TEST PRESSURE</th>
+						</tr>
 
-					<tr>
-						<td>
-							<div class="container-spherical_calc">
-								<img src="/Testes/docs/spherical calc4.png" alt="teste">
-							</div>
-						</td>
-						<td>PTP</td>
-						<td>6,064</td>
-						<td>MPa</td>
-					</tr>
+						<tr>
+							<td>
+								<div class="container-spherical_calc">
+									<img src="/Testes/docs/spherical calc4.png" alt="teste">
+								</div>
+							</td>
+							<td>PTP</td>
+							<td>6,064</td>
+							<td>MPa</td>
+						</tr>
 
-				</tbody></table>
+					</tbody>
+				</table>
 			</div>
 
 		</main>
@@ -1523,38 +1605,52 @@
 			</div>
 
 			<div class="pdf-body">
-				<br><table border="">
-					<tbody><tr><th>ELLIPSOIDAL HEADS UNDER PRESSURE ON CONCAVE SIDE ACCORDING TO ASME VIII DIV.1 (UG - 32). MANDATORY APPENDIX 1.		
-		
-						<div class="container-img-img">
-							<img src="/Testes/docs/SPHERICAL SHELL.png" alt="teste">
-						</div>
-					</th>
+				<br>
+				<table border="">
+					<tbody>
+						<tr>
+							<th>ELLIPSOIDAL HEADS UNDER PRESSURE ON CONCAVE SIDE ACCORDING TO ASME VIII DIV.1 (UG - 32).
+								MANDATORY APPENDIX 1.
+
+								<div class="container-img-img">
+									<img src="/Testes/docs/SPHERICAL SHELL.png" alt="teste">
+								</div>
+							</th>
 
 
 
-					</tr></tbody></table><table border="">
-						<tbody><tr><th>DESIGN DATA</th>
-						<th>SYMBOLS USED IN THE FORMULAS AND DRAWING</th>
-					</tr></tbody></table>
+						</tr>
+					</tbody>
+				</table>
+				<table border="">
+					<tbody>
+						<tr>
+							<th>DESIGN DATA</th>
+							<th>SYMBOLS USED IN THE FORMULAS AND DRAWING</th>
+						</tr>
+					</tbody>
+				</table>
 
-					<table border="">
-						<tbody><tr><th>MATERIAL SPECIFICATION (ASME II part D)</th>
-						<td>
-							<select>
-								<option>SA-312 TP316H</option>
-								<option>SA-249 TP316H</option>
-								<option>SA-240 316H</option>
-								<option>SA-213 TP316H</option>
-								<option>SA/JIS G4303 SUS316</option>
-								<option>SA-814 TP316</option>
-								<option>SA-813 TP316</option>
-							</select>
+				<table border="">
+					<tbody>
+						<tr>
+							<th>MATERIAL SPECIFICATION (ASME II part D)</th>
+							<td>
+								<select>
+									<option>SA-312 TP316H</option>
+									<option>SA-249 TP316H</option>
+									<option>SA-240 316H</option>
+									<option>SA-213 TP316H</option>
+									<option>SA/JIS G4303 SUS316</option>
+									<option>SA-814 TP316</option>
+									<option>SA-813 TP316</option>
+								</select>
 
-						</td>
-						<th></th>
+							</td>
+							<th></th>
 
-						</tr><tr>
+						</tr>
+						<tr>
 							<th>NOMINAL COMPOSITION</th>
 							<td>Carbon steel</td>
 							<th></th>
@@ -1740,7 +1836,7 @@
 							<td>9,7</td>
 							<td>mm</td>
 						</tr>
-	
+
 						<tr>
 							<th>WELDED JOINT EFFICIENCY</th>
 							<td>E</td>
@@ -1748,12 +1844,13 @@
 								<select>
 									<option>1,0</option>
 									<option>0,9</option>
-							</select></td>
+								</select></td>
 							<td>-</td>
 						</tr>
-	
 
-					</tbody></table>
+
+					</tbody>
+				</table>
 			</div>
 		</main>
 	</div>
@@ -1769,98 +1866,99 @@
 			<div class="pdf-body">
 				<table border="">
 
-					<tbody><tr>
-						<th>NOMINAL THICKNESS</th>
-						<td>tn</td>
-						<td>
-							<option>ASTM_A20</option>
-							<option>4,76</option>
-							<option>7,94</option>
-							<option>9,53</option>
-						</td>
-						<td>mm</td>
-					</tr>
+					<tbody>
+						<tr>
+							<th>NOMINAL THICKNESS</th>
+							<td>tn</td>
+							<td>
+								<option>ASTM_A20</option>
+								<option>4,76</option>
+								<option>7,94</option>
+								<option>9,53</option>
+							</td>
+							<td>mm</td>
+						</tr>
 
-					<tr>
-						<th>DESIGN VALIDATION</th>
-						<td>-</td>
-						<td>VALID NOMINAL THICKNESS</td>
-						<td>-</td>
-					</tr>
+						<tr>
+							<th>DESIGN VALIDATION</th>
+							<td>-</td>
+							<td>VALID NOMINAL THICKNESS</td>
+							<td>-</td>
+						</tr>
 
-					<tr>
-						<th>"DESIGN THICKNESS </th>
-					</tr>
+						<tr>
+							<th>"DESIGN THICKNESS </th>
+						</tr>
 
-					<tr>
-						<td>FOR MAXIMUM CIRCUMFERENTIAL STRESS"</td>
-					</tr>
+						<tr>
+							<td>FOR MAXIMUM CIRCUMFERENTIAL STRESS"</td>
+						</tr>
 
-					<tr>
-						<td>LONGITUDINAL JOINTS
-							<div class="container-spherical_calc">
-								<img src="/Testes/docs/spherical calc1.png" alt="teste">
-							</div>
-						</td>
-						<td>t</td>
-						<td>6,509</td>
-						<td>mm</td>
-					</tr>
+						<tr>
+							<td>LONGITUDINAL JOINTS
+								<div class="container-spherical_calc">
+									<img src="/Testes/docs/spherical calc1.png" alt="teste">
+								</div>
+							</td>
+							<td>t</td>
+							<td>6,509</td>
+							<td>mm</td>
+						</tr>
 
-					<tr>
-						<th>WORKING MAXIMUM ALLOWABLE PRESSURE CORRODED AND HOT</th>
-						<th></th>
-					</tr>
+						<tr>
+							<th>WORKING MAXIMUM ALLOWABLE PRESSURE CORRODED AND HOT</th>
+							<th></th>
+						</tr>
 
 
-					<tr>
-						<td>LONGITUDINAL JOINTS
-							<div class="container-spherical_calc">
-								<img src="/Testes/docs/spherical calc2.png" alt="teste">
-							</div>
-						</td>
-						<td>5,512</td>
-						<td>2,512</td>
-						<td>MPa</td>
-					</tr>
+						<tr>
+							<td>LONGITUDINAL JOINTS
+								<div class="container-spherical_calc">
+									<img src="/Testes/docs/spherical calc2.png" alt="teste">
+								</div>
+							</td>
+							<td>5,512</td>
+							<td>2,512</td>
+							<td>MPa</td>
+						</tr>
 
-					<tr>
-						<th>HIDROSTATIC TEST PRESSURE</th>
-					</tr>
+						<tr>
+							<th>HIDROSTATIC TEST PRESSURE</th>
+						</tr>
 
-					<tr>
-						<td>
-							<div class="container-spherical_calc">
-								<img src="/Testes/docs/spherical calc3.png" alt="teste">
-							</div>
-						</td>
-						<td>HTP</td>
-						<td>7,166</td>
-						<td>MPa</td>
-					</tr>
+						<tr>
+							<td>
+								<div class="container-spherical_calc">
+									<img src="/Testes/docs/spherical calc3.png" alt="teste">
+								</div>
+							</td>
+							<td>HTP</td>
+							<td>7,166</td>
+							<td>MPa</td>
+						</tr>
 
-					<tr>
-						<th>PNEUMATIC TEST PRESSURE</th>
-					</tr>
+						<tr>
+							<th>PNEUMATIC TEST PRESSURE</th>
+						</tr>
 
-					<tr>
-						<td>
-							<div class="container-spherical_calc">
-								<img src="/Testes/docs/spherical calc4.png" alt="teste">
-							</div>
-						</td>
-						<td>PTP</td>
-						<td>6,064</td>
-						<td>MPa</td>
-					</tr>
+						<tr>
+							<td>
+								<div class="container-spherical_calc">
+									<img src="/Testes/docs/spherical calc4.png" alt="teste">
+								</div>
+							</td>
+							<td>PTP</td>
+							<td>6,064</td>
+							<td>MPa</td>
+						</tr>
 
-				</tbody></table>
+					</tbody>
+				</table>
 			</div>
 
 		</main>
 	</div>
 
-	
 	<div class="pdf-page size-a4" id="TORISPHERICAL_HEADS_page" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
@@ -1870,38 +1968,52 @@
 			</div>
 
 			<div class="pdf-body">
-				<br><table border="">
-					<tbody><tr><th>TORISPHERICAL HEADS UNDER PRESSURE ON CONCAVE SIDE ACCORDING TO ASME VIII DIV.1 (UG - 32). MANDATORY APPENDIX 1.		
-		
-						<div class="container-img-img">
-							<img src="/Testes/docs/SPHERICAL SHELL.png" alt="teste">
-						</div>
-					</th>
+				<br>
+				<table border="">
+					<tbody>
+						<tr>
+							<th>TORISPHERICAL HEADS UNDER PRESSURE ON CONCAVE SIDE ACCORDING TO ASME VIII DIV.1 (UG -
+								32). MANDATORY APPENDIX 1.
+
+								<div class="container-img-img">
+									<img src="/Testes/docs/SPHERICAL SHELL.png" alt="teste">
+								</div>
+							</th>
 
 
 
-					</tr></tbody></table><table border="">
-						<tbody><tr><th>DESIGN DATA</th>
-						<th>SYMBOLS USED IN THE FORMULAS AND DRAWING</th>
-					</tr></tbody></table>
+						</tr>
+					</tbody>
+				</table>
+				<table border="">
+					<tbody>
+						<tr>
+							<th>DESIGN DATA</th>
+							<th>SYMBOLS USED IN THE FORMULAS AND DRAWING</th>
+						</tr>
+					</tbody>
+				</table>
 
-					<table border="">
-						<tbody><tr><th>MATERIAL SPECIFICATION (ASME II part D)</th>
-						<td>
-							<select>
-								<option>SA-312 TP316H</option>
-								<option>SA-249 TP316H</option>
-								<option>SA-240 316H</option>
-								<option>SA-213 TP316H</option>
-								<option>SA/JIS G4303 SUS316</option>
-								<option>SA-814 TP316</option>
-								<option>SA-813 TP316</option>
-							</select>
+				<table border="">
+					<tbody>
+						<tr>
+							<th>MATERIAL SPECIFICATION (ASME II part D)</th>
+							<td>
+								<select>
+									<option>SA-312 TP316H</option>
+									<option>SA-249 TP316H</option>
+									<option>SA-240 316H</option>
+									<option>SA-213 TP316H</option>
+									<option>SA/JIS G4303 SUS316</option>
+									<option>SA-814 TP316</option>
+									<option>SA-813 TP316</option>
+								</select>
 
-						</td>
-						<th></th>
+							</td>
+							<th></th>
 
-						</tr><tr>
+						</tr>
+						<tr>
 							<th>NOMINAL COMPOSITION</th>
 							<td>Carbon steel</td>
 							<th></th>
@@ -2103,7 +2215,7 @@
 							<td>41,5</td>
 							<td>mm</td>
 						</tr>
-	
+
 						<tr>
 							<th>WELDED JOINT EFFICIENCY</th>
 							<td>E</td>
@@ -2111,7 +2223,7 @@
 								<select>
 									<option>1,0</option>
 									<option>0,9</option>
-							</select></td>
+								</select></td>
 							<td>-</td>
 						</tr>
 
@@ -2122,12 +2234,13 @@
 								<select>
 									<option>1,0</option>
 									<option>0,9</option>
-							</select></td>
+								</select></td>
 							<td>mm</td>
 						</tr>
-	
 
-					</tbody></table>
+
+					</tbody>
+				</table>
 			</div>
 		</main>
 	</div>
@@ -2143,99 +2256,101 @@
 			<div class="pdf-body">
 				<table border="">
 
-					<tbody><tr>
-						<th>NOMINAL THICKNESS</th>
-						<td>tn</td>
-						<td>
-							<option>ASTM_A20</option>
-							<option>4,76</option>
-							<option>7,94</option>
-							<option>9,53</option>
-						</td>
-						<td>mm</td>
-					</tr>
+					<tbody>
+						<tr>
+							<th>NOMINAL THICKNESS</th>
+							<td>tn</td>
+							<td>
+								<option>ASTM_A20</option>
+								<option>4,76</option>
+								<option>7,94</option>
+								<option>9,53</option>
+							</td>
+							<td>mm</td>
+						</tr>
 
-					<tr>
-						<th>DESIGN VALIDATION</th>
-						<td>-</td>
-						<td>VALID NOMINAL THICKNESS</td>
-						<td>-</td>
-					</tr>
+						<tr>
+							<th>DESIGN VALIDATION</th>
+							<td>-</td>
+							<td>VALID NOMINAL THICKNESS</td>
+							<td>-</td>
+						</tr>
 
-					<tr>
-						<th>"DESIGN THICKNESS </th>
-					</tr>
+						<tr>
+							<th>"DESIGN THICKNESS </th>
+						</tr>
 
-					<tr>
-						<td>FOR MAXIMUM CIRCUMFERENTIAL STRESS"</td>
-					</tr>
+						<tr>
+							<td>FOR MAXIMUM CIRCUMFERENTIAL STRESS"</td>
+						</tr>
 
-					<tr>
-						<td>LONGITUDINAL JOINTS
-							<div class="container-spherical_calc">
-								<img src="/Testes/docs/spherical calc1.png" alt="teste">
-							</div>
-						</td>
-						<td>t</td>
-						<td>6,509</td>
-						<td>mm</td>
-					</tr>
+						<tr>
+							<td>LONGITUDINAL JOINTS
+								<div class="container-spherical_calc">
+									<img src="/Testes/docs/spherical calc1.png" alt="teste">
+								</div>
+							</td>
+							<td>t</td>
+							<td>6,509</td>
+							<td>mm</td>
+						</tr>
 
-					<tr>
-						<th>WORKING MAXIMUM ALLOWABLE PRESSURE CORRODED AND HOT</th>
-						<th></th>
-					</tr>
+						<tr>
+							<th>WORKING MAXIMUM ALLOWABLE PRESSURE CORRODED AND HOT</th>
+							<th></th>
+						</tr>
 
 
-					<tr>
-						<td>LONGITUDINAL JOINTS
-							<div class="container-spherical_calc">
-								<img src="/Testes/docs/spherical calc2.png" alt="teste">
-							</div>
-						</td>
-						<td>5,512</td>
-						<td>2,512</td>
-						<td>MPa</td>
-					</tr>
+						<tr>
+							<td>LONGITUDINAL JOINTS
+								<div class="container-spherical_calc">
+									<img src="/Testes/docs/spherical calc2.png" alt="teste">
+								</div>
+							</td>
+							<td>5,512</td>
+							<td>2,512</td>
+							<td>MPa</td>
+						</tr>
 
-					<tr>
-						<th>HIDROSTATIC TEST PRESSURE</th>
-					</tr>
+						<tr>
+							<th>HIDROSTATIC TEST PRESSURE</th>
+						</tr>
 
-					<tr>
-						<td>
-							<div class="container-spherical_calc">
-								<img src="/Testes/docs/spherical calc3.png" alt="teste">
-							</div>
-						</td>
-						<td>HTP</td>
-						<td>7,166</td>
-						<td>MPa</td>
-					</tr>
+						<tr>
+							<td>
+								<div class="container-spherical_calc">
+									<img src="/Testes/docs/spherical calc3.png" alt="teste">
+								</div>
+							</td>
+							<td>HTP</td>
+							<td>7,166</td>
+							<td>MPa</td>
+						</tr>
 
-					<tr>
-						<th>PNEUMATIC TEST PRESSURE</th>
-					</tr>
+						<tr>
+							<th>PNEUMATIC TEST PRESSURE</th>
+						</tr>
 
-					<tr>
-						<td>
-							<div class="container-spherical_calc">
-								<img src="/Testes/docs/spherical calc4.png" alt="teste">
-							</div>
-						</td>
-						<td>PTP</td>
-						<td>6,064</td>
-						<td>MPa</td>
-					</tr>
+						<tr>
+							<td>
+								<div class="container-spherical_calc">
+									<img src="/Testes/docs/spherical calc4.png" alt="teste">
+								</div>
+							</td>
+							<td>PTP</td>
+							<td>6,064</td>
+							<td>MPa</td>
+						</tr>
 
-				</tbody></table>
+					</tbody>
+				</table>
 			</div>
 
 		</main>
 	</div>
 
 
-
-
 	<script src="testes.js"></script>
-</body></html>
+</body>
+
+</html>

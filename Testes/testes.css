@@ -409,6 +409,7 @@ table {
   width: 90%;
   margin: auto;
   table-layout: fixed;
+  display: absolute;
 }
 
 .cilindrical_page2 table{
@@ -511,6 +512,7 @@ body {
   box-shadow: 0 5px 10px 0 rgba(0,0,0,.3);
   background-color: #fff;
   color: #333;
+
 }
 .pdf-header {
   top: .5in;
@@ -528,17 +530,12 @@ body {
 .pdf-body {
   top: 3.7in;
   bottom: 1.2in;
-  left: .2in;
-  right: .2in;
+  left: .5in;
+  right: .5in;
+  position: static;
 }
 
 .size-a4 { width: 8.3in; height: 11.7in; }
-.size-letter { width: 8.5in; height: 11in; }
-.size-executive { width: 7.25in; height: 10.5in; }
 
-.company-logo {
-  font-size: 30px;
-  font-weight: bold;
-  color: #3aabf0;
-}
+
 

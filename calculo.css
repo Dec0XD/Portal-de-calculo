@@ -222,8 +222,8 @@ body {
 /*Formulario*/
 
 page[size="A4"] {
-  width: 790px;
-  height: 1000px;
+  width: 21cm;
+  height: 29.7cm; 
 }
 
 page {
@@ -409,6 +409,7 @@ table {
   width: 90%;
   margin: auto;
   table-layout: fixed;
+  display: absolute;
 }
 
 .cilindrical_page2 table{
@@ -502,3 +503,39 @@ body {
 .contatoBtMais{
   display: flex;
 }
+
+
+
+.pdf-page {
+  margin: 0 auto;
+  box-sizing: border-box;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,.3);
+  background-color: #fff;
+  color: #333;
+  
+}
+.pdf-header {
+  top: .5in;
+  height: .6in;
+  left: .5in;
+  right: .5in;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.company-logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #3aabf0;
+}
+.pdf-body {
+  top: 3.7in;
+  bottom: 1.2in;
+  left: .5in;
+  right: .5in;
+  position: static;
+}
+
+.size-a4 { width: 8.3in; height: 11.7in; }
+
+
+
