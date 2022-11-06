@@ -221,18 +221,6 @@ body {
 
 /*Formulario*/
 
-page[size="A4"] {
-  width: 21cm;
-  height: 29.7cm; 
-}
-
-page {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  background-color: #fff;
-}
-
 main {
   width: 100%;
   min-height: 90vh;
