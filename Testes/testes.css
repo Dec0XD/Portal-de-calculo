@@ -221,18 +221,6 @@ body {
 
 /*Formulario*/
 
-page[size="A4"] {
-  width: 790px;
-  height: 1000px;
-}
-
-page {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  background-color: #fff;
-}
-
 main {
   width: 100%;
   min-height: 90vh;
@@ -290,6 +278,7 @@ main {
   justify-content: space-between;
   padding: 1px;
 }
+
 
 .input-box label,
 .gender-title h6 {
@@ -440,16 +429,7 @@ table th {
 }
 
 @media screen and (max-width: 600px) {
-  page[size="A4"] {  
-    width: 21cm;
-    height: 29.7cm; 
-  }
 
-  page {
-    display: flex;
-    position: relative;
-
-  }
   table {
     width: auto;
     border: 0;
@@ -506,35 +486,82 @@ body {
 
 
 
-.pdf-page {
-  margin: 0 auto;
-  box-sizing: border-box;
-  background-color: #fff;
-  color: #333;
-
-}
-.pdf-header {
-  top: .5in;
-  height: .6in;
-  left: .5in;
-  right: .5in;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.company-logo {
-  font-size: 30px;
-  font-weight: bold;
-  color: #3aabf0;
-}
-.pdf-body {
-  top: 3.7in;
-  bottom: 1.2in;
-  left: .5in;
-  right: .5in;
-  position: static;
-}
-
-.size-a4 { width: 8.3in; height: 11.7in; }
 
 
+  .pdf-page {
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-family: "DejaVu Sans", "Arial", sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .pdf-header {
+    top: .5in;
+    height: .6in;
+    left: .5in;
+    right: .5in;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .invoice-number {
+    padding-top: .17in;
+    float: right;
+  }
+
+
+
+  .pdf-body {
+  
+    top: 0.7in;
+     left: .2in;
+      right: .2in;
+
+  }
+
+  .size-a4 {
+    width: 8.3in;
+    height: 11.7in;
+  }
+
+  /*
+  .size-letter {
+    width: 8.5in;
+    height: 11in;
+  }
+
+  .size-executive {
+    width: 7.25in;
+    height: 10.5in;
+  }
+*/
+  .company-logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #3aabf0;
+  }
+
+  .for {
+    position: absolute;
+    top: 1.5in;
+    left: .5in;
+    width: 2.5in;
+  }
+
+  .from {
+    position: absolute;
+    top: 1.5in;
+    right: .5in;
+    width: 2.5in;
+  }
+
+  .from p,
+  .for p {
+    color: #787878;
+  }
+
+  .signature {
+    padding-top: .5in;
+  }
 

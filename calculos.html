@@ -5,16 +5,11 @@
 	<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.common.min.css">
 	<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.black.min.css">
 	<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.black.mobile.min.css">
-	<link rel="stylesheet" href="calculos.css">
+	<link rel="stylesheet" href="calculo.css">
 	<script src="https://kendo.cdn.telerik.com/2017.1.223/js/jquery.min.js"></script>
-	<script src="https://kendo.cdn.telerik.com/2017.1.223/js/jszip.min.js"></script>
-	<script src="https://kendo.cdn.telerik.com/2017.1.223/js/kendo.all.min.js"></script>
-	<style type="text/css">
-		@page {
-			margin: 0;
-			border: 0;
-		}
-	</style>
+    <script src="https://kendo.cdn.telerik.com/2017.1.223/js/jszip.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2017.1.223/js/kendo.all.min.js"></script>
+
 </head>
 
 
@@ -192,7 +187,7 @@
 
 	<div class="pdf-page size-a4" id="design_page">
 		<main>
-			<div class="contatoBtMais" id="divheader" style="display: block;">Adicionar</div>
+
 			<div class="titulo-pagina">
 				<span class="company-logo">
 					WISECALC®
@@ -216,11 +211,7 @@
 						<tr>
 							<th>JOB NAME</th>
 							<td>
-								<div class="input-group">
-									<div class="input-box">
-										<input id="JOBNAME" type="text" required="">
-									</div>
-								</div>
+								<input id="JOBNAME" type="text" required="">
 							</td>
 
 						</tr>
@@ -623,13 +614,852 @@
 							<th>MATERIAL SPECIFICATION (ASME II part D)</th>
 							<td>
 								<select>
-									<option>37,78</option>
-									<option>65,56</option>
-									<option>93,33</option>
-									<option>121,11</option>
-									<option>148,89</option>
-									<option>204,44</option>
-									<option>260,00</option>
+									<option>SA-1008 CS–A</option>
+									<option>SA-1008 CS–B</option>
+									<option>SA-675 45</option>
+									<option>SA-134 A283A</option>
+									<option>SA-283 A</option>
+									<option>SA-285 A</option>
+									<option>SA-672 A45</option>
+									<option>SA-414 A</option>
+									<option>SA-178 A</option>
+									<option>SA-179 …</option>
+									<option>SA-192 …</option>
+									<option>SA-214 …</option>
+									<option>SA-556 A2</option>
+									<option>SA-557 A2</option>
+									<option>SA-53 E/A</option>
+									<option>SA-53 F/A</option>
+									<option>SA-53 S/A</option>
+									<option>SA-106 A</option>
+									<option>SA-135 A</option>
+									<option>SA-369 FPA</option>
+									<option>SA-587 …</option>
+									<option>SA-675 50</option>
+									<option>SA-134 A283B</option>
+									<option>SA-283 B</option>
+									<option>SA-285 B</option>
+									<option>SA-672 A50</option>
+									<option>SA-414 B</option>
+									<option>SA/EN 10028-3 P275NH</option>
+									<option>SA/EN 10028-2 P235GH</option>
+									<option>SA/EN 10216-2 P235GH</option>
+									<option>SA-675 55</option>
+									<option>SA-134 A283C</option>
+									<option>SA-283 C</option>
+									<option>SA-285 C</option>
+									<option>SA-333 1</option>
+									<option>SA-334 1</option>
+									<option>SA-516 55</option>
+									<option>SA-524 II</option>
+									<option>SA-671 CA55</option>
+									<option>SA-671 CE55</option>
+									<option>SA-672 A55</option>
+									<option>SA-672 B55</option>
+									<option>SA-672 C55</option>
+									<option>SA-672 E55</option>
+									<option>SA-414 C</option>
+									<option>SA/EN 10028-3 P275NH</option>
+									<option>SA-36 …</option>
+									<option>SA-36 …</option>
+									<option>SA-662 A</option>
+									<option>SA/IS 2062 E250A</option>
+									<option>SA/IS 2062 E250B</option>
+									<option>SA/IS 2062 E250C</option>
+									<option>SA/EN 10028-2 P265GH</option>
+									<option>SA/EN 10216-2 P265GH</option>
+									<option>SA-181 …</option>
+									<option>SA-216 WCA</option>
+									<option>SA-266 1</option>
+									<option>SA-350 LF1</option>
+									<option>SA-352 LCA</option>
+									<option>SA-660 WCA</option>
+									<option>SA-675 60</option>
+									<option>SA-765 I</option>
+									<option>SA-515 60</option>
+									<option>SA-516 60</option>
+									<option>SA-671 CB60</option>
+									<option>SA-671 CC60</option>
+									<option>SA-671 CE60</option>
+									<option>SA-672 B60</option>
+									<option>SA-672 C60</option>
+									<option>SA-672 E60</option>
+									<option>SA-134 A283D</option>
+									<option>SA-283 D</option>
+									<option>SA-53 E/B</option>
+									<option>SA-53 S/B</option>
+									<option>SA-106 B</option>
+									<option>SA-135 B</option>
+									<option>SA-234 WPB</option>
+									<option>SA-333 6</option>
+									<option>SA-334 6</option>
+									<option>SA-369 FPB</option>
+									<option>SA-372 A</option>
+									<option>SA-414 D</option>
+									<option>SA-420 WPL6</option>
+									<option>SA-524 I</option>
+									<option>SA-696 B</option>
+									<option>SA-727 …</option>
+									<option>SA-178 C</option>
+									<option>SA-210 A–1</option>
+									<option>SA-556 B2</option>
+									<option>SA-557 B2</option>
+									<option>SA/CSA-G40,21 38W</option>
+									<option>SA/AS 1548 PT430N</option>
+									<option>SA/AS 1548 PT430NR</option>
+									<option>SA/EN 10028-2 P295GH</option>
+									<option>SA-675 65</option>
+									<option>SA-352 LCB</option>
+									<option>SA-515 65</option>
+									<option>SA-516 65</option>
+									<option>SA-671 CB65</option>
+									<option>SA-671 CC65</option>
+									<option>SA-672 B65</option>
+									<option>SA-672 C65</option>
+									<option>SA-414 E</option>
+									<option>SA-662 B</option>
+									<option>SA-537 …</option>
+									<option>SA-691 CMSH–70</option>
+									<option>SA/CSA-G40,21 44W</option>
+									<option>SA/CSA-G40,21 50W</option>
+									<option>SA/AS 1548 PT460N</option>
+									<option>SA/AS 1548 PT460NR</option>
+									<option>SA/EN 10222-2 P280GH</option>
+									<option>SA/EN 10028-2 P295GH</option>
+									<option>SA/EN 10028-2 P355GH</option>
+									<option>SA/GB 713 Q345R</option>
+									<option>SA-455 …</option>
+									<option>SA-675 70</option>
+									<option>SA-105 …</option>
+									<option>SA-181 …</option>
+									<option>SA-216 WCB</option>
+									<option>SA-266 2</option>
+									<option>SA-266 4</option>
+									<option>SA-350 LF2</option>
+									<option>SA-508 1</option>
+									<option>SA-508 1A</option>
+									<option>SA-541 1</option>
+									<option>SA-541 1A</option>
+									<option>SA-660 WCB</option>
+									<option>SA-765 II</option>
+									<option>SA-515 70</option>
+									<option>SA-516 70</option>
+									<option>SA-671 CB70</option>
+									<option>SA-671 CC70</option>
+									<option>SA-672 B70</option>
+									<option>SA-672 C70</option>
+									<option>SA/JIS G3118 SGV480</option>
+									<option>SA-106 C</option>
+									<option>SA-178 D</option>
+									<option>SA-210 C</option>
+									<option>SA-216 WCC</option>
+									<option>SA-234 WPC</option>
+									<option>SA-352 LCC</option>
+									<option>SA-487 16</option>
+									<option>SA-537 …</option>
+									<option>SA-556 C2</option>
+									<option>SA-557 C2</option>
+									<option>SA-660 WCC</option>
+									<option>SA-696 C</option>
+									<option>SA-414 F</option>
+									<option>SA-662 C</option>
+									<option>SA-738 C</option>
+									<option>SA-671 CD70</option>
+									<option>SA-672 D70</option>
+									<option>SA-691 CMSH–70</option>
+									<option>SA-841 A</option>
+									<option>SA/EN 10222-2 P305GH</option>
+									<option>SA/GB 713 Q345R</option>
+									<option>SA/EN 10028-2 P355GH</option>
+									<option>SA-455 …</option>
+									<option>SA-266 3</option>
+									<option>SA-299 A</option>
+									<option>SA-671 CK75</option>
+									<option>SA-672 N75</option>
+									<option>SA-691 CMS–75</option>
+									<option>SA-372 B</option>
+									<option>SA-414 G</option>
+									<option>SA-738 A</option>
+									<option>SA-537 …</option>
+									<option>SA-691 CMSH–80</option>
+									<option>SA-299 B</option>
+									<option>SA-765 IV</option>
+									<option>SA-671 CD80</option>
+									<option>SA-672 D80</option>
+									<option>SA-841 B</option>
+									<option>SA-612 …</option>
+									<option>SA-738 B</option>
+									<option>SA-372 C</option>
+									<option>SA-724 A</option>
+									<option>SA-724 C</option>
+									<option>SA-724 B</option>
+									<option>SA-737 B</option>
+									<option>SA/AS 1548 PT490N</option>
+									<option>SA/AS 1548 PT490NR</option>
+									<option>SA/GB 713 Q370R</option>
+									<option>SA-737 C</option>
+									<option>SA-656 T3</option>
+									<option>SA-656 T7</option>
+									<option>SA-562 …</option>
+									<option>SA-836 …</option>
+									<option>SA/EN 10216-2 16Mo3</option>
+									<option>SA-209 T1b</option>
+									<option>SA-250 T1b</option>
+									<option>SA-209 T1</option>
+									<option>SA-234 WP1</option>
+									<option>SA-250 T1</option>
+									<option>SA-335 P1</option>
+									<option>SA-369 FP1</option>
+									<option>SA-209 T1a</option>
+									<option>SA-250 T1a</option>
+									<option>SA-217 WC1</option>
+									<option>SA-352 LC1</option>
+									<option>SA-426 CP1</option>
+									<option>SA-204 A</option>
+									<option>SA-672 L65</option>
+									<option>SA-691 CM–65</option>
+									<option>SA-182 F1</option>
+									<option>SA-204 B</option>
+									<option>SA-336 F1</option>
+									<option>SA-672 L70</option>
+									<option>SA-691 CM–70</option>
+									<option>SA-204 C</option>
+									<option>SA-672 L75</option>
+									<option>SA-691 CM–75</option>
+									<option>SA-372 G</option>
+									<option>SA-372 H</option>
+									<option>SA-517 B</option>
+									<option>SA-517 A</option>
+									<option>SA-592 A</option>
+									<option>SA-335 P2</option>
+									<option>SA-369 FP2</option>
+									<option>SA-387 2</option>
+									<option>SA-691 1/2CR</option>
+									<option>SA-213 T2</option>
+									<option>SA-250 T2</option>
+									<option>SA-250 T2S1</option>
+									<option>SA-426 CP2</option>
+									<option>SA-182 F2</option>
+									<option>SA-423 1</option>
+									<option>SA-333 4</option>
+									<option>SA-372 E</option>
+									<option>SA-372 F</option>
+									<option>SA-372 J</option>
+									<option>SA-387 12</option>
+									<option>SA-691 1CR</option>
+									<option>SA-426 CP12</option>
+									<option>SA-182 F12</option>
+									<option>SA-213 T12</option>
+									<option>SA-234 WP12</option>
+									<option>SA-250 T12</option>
+									<option>SA-250 T12S1</option>
+									<option>SA-335 P12</option>
+									<option>SA-369 FP12</option>
+									<option>SA/EN 10222-2 13CrMo4–5</option>
+									<option>SA/EN 10028-2 13CrMo4–5</option>
+									<option>SA/GB 713 15CrMoR</option>
+									<option>SA/EN 10216-2 13CrMo4–5</option>
+									<option>SA-387 12</option>
+									<option>SA-691 1CR</option>
+									<option>SA-182 F12</option>
+									<option>SA-336 F12</option>
+									<option>SA-213 T17</option>
+									<option>SA-217 WC6</option>
+									<option>SA-426 CP11</option>
+									<option>SA-739 B11</option>
+									<option>SA-182 F11</option>
+									<option>SA-213 T11</option>
+									<option>SA-234 WP11</option>
+									<option>SA-250 T11</option>
+									<option>SA-250 T11S1</option>
+									<option>SA-335 P11</option>
+									<option>SA-336 F11</option>
+									<option>SA-369 FP11</option>
+									<option>SA-387 11</option>
+									<option>SA-691 1 1/4CR</option>
+									<option>SA-182 F11</option>
+									<option>SA-592 E</option>
+									<option>SA-517 E</option>
+									<option>SA-182 F22</option>
+									<option>SA-213 T22</option>
+									<option>SA-234 WP22</option>
+									<option>SA-250 T22</option>
+									<option>SA-250 T22S1</option>
+									<option>SA-335 P22</option>
+									<option>SA-336 F22</option>
+									<option>SA-369 FP22</option>
+									<option>SA-387 22</option>
+									<option>SA-691 2 1/4CR</option>
+									<option>SA/EN 10028-2 10CrMo9–10</option>
+									<option>SA/EN 10222-2 11CrMo9–10</option>
+									<option>SA/EN 10216-2 10CrMo9–10</option>
+									<option>SA-217 WC9</option>
+									<option>SA-426 CP22</option>
+									<option>SA-182 F22</option>
+									<option>SA-336 F22</option>
+									<option>SA-387 22</option>
+									<option>SA-691 2 1/4CR</option>
+									<option>SA-739 B22</option>
+									<option>SA-487 8</option>
+									<option>SA-508 22</option>
+									<option>SA-541 22</option>
+									<option>SA-542 B</option>
+									<option>SA-182 F22V</option>
+									<option>SA-336 F22V</option>
+									<option>SA-541 22V</option>
+									<option>SA-542 D</option>
+									<option>SA-832 22V</option>
+									<option>SA-213 T21</option>
+									<option>SA-335 P21</option>
+									<option>SA-336 F21</option>
+									<option>SA-369 FP21</option>
+									<option>SA-387 21</option>
+									<option>SA-426 CP21</option>
+									<option>SA-182 F21</option>
+									<option>SA-182 F3V</option>
+									<option>SA-336 F3V</option>
+									<option>SA-508 3V</option>
+									<option>SA-541 3V</option>
+									<option>SA-542 C</option>
+									<option>SA-832 21V</option>
+									<option>SA-182 F3VCb</option>
+									<option>SA-336 F3VCb</option>
+									<option>SA-508 3VCb</option>
+									<option>SA-541 3VCb</option>
+									<option>SA-542 E</option>
+									<option>SA-832 23V</option>
+									<option>SA-213 T5</option>
+									<option>SA-234 WP5</option>
+									<option>SA-335 P5</option>
+									<option>SA-369 FP5</option>
+									<option>SA-387 5</option>
+									<option>SA-691 5CR</option>
+									<option>SA-336 F5</option>
+									<option>SA-182 F5</option>
+									<option>SA-336 F5A</option>
+									<option>SA-217 C5</option>
+									<option>SA-426 CP5</option>
+									<option>SA-182 F5a</option>
+									<option>SA-213 T5b</option>
+									<option>SA-335 P5b</option>
+									<option>SA-213 T5c</option>
+									<option>SA-335 P5c</option>
+									<option>SA-213 T9</option>
+									<option>SA-234 WP9</option>
+									<option>SA-335 P9</option>
+									<option>SA-369 FP9</option>
+									<option>SA-182 F9</option>
+									<option>SA-336 F9</option>
+									<option>SA-217 C12</option>
+									<option>SA-426 CP9</option>
+									<option>SA-213 T91</option>
+									<option>SA-234 WP91</option>
+									<option>SA-335 P91</option>
+									<option>SA-369 FP91</option>
+									<option>SA-387 91</option>
+									<option>SA-182 F91</option>
+									<option>SA-336 F91</option>
+									<option>SA-240 …</option>
+									<option>SA-268 TP409</option>
+									<option>SA-1010 40</option>
+									<option>SA-479 403</option>
+									<option>SA-1010 50</option>
+									<option>SA-240 405</option>
+									<option>SA-479 405</option>
+									<option>SA/JIS G4303 SUS405</option>
+									<option>SA-268 …</option>
+									<option>SA-240 410S</option>
+									<option>SA-268 TP410</option>
+									<option>SA-240 410</option>
+									<option>SA-182 F6a</option>
+									<option>SA-479 410</option>
+									<option>SA-217 CA15</option>
+									<option>SA-426 CPCA15</option>
+									<option>SA/EN 10088-3 X12Cr13</option>
+									<option>SA-487 CA6NM</option>
+									<option>SA-182 F6NM</option>
+									<option>SA-268 TP429</option>
+									<option>SA-240 429</option>
+									<option>SA-268 TP430</option>
+									<option>SA-240 430</option>
+									<option>SA-479 430</option>
+									<option>SA-747 CB7Cu–1</option>
+									<option>SA-564 630</option>
+									<option>SA-693 630</option>
+									<option>SA-705 630</option>
+									<option>SA-268 TP439</option>
+									<option>SA-731 TP439</option>
+									<option>SA-803 TP439</option>
+									<option>SA-268 TP430 Ti</option>
+									<option>SA-479 439</option>
+									<option>SA-240 26–3–3</option>
+									<option>SA-268 26–3–3</option>
+									<option>SA-803 26–3–3</option>
+									<option>SA-268 TP446–1</option>
+									<option>SA-182 FXM–27Cb</option>
+									<option>SA-240 XM–27</option>
+									<option>SA-268 TPXM–27</option>
+									<option>SA-479 XM–27</option>
+									<option>SA-731 TPXM–27</option>
+									<option>SA-731 TPXM–33</option>
+									<option>SA-240 XM–33</option>
+									<option>SA-268 TPXM–33</option>
+									<option>SA-268 29–4</option>
+									<option>SA-268 29–4–2</option>
+									<option>SA-372 D</option>
+									<option>SA-487 2</option>
+									<option>SA-302 A</option>
+									<option>SA-672 H75</option>
+									<option>SA-302 B</option>
+									<option>SA-533 A</option>
+									<option>SA-533 D</option>
+									<option>SA-302 C</option>
+									<option>SA-533 B</option>
+									<option>SA-672 H80</option>
+									<option>SA-672 J80</option>
+									<option>SA-672 J90</option>
+									<option>SA-672 J100</option>
+									<option>SA-302 D</option>
+									<option>SA-533 C</option>
+									<option>SA-533 E</option>
+									<option>SA-225 C</option>
+									<option>SA-487 1</option>
+									<option>SA-335 P15</option>
+									<option>SA-487 4</option>
+									<option>SA-541 3</option>
+									<option>SA-592 F</option>
+									<option>SA-517 F</option>
+									<option>SA-423 2</option>
+									<option>SA-508 2</option>
+									<option>SA-541 2</option>
+									<option>SA-508 3</option>
+									<option>SA-217 WC5</option>
+									<option>SA-217 WC4</option>
+									<option>SA-517 P</option>
+									<option>SA-350 LF5</option>
+									<option>SA-372 L</option>
+									<option>SA-182 FR</option>
+									<option>SA-234 WPR</option>
+									<option>SA-333 9</option>
+									<option>SA-334 9</option>
+									<option>SA-350 LF9</option>
+									<option>SA-420 WPL9</option>
+									<option>SA-723 1</option>
+									<option>SA-333 7</option>
+									<option>SA-334 7</option>
+									<option>SA-203 A</option>
+									<option>SA-203 B</option>
+									<option>SA-352 LC2</option>
+									<option>SA-543 C</option>
+									<option>SA-723 2</option>
+									<option>SA-543 B</option>
+									<option>SA-372 M</option>
+									<option>SA-333 3</option>
+									<option>SA-334 3</option>
+									<option>SA-420 WPL3</option>
+									<option>SA-203 D</option>
+									<option>SA-350 LF3</option>
+									<option>SA-765 III</option>
+									<option>SA-203 E</option>
+									<option>SA-352 LC3</option>
+									<option>SA-203 F</option>
+									<option>SA-508 4N</option>
+									<option>SA-723 3</option>
+									<option>SA-645 A</option>
+									<option>SA-553 III</option>
+									<option>SA-522 II</option>
+									<option>SA-553 II</option>
+									<option>SA/EN 10028-4 X8Ni9</option>
+									<option>SA/EN 10028-4 X7Ni9</option>
+									<option>SA-333 8</option>
+									<option>SA-334 8</option>
+									<option>SA-353 …</option>
+									<option>SA-420 WPL8</option>
+									<option>SA-522 I</option>
+									<option>SA-553 I</option>
+									<option>SA-638 660</option>
+									<option>SA-213 …</option>
+									<option>SA-249 …</option>
+									<option>SA-351 CN7M</option>
+									<option>SA-312 …</option>
+									<option>SA-403 …</option>
+									<option>SA-240 201LN</option>
+									<option>SA-240 204</option>
+									<option>SA-182 F316L</option>
+									<option>SA-965 F316L</option>
+									<option>SA-213 TP316L</option>
+									<option>SA-240 316L</option>
+									<option>SA-249 TP316L</option>
+									<option>SA-312 TP316L</option>
+									<option>SA-358 316L</option>
+									<option>SA-403 316L</option>
+									<option>SA-409 TP316L</option>
+									<option>SA-479 316L</option>
+									<option>SA-688 TP316L</option>
+									<option>SA-813 TP316L</option>
+									<option>SA-814 TP316L</option>
+									<option>SA/JIS G4303 SUS316L</option>
+									<option>SA-351 CF3M</option>
+									<option>SA-451 CPF3M</option>
+									<option>SA-351 CF8M</option>
+									<option>SA-451 CPF8M</option>
+									<option>SA-182 F316</option>
+									<option>SA-965 F316</option>
+									<option>SA-182 F316H</option>
+									<option>SA-965 F316H</option>
+									<option>SA-213 TP316</option>
+									<option>SA-240 316</option>
+									<option>SA-249 TP316</option>
+									<option>SA-312 TP316</option>
+									<option>SA-358 316</option>
+									<option>SA-376 TP316</option>
+									<option>SA-403 316</option>
+									<option>SA-409 TP316</option>
+									<option>SA-479 316</option>
+									<option>SA-688 TP316</option>
+									<option>SA-813 TP316</option>
+									<option>SA-814 TP316</option>
+									<option>SA/JIS G4303 SUS316</option>
+									<option>SA-182 F316H</option>
+									<option>SA-213 TP316H</option>
+									<option>SA-240 316H</option>
+									<option>SA-249 TP316H</option>
+									<option>SA-312 TP316H</option>
+									<option>SA-358 316H</option>
+									<option>SA-376 TP316H</option>
+									<option>SA-403 316H</option>
+									<option>SA-479 316H</option>
+									<option>SA-479 316H</option>
+									<option>SA-813 TP316H</option>
+									<option>SA-814 TP316H</option>
+									<option>SA/EN 10028-7 X2CrNiMo17–12–2</option>
+									<option>SA/EN 10028-7 X5CrNiMo17–12–2</option>
+									<option>SA-240 316Cb</option>
+									<option>SA-182 F316LN</option>
+									<option>SA-965 F316LN</option>
+									<option>SA-213 TP316LN</option>
+									<option>SA-240 316LN</option>
+									<option>SA-249 TP316LN</option>
+									<option>SA-312 TP316LN</option>
+									<option>SA-358 316LN</option>
+									<option>SA-376 TP316LN</option>
+									<option>SA-403 316LN</option>
+									<option>SA-479 316LN</option>
+									<option>SA-688 TP316LN</option>
+									<option>SA-182 F316N</option>
+									<option>SA-213 TP316N</option>
+									<option>SA-240 316N</option>
+									<option>SA-249 TP316N</option>
+									<option>SA-312 TP316N</option>
+									<option>SA-358 316N</option>
+									<option>SA-376 TP316N</option>
+									<option>SA-403 316N</option>
+									<option>SA-479 316N</option>
+									<option>SA-688 TP316N</option>
+									<option>SA-813 TP316N</option>
+									<option>SA-814 TP316N</option>
+									<option>SA-965 F316N</option>
+									<option>SA/EN 10028-7 X2CrNiMoN17–11–2</option>
+									<option>SA/EN 10028-7 X2CrNiMoN17–13–3</option>
+									<option>SA-240 316Ti</option>
+									<option>SA-240 201–1</option>
+									<option>SA-666 201–1</option>
+									<option>SA-240 201–2</option>
+									<option>SA-666 201–2</option>
+									<option>SA-240 301</option>
+									<option>SA-240 XM–29</option>
+									<option>SA-249 XM–29</option>
+									<option>SA-312 XM–29</option>
+									<option>SA-479 XM–29</option>
+									<option>SA-688 TPXM–29</option>
+									<option>SA-789 …</option>
+									<option>SA-790 …</option>
+									<option>SA-182 F304L</option>
+									<option>SA-965 F304L</option>
+									<option>SA-213 TP304L</option>
+									<option>SA-240 304L</option>
+									<option>SA-249 TP304L</option>
+									<option>SA-312 TP304L</option>
+									<option>SA-358 304L</option>
+									<option>SA-403 304L</option>
+									<option>SA-409 TP304L</option>
+									<option>SA-479 304L</option>
+									<option>SA-688 TP304L</option>
+									<option>SA-813 TP304L</option>
+									<option>SA-814 TP304L</option>
+									<option>SA/JIS G4303 SUS304L</option>
+									<option>SA-182 F304</option>
+									<option>SA-182 F304H</option>
+									<option>SA-351 CF3</option>
+									<option>SA-351 CF8</option>
+									<option>SA-376 TP304</option>
+									<option>SA-451 CPF3</option>
+									<option>SA-451 CPF8</option>
+									<option>SA-965 F304</option>
+									<option>SA-965 F304H</option>
+									<option>SA/EN 10028-7 X2CrNi18–9</option>
+									<option>SA-182 F304</option>
+									<option>SA-182 F304H</option>
+									<option>SA-213 TP304</option>
+									<option>SA-213 TP304H</option>
+									<option>SA-240 302</option>
+									<option>SA-240 304</option>
+									<option>SA-240 304H</option>
+									<option>SA-249 TP304</option>
+									<option>SA-249 TP304H</option>
+									<option>SA-312 TP304</option>
+									<option>SA-312 TP304H</option>
+									<option>SA-358 304</option>
+									<option>SA-358 304H</option>
+									<option>SA-358 304LN</option>
+									<option>SA-376 TP304</option>
+									<option>SA-376 TP304H</option>
+									<option>SA-403 304</option>
+									<option>SA-403 304H</option>
+									<option>SA-409 TP304</option>
+									<option>SA-479 302</option>
+									<option>SA-479 304</option>
+									<option>SA-479 304H</option>
+									<option>SA-688 TP304</option>
+									<option>SA-813 TP304</option>
+									<option>SA-813 TP304H</option>
+									<option>SA-814 TP304</option>
+									<option>SA-814 TP304H</option>
+									<option>SA/JIS G4303 SUS302</option>
+									<option>SA/JIS G4303 SUS304</option>
+									<option>SA/EN 10028-7 X5CrNi18–10</option>
+									<option>SA-351 CF3A</option>
+									<option>SA-351 CF8A</option>
+									<option>SA-451 CPF3A</option>
+									<option>SA-451 CPF8A</option>
+									<option>SA-182 F304LN</option>
+									<option>SA-965 F304LN</option>
+									<option>SA-213 TP304LN</option>
+									<option>SA-240 304LN</option>
+									<option>SA-249 TP304LN</option>
+									<option>SA-312 TP304LN</option>
+									<option>SA-376 TP304LN</option>
+									<option>SA-403 304LN</option>
+									<option>SA-479 304LN</option>
+									<option>SA-688 TP304LN</option>
+									<option>SA-813 TP304LN</option>
+									<option>SA-814 TP304LN</option>
+									<option>SA-182 F304N</option>
+									<option>SA-213 TP304N</option>
+									<option>SA-240 304N</option>
+									<option>SA-249 TP304N</option>
+									<option>SA-312 TP304N</option>
+									<option>SA-358 304N</option>
+									<option>SA-376 TP304N</option>
+									<option>SA-403 304N</option>
+									<option>SA-479 304N</option>
+									<option>SA-688 TP304N</option>
+									<option>SA-813 TP304N</option>
+									<option>SA-814 TP304N</option>
+									<option>SA-965 F304N</option>
+									<option>SA/EN 10028-7 X2CrNiN18–10</option>
+									<option>SA/EN 10028-7 X5CrNiN19–9</option>
+									<option>SA-479 …</option>
+									<option>SA-965 F348H</option>
+									<option>SA-351 CF8C</option>
+									<option>SA-451 CPF8C</option>
+									<option>SA-182 F347</option>
+									<option>SA-965 F347</option>
+									<option>SA-182 F347H</option>
+									<option>SA-965 F347H</option>
+									<option>SA-182 F348</option>
+									<option>SA-965 F348</option>
+									<option>SA-182 F348H</option>
+									<option>SA-182 F347</option>
+									<option>SA-213 TP347</option>
+									<option>SA-240 347</option>
+									<option>SA-249 TP347</option>
+									<option>SA-312 TP347</option>
+									<option>SA-358 347</option>
+									<option>SA-376 TP347</option>
+									<option>SA-403 347</option>
+									<option>SA-409 TP347</option>
+									<option>SA-479 347</option>
+									<option>SA-813 TP347</option>
+									<option>SA/JIS G4303 SUS347</option>
+									<option>SA-182 F347H</option>
+									<option>SA-213 TP347H</option>
+									<option>SA-240 347H</option>
+									<option>SA-249 TP347H</option>
+									<option>SA-312 TP347H</option>
+									<option>SA-376 TP347H</option>
+									<option>SA-403 347H</option>
+									<option>SA-479 347H</option>
+									<option>SA-813 TP347H</option>
+									<option>SA-814 TP347H</option>
+									<option>SA-213 TP347LN</option>
+									<option>SA-312 TP347LN</option>
+									<option>SA-182 F348</option>
+									<option>SA-213 TP348</option>
+									<option>SA-240 348</option>
+									<option>SA-249 TP348</option>
+									<option>SA-312 TP348</option>
+									<option>SA-358 348</option>
+									<option>SA-376 TP348</option>
+									<option>SA-403 348</option>
+									<option>SA-409 TP348</option>
+									<option>SA-479 348</option>
+									<option>SA-813 TP348</option>
+									<option>SA-814 TP348</option>
+									<option>SA-182 F348H</option>
+									<option>SA-213 TP348H</option>
+									<option>SA-240 348H</option>
+									<option>SA-249 TP348H</option>
+									<option>SA-312 TP348H</option>
+									<option>SA-403 348H</option>
+									<option>SA-479 348H</option>
+									<option>SA-813 TP348H</option>
+									<option>SA-814 TP348H</option>
+									<option>SA-213 TP347HFG</option>
+									<option>SA-312 TP321</option>
+									<option>SA-376 TP321</option>
+									<option>SA-312 TP321H</option>
+									<option>SA-376 TP321H</option>
+									<option>SA-182 F321</option>
+									<option>SA-965 F321</option>
+									<option>SA-182 F321H</option>
+									<option>SA-965 F321H</option>
+									<option>SA/EN 10028-7 X6CrNiTi18–10</option>
+									<option>SA-182 F321</option>
+									<option>SA-213 TP321</option>
+									<option>SA-240 321</option>
+									<option>SA-249 TP321</option>
+									<option>SA-358 321</option>
+									<option>SA-403 321</option>
+									<option>SA-409 TP321</option>
+									<option>SA-479 321</option>
+									<option>SA-813 TP321</option>
+									<option>SA-814 TP321</option>
+									<option>SA/JIS G4303 SUS321</option>
+									<option>SA-182 F321H</option>
+									<option>SA-213 TP321H</option>
+									<option>SA-240 321H</option>
+									<option>SA-249 TP321H</option>
+									<option>SA-312 TP321H</option>
+									<option>SA-376 TP321H</option>
+									<option>SA-403 321H</option>
+									<option>SA-479 321H</option>
+									<option>SA-813 TP321H</option>
+									<option>SA-814 TP321H</option>
+									<option>SA-240 305</option>
+									<option>SA-182 F317L</option>
+									<option>SA-182 F317</option>
+									<option>SA-240 317</option>
+									<option>SA-240 317L</option>
+									<option>SA-249 TP317</option>
+									<option>SA-249 TP317L</option>
+									<option>SA-312 TP317</option>
+									<option>SA-312 TP317L</option>
+									<option>SA-403 317</option>
+									<option>SA-403 317L</option>
+									<option>SA-182 …</option>
+									<option>SA-312 …</option>
+									<option>SA-213 XM–15</option>
+									<option>SA-240 XM–15</option>
+									<option>SA-249 TPXM–15</option>
+									<option>SA-312 TPXM–15</option>
+									<option>SA-213 …</option>
+									<option>SA-351 CF10</option>
+									<option>SA-351 CF10M</option>
+									<option>SA-351 CG8M</option>
+									<option>SA-358 …</option>
+									<option>SA-376 …</option>
+									<option>SA-409 …</option>
+									<option>SA-479 ER308</option>
+									<option>SA-351 CK3MCuN</option>
+									<option>SA-182 F44</option>
+									<option>SA-815 …</option>
+									<option>SA-182 FXM–11</option>
+									<option>SA-312 TPXM–11</option>
+									<option>SA-666 XM–11</option>
+									<option>SA-965 FXM–11</option>
+									<option>SA-182 F45</option>
+									<option>SA-182 F66</option>
+									<option>SA-995 4A</option>
+									<option>SA-182 F51</option>
+									<option>SA-182 F60</option>
+									<option>SA-351 CG6MMN</option>
+									<option>SA-182 FXM–19</option>
+									<option>SA-213 XM–19</option>
+									<option>SA-240 XM–19</option>
+									<option>SA-249 TPXM–19</option>
+									<option>SA-312 TPXM–19</option>
+									<option>SA-358 XM–19</option>
+									<option>SA-403 XM–19</option>
+									<option>SA-479 XM–19</option>
+									<option>SA-813 TPXM–19</option>
+									<option>SA-814 TPXM–19</option>
+									<option>SA-403 309</option>
+									<option>SA-213 TP309S</option>
+									<option>SA-240 309S</option>
+									<option>SA-249 TP309S</option>
+									<option>SA-312 TP309S</option>
+									<option>SA-358 309S</option>
+									<option>SA-479 309S</option>
+									<option>SA-813 TP309S</option>
+									<option>SA-814 TP309S</option>
+									<option>SA-213 TP309H</option>
+									<option>SA-240 309H</option>
+									<option>SA-249 TP309H</option>
+									<option>SA-312 TP309H</option>
+									<option>SA-479 309H</option>
+									<option>SA-213 TP309Cb</option>
+									<option>SA-240 309Cb</option>
+									<option>SA-249 TP309Cb</option>
+									<option>SA-312 TP309Cb</option>
+									<option>SA-479 309Cb</option>
+									<option>SA-813 TP309Cb</option>
+									<option>SA-814 TP309Cb</option>
+									<option>SA-995 2A</option>
+									<option>SA-182 F58</option>
+									<option>SA-813 …</option>
+									<option>SA-995 1B</option>
+									<option>SA-182 F54</option>
+									<option>SA-182 F53</option>
+									<option>SA-995 CD3MWCuN</option>
+									<option>SA-182 F55</option>
+									<option>SA-351 CH8</option>
+									<option>SA-451 CPH8</option>
+									<option>SA-351 CH20</option>
+									<option>SA-451 CPH20</option>
+									<option>SA-351 CK20</option>
+									<option>SA-451 CPK20</option>
+									<option>SA-182 F310</option>
+									<option>SA-965 F310</option>
+									<option>SA-213 TP310S</option>
+									<option>SA-240 310S</option>
+									<option>SA-249 TP310S</option>
+									<option>SA-312 TP310S</option>
+									<option>SA-358 310S</option>
+									<option>SA-403 310S</option>
+									<option>SA-479 310S</option>
+									<option>SA-813 TP310S</option>
+									<option>SA-814 TP310S</option>
+									<option>SA/JIS G4303 SUS310S</option>
+									<option>SA-213 TP310H</option>
+									<option>SA-240 310H</option>
+									<option>SA-249 TP310H</option>
+									<option>SA-312 TP310H</option>
+									<option>SA-479 310H</option>
+									<option>SA-213 TP310Cb</option>
+									<option>SA-240 310Cb</option>
+									<option>SA-249 TP310Cb</option>
+									<option>SA-312 TP310Cb</option>
+									<option>SA-479 310Cb</option>
+									<option>SA-813 TP310Cb</option>
+									<option>SA-814 TP310Cb</option>
+									<option>SA-213 TP310HCbN</option>
+									<option>SA-182 F310MoLN</option>
+									<option>SA-213 TP310MoLN</option>
+									<option>SA-240 310MoLN</option>
+									<option>SA-249 TP310MoLN</option>
+									<option>SA-312 TP310MoLN</option>
+									<option>SA-240 329</option>
 								</select>
 
 
