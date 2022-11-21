@@ -1,3 +1,3 @@
-# Projeto DashBoard Site
+# Projeto Portal de Calculo
 
-## Elaboração de um site com dashboard e outras funcionalidades.
+## Elaboração de um portal de calculo e outras funcionalidades.
