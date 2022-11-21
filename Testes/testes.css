@@ -251,17 +251,18 @@ main {
   height: 37px;
 }
 
-.container-conical_calc{
+.container-conical_calc {
   display: flex;
   justify-self: center;
   height: 50px;
 }
 
-.container-spherical_calc{
+.container-spherical_calc {
   display: flex;
   justify-self: center;
   height: 44px;
 }
+
 .form-header h1::after {
   content: '';
   display: flex;
@@ -401,7 +402,7 @@ table {
   display: absolute;
 }
 
-.cilindrical_page2 table{
+.cilindrical_page2 table {
   margin-top: 10px;
 }
 
@@ -480,7 +481,7 @@ body {
   line-height: 1.25;
 }
 
-.contatoBtMais{
+.contatoBtMais {
   display: flex;
 }
 
@@ -488,44 +489,44 @@ body {
 
 
 
-  .pdf-page {
-    margin: 0 auto;
-    box-sizing: border-box;
-    background-color: #fff;
-    font-family: "DejaVu Sans", "Arial", sans-serif;
-    color: #333;
-    margin-bottom: 10px;
-  }
+.pdf-page {
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-family: "DejaVu Sans", "Arial", sans-serif;
+  color: #333;
+  margin-bottom: 10px;
+}
 
-  .pdf-header {
-    top: .5in;
-    height: .6in;
-    left: .5in;
-    right: .5in;
-    border-bottom: 1px solid #e5e5e5;
-  }
+.pdf-header {
+  top: .5in;
+  height: .6in;
+  left: .5in;
+  right: .5in;
+  border-bottom: 1px solid #e5e5e5;
+}
 
-  .invoice-number {
-    padding-top: .17in;
-    float: right;
-  }
+.invoice-number {
+  padding-top: .17in;
+  float: right;
+}
 
 
 
-  .pdf-body {
-  
-    top: 0.7in;
-     left: .2in;
-      right: .2in;
+.pdf-body {
 
-  }
+  top: 0.7in;
+  left: .2in;
+  right: .2in;
 
-  .size-a4 {
-    width: 8.3in;
-    height: 11.7in;
-  }
+}
 
-  /*
+.size-a4 {
+  width: 210mm;
+  height: 297mm;
+}
+
+/*
   .size-letter {
     width: 8.5in;
     height: 11in;
@@ -536,32 +537,31 @@ body {
     height: 10.5in;
   }
 */
-  .company-logo {
-    font-size: 30px;
-    font-weight: bold;
-    color: #3aabf0;
-  }
+.company-logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #3aabf0;
+}
 
-  .for {
-    position: absolute;
-    top: 1.5in;
-    left: .5in;
-    width: 2.5in;
-  }
+.for {
+  position: absolute;
+  top: 1.5in;
+  left: .5in;
+  width: 2.5in;
+}
 
-  .from {
-    position: absolute;
-    top: 1.5in;
-    right: .5in;
-    width: 2.5in;
-  }
+.from {
+  position: absolute;
+  top: 1.5in;
+  right: .5in;
+  width: 2.5in;
+}
 
-  .from p,
-  .for p {
-    color: #787878;
-  }
+.from p,
+.for p {
+  color: #787878;
+}
 
-  .signature {
-    padding-top: .5in;
-  }
-
+.signature {
+  padding-top: .5in;
+}

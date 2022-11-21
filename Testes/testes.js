@@ -44,11 +44,18 @@
 	var button_cilindrical = document.getElementById("cilindrical_button")
 	var button_conical = document.getElementById("conical_button")
 	var button_spherical = document.getElementById("spherical_button")
+	var button_ELLIPSOIDAL = document.getElementById("ELLIPSOIDAL_button")
+	var button_TORISPHERICAL = document.getElementById("TORISPHERICAL_button")
 	var button_header = document.getElementById("btn-print-pdf")
 	var i = 0;
 	var j = 0;
 	var k = 0;
 	var l = 0;
+	var a = 0;
+	var b = 0;
+	var c = 0;
+	var d = 0;
+	var e = 0;
 	button_cilindrical.addEventListener('change', function () {
 		i++
 		console.log(i)
@@ -78,6 +85,26 @@
 		} else {
 			document.getElementById("SPHERICAL_page").style = "display:flex;"
 			document.getElementById("SPHERICAL_page2").style = "display:flex;"
+		}
+	})
+	button_ELLIPSOIDAL.addEventListener('change', function () {
+		a++
+		if (a % 2 == 0) {
+			document.getElementById("ELLIPSOIDAL_HEADS_page").style = "display:none;"
+			document.getElementById("ELLIPSOIDAL_HEADS_page2").style = "display:none;"
+		} else {
+			document.getElementById("ELLIPSOIDAL_HEADS_page").style = "display:flex;"
+			document.getElementById("ELLIPSOIDAL_HEADS_page2").style = "display:flex;"
+		}
+	})
+	button_TORISPHERICAL.addEventListener('change', function () {
+		b++
+		if (b % 2 == 0) {
+			document.getElementById("TORISPHERICAL_HEADS_page").style = "display:none;"
+			document.getElementById("TORISPHERICAL_HEADS_page2").style = "display:none;"
+		} else {
+			document.getElementById("TORISPHERICAL_HEADS_page").style = "display:flex;"
+			document.getElementById("TORISPHERICAL_HEADS_page2").style = "display:flex;"
 		}
 	})
 	button_header.addEventListener('change', function () {
