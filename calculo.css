@@ -5,6 +5,11 @@
   font-family: 'inter', sans-serif;
 }
 
+body {
+  height: 10vh;
+  background: linear-gradient(90deg, #161F30, #173540);
+}
+
 /*CSS do Titulo*/
 .titulo a {
   color: #fff;
@@ -55,6 +60,7 @@
 .nav-list li {
   letter-spacing: 3px;
   margin-left: 32px;
+  cursor: pointer;
 }
 
 
@@ -181,43 +187,6 @@
 }
 
 
-body {
-  height: 10vh;
-  background: linear-gradient(90deg, #161F30, #173540);
-}
-
-
-@media screen and (max-width:1064px) {
-
-  .titulo nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    font-size: 20px;
-    padding: 16px;
-    align-content: center;
-    height: 11vh;
-  }
-
-  .titulo nav ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .titulo nav ul li {
-    display: inline;
-    position: relative;
-  }
-
-  .titulo nav ul li a {
-    right: 8px;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    transition: background .6s;
-  }
-}
 
 /*Formulario*/
 
@@ -251,17 +220,18 @@ main {
   height: 37px;
 }
 
-.container-conical_calc{
+.container-conical_calc {
   display: flex;
   justify-self: center;
   height: 50px;
 }
 
-.container-spherical_calc{
+.container-spherical_calc {
   display: flex;
   justify-self: center;
   height: 44px;
 }
+
 .form-header h1::after {
   content: '';
   display: flex;
@@ -394,15 +364,12 @@ table {
   border-collapse: collapse;
   margin: 0;
   padding: 0;
-  width: 90%;
+  width: 100%;
   margin: auto;
   table-layout: fixed;
-  display: absolute;
 }
 
-.cilindrical_page2 table{
-  margin-top: 10px;
-}
+
 
 table caption {
   font-size: 0.3px;
@@ -428,16 +395,15 @@ table th {
 }
 
 @media screen and (max-width: 600px) {
-  page[size="A4"] {  
+  page[size="A4"] {
     width: 21cm;
-    height: 29.7cm; 
+    height: 29.7cm;
   }
 
   page {
     display: flex;
-    position: relative;
-
   }
+
   table {
     width: auto;
     border: 0;
@@ -488,26 +454,67 @@ body {
   line-height: 1.25;
 }
 
-.contatoBtMais{
+.contatoBtMais {
   display: flex;
 }
 
 
 
+
+
+
+
+
+
+
+/*Pagina que vai ser impressa*/
+.pdf-page {
+  font-family: "DejaVu Sans", "Arial", sans-serif;
+}
+
 .pdf-page {
   margin: 0 auto;
   box-sizing: border-box;
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,.3);
   background-color: #fff;
   color: #333;
-  
+
 }
+
 .pdf-header {
+  position: relative;
   top: .5in;
   height: .6in;
   left: .5in;
   right: .5in;
   border-bottom: 1px solid #e5e5e5;
+  
+}
+
+/*.pdf-footer {
+  position: absolute;
+  bottom: .5in;
+  height: .6in;
+  left: .5in;
+  right: .5in;
+  padding-top: 10px;
+  border-top: 1px solid #e5e5e5;
+  text-align: left;
+  color: #787878;
+  font-size: 12px;
+}*/
+
+.pdf-body {
+  top: .1in;
+  bottom: 0in;
+  left: 0in;
+  right: 0in;
+  
+}
+
+.size-a4 {
+  width: 8.3in;
+  height: 11.7in;
+  
 }
 
 .company-logo {
@@ -515,15 +522,30 @@ body {
   font-weight: bold;
   color: #3aabf0;
 }
-.pdf-body {
-  top: 3.7in;
-  bottom: 1.2in;
-  left: .5in;
-  right: .5in;
-  position: static;
+
+
+.titulo-pagina {
+  margin-left: 20px;
 }
 
-.size-a4 { width: 8.3in; height: 11.7in; }
+.pdf-body table th, td {
+  text-transform: capitalize;
+}
 
 
 
+
+
+.product {
+  width: 30%;
+  margin: 30px;
+  align-items: center;
+}
+.form-group {
+  width: 30%;
+  margin: 30px;
+  align-items: center;
+}
+.form-group .glyphicon {
+  color: #000;
+}
