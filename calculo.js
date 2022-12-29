@@ -43,12 +43,25 @@
 
      var button_cilindrical = document.getElementById("cilindrical_button")
      var button_conical = document.getElementById("conical_button")
-     var button_spherical = document.getElementById("spherical_button")
+	 var button_spherical = document.getElementById("spherical_button")
+	 var button_ellipsoidal = document.getElementById("ellipsoidal_button")
+	 var button_TORISPHERICAL = document.getElementById("TORISPHERICAL_button")
      var button_header = document.getElementById("btn-print-pdf")
      var i = 0;
      var j = 0;
      var k = 0;
-     var l = 0;
+	 var l = 0;
+	 var m = 0;
+	 var n = 0;
+	 button_header.addEventListener('change', function () {
+		l++
+		if (l % 2 == 0) {
+			document.getElementById("titulo").style = "display:block;"
+		} else {
+			document.getElementById("titulo").style = "display:none;"
+
+		}
+	 })
      button_cilindrical.addEventListener('change', function () {
      	i++
      	console.log(i)
@@ -79,30 +92,29 @@
      		document.getElementById("SPHERICAL_page").style = "display:flex;"
      		document.getElementById("SPHERICAL_page2").style = "display:flex;"
      	}
-     })
-     button_header.addEventListener('change', function () {
-     	l++
-     	if (l % 2 == 0) {
-     		document.getElementById("titulo").style = "display:block;"
-     	} else {
-     		document.getElementById("titulo").style = "display:none;"
+	 })
+	 button_ellipsoidal.addEventListener('change', function () {
+		m++
+		if (m % 2 == 0) {
+			document.getElementById("ELLIPSOIDAL_HEADS_page").style = "display:none;"
+			document.getElementById("ELLIPSOIDAL_HEADS_page2").style = "display:none;"
+		} else {
+			document.getElementById("ELLIPSOIDAL_HEADS_page").style = "display:flex;"
+			document.getElementById("ELLIPSOIDAL_HEADS_page2").style = "display:flex;"
+		}
+	 })
+	 button_TORISPHERICAL.addEventListener('change', function () {
+		n++
+		if (n % 2 == 0) {
+			document.getElementById("TORISPHERICAL_HEADS_page").style = "display:none;"
+			document.getElementById("TORISPHERICAL_HEADS_page2").style = "display:none;"
+		} else {
+			document.getElementById("TORISPHERICAL_HEADS_page").style = "display:flex;"
+			document.getElementById("TORISPHERICAL_HEADS_page2").style = "display:flex;"
+		}
+	})
 
-     	}
-     })
 
-
-     //contas - teste//
-
-     var num1 = document.querySelector("#num1");
-     var num2 = document.querySelector("#num2");
-     var resultado = document.querySelector("#resp")
-
-     document.getElementById("num1").addEventListener("keyup", function () {
-     	resultado.innerHTML = (parseFloat(num1.value) + parseFloat(num2.value)) / 2
-     })
-     document.getElementById("num2").addEventListener("keyup", function () {
-     	resultado.innerHTML = (parseFloat(num1.value) + parseFloat(num2.value)) / 2
-     })
 
 
      //print//
