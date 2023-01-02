@@ -19,25 +19,26 @@
     <h2>Login</h2>
 
     <div class="inputBox">
-      <input type="text" required="required" />
+      <input type="text" required="required"  id="Nome"/>
       <span>Name</span>
     </div>
 
     <br>
 
     <div class="inputBox">
-      <input type="text" required="required" />
+      <input type="email" required="required" id="Login"/>
       <span>Login</span>
     </div>
-
+ 
     <br>
 
     <div class="inputBox">
-      <input type="password" required="required" />
+      <input type="password" required="required" id="Senha"/>
       <span>Password</span>
     </div>
+
     <div class="center">
-        <a href="./cursos.html">Go</a>
+        <a onclick="logar(); return false" >Go</a>
       </div>
       <br>
   
@@ -50,6 +51,40 @@
     </div>
 
 </body>
+
+<script src="login.js"></script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCskVoWz4T3gHwNoNsQ5pQctgODi-GJEx4",
+    authDomain: "wisecalc-33be8.firebaseapp.com",
+    projectId: "wisecalc-33be8",
+    storageBucket: "wisecalc-33be8.appspot.com",
+    messagingSenderId: "299273940359",
+    appId: "1:299273940359:web:28f8840e469db262427722",
+    measurementId: "G-ZE67ZQBTQ4"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+  firebase.auth().signInWhithEmailAndPassword("any@email.com", "123456").then(response => {
+    console.log('success', response)
+  }).cath(error => {
+    console.log('error', error)
+  });
+  console.log('depois')
+</script>
 
 
 </html>

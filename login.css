@@ -98,7 +98,11 @@ button:hover {
   text-align: center;
 }
 
+<<<<<<< Updated upstream
 .center a {
+=======
+.center a, button {
+>>>>>>> Stashed changes
   appearance: button;
   padding: 15px 50px;
   margin: 20px;
@@ -109,14 +113,22 @@ button:hover {
   border-radius: 20px;
 }
 
+<<<<<<< Updated upstream
 a:hover {
+=======
+a, button:hover {
+>>>>>>> Stashed changes
   color: #26a96a;
   text-decoration: none;
   font-family: sans-serif;
   font-weight: 600;
 }
 
+<<<<<<< Updated upstream
 a {
+=======
+a, button {
+>>>>>>> Stashed changes
   text-decoration: none;
   color: #fff;
   transition: 0.25s ease-in-out;
@@ -128,7 +140,11 @@ a {
   cursor: pointer;
 }
 
+<<<<<<< Updated upstream
 a:hover {
+=======
+a, button:hover {
+>>>>>>> Stashed changes
   text-decoration: none;
   font-family: sans-serif;
   font-weight: 600;
@@ -173,4 +189,9 @@ z-index: -1;
   border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
   transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
 }
+<<<<<<< Updated upstream
 }
+=======
+}
+
+>>>>>>> Stashed changes
