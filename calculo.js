@@ -182,5 +182,13 @@
 		if (document.getElementById("myNumber").value <= parseInt(min)) {
 			document.getElementById("myNumber").value = min;
 		}
-	}
+}
 	
+
+
+
+const selection = document.querySelector('.selection')
+
+selection = addEventListener('click', () => {
+	window.scroll({top: window.innerHeight, behavior: "smooth"})
+})

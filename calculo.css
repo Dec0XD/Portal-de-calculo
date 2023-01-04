@@ -535,3 +535,75 @@ body {
 .form-group .glyphicon {
   color: #000;
 }
+
+
+.section a {
+  padding-top: 60px;
+}
+.section a span {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin-top: 50px;
+  margin-left: 400px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb04 2s infinite;
+  animation: sdb04 2s infinite;
+  box-sizing: border-box;
+}
+
+
+
+  
+.sectionUp a {
+  padding-top: 60px;
+}
+.sectionUp a span {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin-top: 50px;
+  margin-left: 470px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(135deg);
+  -webkit-animation: sdb04 2s infinite;
+  animation: sdb04 2s infinite;
+  box-sizing: border-box;
+}
+
+  
+  
+.to-top{
+  margin-left: 900px;
+  margin-top: 10px;
+	color:white;
+	padding-top:1.8em;
+	display:inline-block;/* or block */
+	position:relative;
+	border-color:white;
+	text-decoration:none;
+	transition:all .3s ease-out;
+}
+.to-top:before{
+	content:'▲';
+  text-align:center;
+	font-size:.9em;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-.7em;
+	border:solid .13em white;
+	border-radius:10em;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.3em;
+	border-color:inherit;
+	transition:transform .5s ease-in;
+}
+
+

@@ -1,11 +1,35 @@
-.product {
-  width: 30%;
-  margin: 30px;
+*{
+  margin: 0;
+  padding: 0;
 }
-.form-group {
-  width: 30%;
-  margin: 30px;
+
+body{
+  background-color: black;
 }
-.form-group .glyphicon {
-  color: #000;
+
+#img {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#img > img{
+  width: 60px;
+  margin-bottom: 20px;
+  animation: jumping 1s linear infinite;
+  cursor: pointer;
+}
+
+@keyframes jumping {
+  from{transform: translateY(-15px);}
+  50% {transform: translateY(0);}
+  to {transform: translateY(-15px);}
+}
+
+#conteudo{
+  height: 100vh;
+  background-color: aliceblue;
 }

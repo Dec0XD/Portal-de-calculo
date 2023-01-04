@@ -5,6 +5,7 @@
 	<title>WISECALC®</title>
 	<link rel="stylesheet" href="calculo.css">
 	<script src="https://kendo.cdn.telerik.com/2017.1.223/js/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<style type="text/css">
 		@page {
 			margin: 0;
@@ -187,7 +188,9 @@
 </div>
 
 <body>
-	
+	<section id="section01" class="Section">
+		<a href="#section02"><span></span></a>
+	</section>
 	<div class="pdf-page size-a4" id="design_page">
 
 		<main>
@@ -556,6 +559,13 @@
 
 	</div>
 
+
+	<section id="section02" class="Section">
+		<a href="#section03"><span></span></a>
+	</section>
+	<section id="section02" class="sectionUp">
+		<a href="#section01"><span></span></a>
+	</section>
 	<div class="pdf-page size-a4" id="cilindrical_page" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
@@ -1584,6 +1594,13 @@
 		</main>
 	</div>
 
+
+	<section id="section03" class="Section">
+		<a href="#section04"><span></span></a>
+	</section>
+	<section id="section03" class="sectionUp">
+		<a href="#section02"><span></span></a>
+	</section>
 	<div class="pdf-page size-a4" id="cilindrical_page2" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
@@ -1713,6 +1730,12 @@
 		</main>
 	</div>
 
+	<section id="section04" class="Section">
+		<a href="#section05"><span></span></a>
+	</section>
+	<section id="section04" class="sectionUp">
+		<a href="#section03"><span></span></a>
+	</section>
 	<div class="pdf-page size-a4" id="conical_page" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
@@ -1911,6 +1934,12 @@
 		</main>
 	</div>
 
+	<section id="section05" class="Section">
+		<a href="#section06"><span></span></a>
+	</section>
+	<section id="section05" class="sectionUp">
+		<a href="#section04"><span></span></a>
+	</section>
 	<div class="pdf-page size-a4" id="conical_page2" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
@@ -2046,6 +2075,12 @@
 		</main>
 	</div>
 
+	<section id="section06" class="Section">
+		<a href="#section07"><span></span></a>
+	</section>
+	<section id="section06" class="sectionUp">
+		<a href="#section05"><span></span></a>
+	</section>
 	<div class="pdf-page size-a4" id="SPHERICAL_page" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
@@ -2244,6 +2279,12 @@
 		</main>
 	</div>
 
+	<section id="section07" class="Section">
+		<a href="#section08"><span></span></a>
+	</section>
+	<section id="section07" class="sectionUp">
+		<a href="#section06"><span></span></a>
+	</section>
 	<div class="pdf-page size-a4" id="SPHERICAL_page2" style="display:none;">
 		<main>
 			<div class="titulo-pagina">
@@ -2364,6 +2405,12 @@
 		</main>
 	</div>
 
+	<section id="section08" class="Section">
+		<a href="#section09"><span></span></a>
+	</section>
+	<section id="section08" class="sectionUp">
+		<a href="#section07"><span></span></a>
+	</section>
 	<div class="pdf-page size-a4" id="ELLIPSOIDAL_HEADS_page" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
@@ -2609,6 +2656,12 @@
 		</main>
 	</div>
 
+	<section id="section09" class="Section">
+		<a href="#section10"><span></span></a>
+	</section>
+	<section id="section09" class="sectionUp">
+		<a href="#section08"><span></span></a>
+	</section>
 	<div class="pdf-page size-a4" id="ELLIPSOIDAL_HEADS_page2" style="display:none;">
 		<main>
 			<div class="titulo-pagina">
@@ -2624,10 +2677,12 @@
 						<th>Nominal Thickness</th>
 						<td>tn</td>
 						<td>
+							<select><
 							<option>ASTM_A20</option>
 							<option>4,76</option>
 							<option>7,94</option>
 							<option>9,53</option>
+						</select>
 						</td>
 						<td>mm</td>
 					</tr>
@@ -2711,6 +2766,12 @@
 		</main>
 	</div>
 
+	<section id="section10" class="Section">
+		<a href="#section11"><span></span></a>
+	</section>
+	<section id="section10" class="sectionUp">
+		<a href="#section09"><span></span></a>
+	</section>
 	<div class="pdf-page size-a4" id="TORISPHERICAL_HEADS_page" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
@@ -2983,6 +3044,12 @@
 		</main>
 	</div>
 
+	<section id="section11" class="Section">
+		<a href="#section12"><span></span></a>
+	</section>
+	<section id="section11" class="sectionUp">
+		<a href="#section10"><span></span></a>
+	</section>
 	<div class="pdf-page size-a4" id="TORISPHERICAL_HEADS_page2" style="display:none;">
 		<main>
 			<div class="titulo-pagina">
@@ -2998,12 +3065,12 @@
 						<th>Nominal Thickness</th>
 						<td>tn</td>
 						<td>
-						<select>
-							<option>ASTM_A20</option>
-							<option>4,76</option>
-							<option>7,94</option>
-							<option>9,53</option>
-						</select>
+							<select>
+								<option>ASTM_A20</option>
+								<option>4,76</option>
+								<option>7,94</option>
+								<option>9,53</option>
+							</select>
 						</td>
 						<td>mm</td>
 					</tr>
@@ -3088,6 +3155,9 @@
 	</div>
 
 
+	<section id="sectionFinalpage">
+	<a href="#section01" class="to-top">Back to top</a>
+	</section>
 
 
 	<script src="calculo.js"></script>
