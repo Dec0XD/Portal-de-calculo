@@ -151,7 +151,7 @@
      		$(".container").show();
      	}, 1000);
 
-     	document.getElementById("sectionFinalpage").style = "display: block;"
+
 		document.getElementById("sectionFinalpage").style = "display: block;"
      	document.getElementById("divheader").style = "display: block;"
 		document.getElementById("brh").style = "display: block;"
