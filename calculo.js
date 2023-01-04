@@ -119,6 +119,7 @@
 
      //print//
      $('#btn-print-pdf').click(function () {
+		document.getElementById("brh").style = "display: none;"
      	document.getElementById("divheader").style = "display: none;"
 		document.getElementById("sectionFinalpage").style = "display: none;"
 		
@@ -133,6 +134,7 @@
 		
 		document.getElementById("sectionFinalpage").style = "display: block;"
      	document.getElementById("divheader").style = "display: block;"
+		document.getElementById("brh").style = "display: block;"
      });
 
 
