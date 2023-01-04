@@ -157,25 +157,22 @@
 						</li>
 	</div>
 
-	<!--
-	<div class="box wide hidden-on-narrow">
-		<div class="page-size" style="display: block;">
-			<h4>Select Page size</h4>
-			<select id="paper" style="width: 100px;">
-				<option value="size-a4" selected>A4</option>
-				<option value="size-letter">Letter</option>
-				<option value="size-executive">Executive</option>
-			</select>
+	<div class="contatoBtMais" id="divheader" style="display: block;">Adicionar</div>
+	<div class="input-group">
+		<div class="input-group-btn">
+			<button id="down" class="btn btn-default" onclick=" down('0')"><span
+					class="glyphicon glyphicon-minus"></span></button>
 		</div>
-	</div>
-	-->
-
-
+		<input type="text" id="myNumber" class="form-control input-number" value="1" />
+		<div class="input-group-btn">
+			<button id="up" class="btn btn-default" onclick="up('10')"><span
+					class="glyphicon glyphicon-plus"></span></button>
+		</div>
+	</div>	
 
 </header>
 
-
-<!-- <div class="input-group">
+ <div class="input-group">
 	<div class="input-group-btn">
 		<button id="down" class="btn btn-default" onclick=" down('0')"><span
 				class="glyphicon glyphicon-minus"></span></button>
@@ -185,7 +182,7 @@
 		<button id="up" class="btn btn-default" onclick="up('10')"><span
 				class="glyphicon glyphicon-plus"></span></button>
 	</div>
-</div> -->
+</div>
 
 <body>
 	<section id="section01" class="Section">
@@ -3157,7 +3154,7 @@
 
 
 	<section id="sectionFinalpage">
-	<a href="#section01" class="to-top">Back to top</a>
+	<a href="#divheader" class="to-top">Back to top</a>
 	</section>
 
 
