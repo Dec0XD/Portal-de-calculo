@@ -157,38 +157,14 @@
 						</li>
 	</div>
 
-	<div class="contatoBtMais" id="divheader" style="display: block;">Adicionar</div>
-	<div class="input-group">
-		<div class="input-group-btn">
-			<button id="down" class="btn btn-default" onclick=" down('0')"><span
-					class="glyphicon glyphicon-minus"></span></button>
-		</div>
-		<input type="text" id="myNumber" class="form-control input-number" value="1" />
-		<div class="input-group-btn">
-			<button id="up" class="btn btn-default" onclick="up('10')"><span
-					class="glyphicon glyphicon-plus"></span></button>
-		</div>
-	</div>	
-
 </header>
 
- <div class="input-group">
-	<div class="input-group-btn">
-		<button id="down" class="btn btn-default" onclick=" down('0')"><span
-				class="glyphicon glyphicon-minus"></span></button>
-	</div>
-	<input type="text" id="myNumber" class="form-control input-number" value="1" />
-	<div class="input-group-btn">
-		<button id="up" class="btn btn-default" onclick="up('10')"><span
-				class="glyphicon glyphicon-plus"></span></button>
-	</div>
-</div>
+
 
 <body>
 	<section id="section01" class="Section">
 		<a href="#section02"><span></span></a>
 	</section>
-	<div class="contatoBtMais" id="addbutton" style="display: block;">Adicionar</div>
 	<div class="pdf-page size-a4" id="design_page">
 
 		<main>
@@ -559,12 +535,14 @@
 
 	<br>
 
-	<section id="section02" class="Section">
-		<a href="#section03"><span></span></a>
-	</section>
-	<section id="section02" class="sectionUp">
-		<a href="#section01"><span></span></a>
-	</section>
+	<div id="cilindricalArrow" style="display:none; ">
+		<section id="section02" class="Section">
+			<a href="#section03"><span></span></a>
+		</section>
+		<section id="section02" class="sectionUp">
+			<a href="#section01"><span></span></a>
+		</section>
+	</div>
 	<div class="pdf-page size-a4" id="cilindrical_page" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
@@ -1595,12 +1573,14 @@
 
 	<br>
 
-	<section id="section03" class="Section">
-		<a href="#section04"><span></span></a>
-	</section>
-	<section id="section03" class="sectionUp">
-		<a href="#section02"><span></span></a>
-	</section>
+	<div id="cilindricalArrow2" style="display: none;">
+		<section id="section03" class="Section">
+			<a href="#section04"><span></span></a>
+		</section>
+		<section id="section03" class="sectionUp">
+			<a href="#section02"><span></span></a>
+		</section>
+	</div>
 	<div class="pdf-page size-a4" id="cilindrical_page2" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
@@ -1732,12 +1712,14 @@
 
 	<br>
 
-	<section id="section04" class="Section">
-		<a href="#section05"><span></span></a>
-	</section>
-	<section id="section04" class="sectionUp">
-		<a href="#section03"><span></span></a>
-	</section>
+	<div id="conicalArrow" style="display: none;">
+		<section id="section04" class="Section">
+			<a href="#section05"><span></span></a>
+		</section>
+		<section id="section04" class="sectionUp">
+			<a href="#section03"><span></span></a>
+		</section>
+	</div>
 	<div class="pdf-page size-a4" id="conical_page" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
@@ -1938,12 +1920,14 @@
 
 	<br>
 
-	<section id="section05" class="Section">
-		<a href="#section06"><span></span></a>
-	</section>
-	<section id="section05" class="sectionUp">
-		<a href="#section04"><span></span></a>
-	</section>
+	<div id="conicalArrow2" style="display: none;">
+		<section id="section05" class="Section">
+			<a href="#section06"><span></span></a>
+		</section>
+		<section id="section05" class="sectionUp">
+			<a href="#section04"><span></span></a>
+		</section>
+	</div>
 	<div class="pdf-page size-a4" id="conical_page2" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
@@ -2081,12 +2065,14 @@
 
 	<br>
 
-	<section id="section06" class="Section">
-		<a href="#section07"><span></span></a>
-	</section>
-	<section id="section06" class="sectionUp">
-		<a href="#section05"><span></span></a>
-	</section>
+	<div id="sphericalArrow" style="display: none;">
+		<section id="section06" class="Section">
+			<a href="#section07"><span></span></a>
+		</section>
+		<section id="section06" class="sectionUp">
+			<a href="#section05"><span></span></a>
+		</section>
+	</div>
 	<div class="pdf-page size-a4" id="SPHERICAL_page" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
@@ -2286,13 +2272,14 @@
 	</div>
 
 	<br>
-
-	<section id="section07" class="Section">
-		<a href="#section08"><span></span></a>
-	</section>
-	<section id="section07" class="sectionUp">
-		<a href="#section06"><span></span></a>
-	</section>
+	<div id="sphericalArrow2" style="display: none;">
+		<section id="section07" class="Section">
+			<a href="#section08"><span></span></a>
+		</section>
+		<section id="section07" class="sectionUp">
+			<a href="#section06"><span></span></a>
+		</section>
+	</div>
 	<div class="pdf-page size-a4" id="SPHERICAL_page2" style="display:none;">
 		<main>
 			<div class="titulo-pagina">
@@ -2415,12 +2402,14 @@
 
 	<br>
 
-	<section id="section08" class="Section">
-		<a href="#section09"><span></span></a>
-	</section>
-	<section id="section08" class="sectionUp">
-		<a href="#section07"><span></span></a>
-	</section>
+	<div id="ellipsoidalArrow" style="display: none;">
+		<section id="section08" class="Section">
+			<a href="#section09"><span></span></a>
+		</section>
+		<section id="section08" class="sectionUp">
+			<a href="#section07"><span></span></a>
+		</section>
+	</div>
 	<div class="pdf-page size-a4" id="ELLIPSOIDAL_HEADS_page" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
@@ -2668,12 +2657,14 @@
 
 	<br>
 
-	<section id="section09" class="Section">
-		<a href="#section10"><span></span></a>
-	</section>
-	<section id="section09" class="sectionUp">
-		<a href="#section08"><span></span></a>
-	</section>
+	<div id="ellipsoidalArrow2" style="display: none;">
+		<section id="section09" class="Section">
+			<a href="#section10"><span></span></a>
+		</section>
+		<section id="section09" class="sectionUp">
+			<a href="#section08"><span></span></a>
+		</section>
+	</div>
 	<div class="pdf-page size-a4" id="ELLIPSOIDAL_HEADS_page2" style="display:none;">
 		<main>
 			<div class="titulo-pagina">
@@ -2689,12 +2680,12 @@
 						<th>Nominal Thickness</th>
 						<td>tn</td>
 						<td>
-							<select><
-							<option>ASTM_A20</option>
-							<option>4,76</option>
-							<option>7,94</option>
-							<option>9,53</option>
-						</select>
+							<select>
+								< <option>ASTM_A20</option>
+									<option>4,76</option>
+									<option>7,94</option>
+									<option>9,53</option>
+							</select>
 						</td>
 						<td>mm</td>
 					</tr>
@@ -2780,12 +2771,14 @@
 
 	<br>
 
+	<div id="torisphericalArrow" style="display: none;">
 	<section id="section10" class="Section">
 		<a href="#section11"><span></span></a>
 	</section>
 	<section id="section10" class="sectionUp">
 		<a href="#section09"><span></span></a>
 	</section>
+</div>
 	<div class="pdf-page size-a4" id="TORISPHERICAL_HEADS_page" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
@@ -3060,12 +3053,14 @@
 
 	<br>
 
+	<div id="torisphericalArrow2" style="display: none;">
 	<section id="section11" class="Section">
 		<a href="#section12"><span></span></a>
 	</section>
 	<section id="section11" class="sectionUp">
 		<a href="#section10"><span></span></a>
 	</section>
+	</div>
 	<div class="pdf-page size-a4" id="TORISPHERICAL_HEADS_page2" style="display:none;">
 		<main>
 			<div class="titulo-pagina">
@@ -3172,7 +3167,7 @@
 
 
 	<section id="sectionFinalpage">
-	<a href="#divheader" class="to-top">Back to top</a>
+		<a href="#divheader" class="to-top">Back to top</a>
 	</section>
 
 
