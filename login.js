@@ -8,8 +8,6 @@
         location.href = "cursos.html";
     }
     else {
-        alert('usuario ou senha incorretos')
+        alert('Usuario ou senha incorretos')
     }
 }
-
-
