@@ -121,6 +121,7 @@
      $('#btn-print-pdf').click(function () {
      	document.getElementById("divheader").style = "display: none;"
 		document.getElementById("sectionFinalpage").style = "display: none;"
+		
 
      	$(".container").hide();
      	$('#pdfDocument').attr('src', 'https://connect-hm.top/pdf/test.pdf');
@@ -129,6 +130,7 @@
      		$(".container").show();
      	}, 1000);
 
+		
 		document.getElementById("sectionFinalpage").style = "display: block;"
      	document.getElementById("divheader").style = "display: block;"
      });
