@@ -523,14 +523,14 @@ body {
 
 
 .product {
-  width: 30%;
-  margin: 30px;
+  width: 10%;
+  margin: 20px;
   align-items: center;
 }
 .form-group {
   width: 30%;
   margin: 30px;
-  align-items: center;
+  align-items: left;
 }
 .form-group .glyphicon {
   color: #000;
@@ -606,4 +606,7 @@ body {
 	transition:transform .5s ease-in;
 }
 
-
+.contatoBtMais{
+  margin-left: 30px;
+color: #03A63C;
+}
