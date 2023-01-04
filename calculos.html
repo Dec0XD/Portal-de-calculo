@@ -12,6 +12,7 @@
 		}
 	</style>
 </head>
+
 <header id="divheader">
 
 	<div class="titulo" style="display: block;">
@@ -170,24 +171,30 @@
 	</div>
 	-->
 
+	<div class="contatoBtMais">Adicionar</div>
 
+	<div class="input-group">
+
+		<div class="input-group-btn">
+			<button id="down" class="btn btn-default" onclick=" down('0')"><span
+					class="glyphicon glyphicon-minus"></span></button>
+		</div>
+
+		<input type="text" id="myNumber" class="form-control input-number" value="1" />
+
+		<div class="input-group-btn">
+			<button id="up" class="btn btn-default" onclick="up('10')"><span
+					class="glyphicon glyphicon-plus"></span></button>
+		</div>
+
+	</div>
 
 </header>
 
-<div class="contatoBtMais" id="divheader" style="display: block;">Adicionar</div>
-<div class="input-group">
-	<div class="input-group-btn">
-		<button id="down" class="btn btn-default" onclick=" down('0')"><span
-				class="glyphicon glyphicon-minus"></span></button>
-	</div>
-	<input type="text" id="myNumber" class="form-control input-number" value="1" />
-	<div class="input-group-btn">
-		<button id="up" class="btn btn-default" onclick="up('10')"><span
-				class="glyphicon glyphicon-plus"></span></button>
-	</div>
-</div>
+
 
 <body>
+
 	<section id="section01" class="Section">
 		<a href="#section02"><span></span></a>
 	</section>
@@ -1605,6 +1612,7 @@
 	<section id="section03" class="sectionUp">
 		<a href="#section02"><span></span></a>
 	</section>
+
 	<div class="pdf-page size-a4" id="cilindrical_page2" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
@@ -1739,7 +1747,7 @@
 	<section id="section04" class="Section">
 		<a href="#section05"><span></span></a>
 	</section>
-	
+
 	<section id="section04" class="sectionUp">
 		<a href="#section03"><span></span></a>
 	</section>
@@ -2699,12 +2707,12 @@
 						<th>Nominal Thickness</th>
 						<td>tn</td>
 						<td>
-							<select><
-							<option>ASTM_A20</option>
-							<option>4,76</option>
-							<option>7,94</option>
-							<option>9,53</option>
-						</select>
+							<select>
+								< <option>ASTM_A20</option>
+									<option>4,76</option>
+									<option>7,94</option>
+									<option>9,53</option>
+							</select>
 						</td>
 						<td>mm</td>
 					</tr>
@@ -3182,9 +3190,8 @@
 		</main>
 	</div>
 
-
 	<section id="sectionFinalpage">
-	<a href="#divheader" class="to-top">Back to top</a>
+		<a href="#divheader" class="to-top">Back to top</a>
 	</section>
 
 
