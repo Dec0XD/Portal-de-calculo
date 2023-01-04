@@ -187,7 +187,7 @@
 
 
 
-const selection = document.querySelector('.selection')
+const selection = document.querySelector('.section')
 
 selection = addEventListener('click', () => {
 	window.scroll({top: window.innerHeight, behavior: "smooth"})
