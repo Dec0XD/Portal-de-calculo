@@ -176,11 +176,11 @@
 
 
 <body>
-	
+
 	<section id="section01" class="Section">
 		<a href="#section02"><span></span></a>
 	</section>
-	
+
 	<div class="pdf-page size-a4" id="design_page">
 
 		<main>
@@ -585,7 +585,7 @@
 					<table border>
 						<th>Material Specification (ASME II part D)</th>
 						<td>
-							<select>
+							<select id="selectopt">
 								<option>SA-1008 CS–A</option>
 								<option>SA-1008 CS–B</option>
 								<option>SA-675 45</option>
@@ -1437,55 +1437,55 @@
 
 							<tr>
 								<th>Nominal Composition</th>
-								<td>Carbon Steel</td>
+								<td><span id="nominal"></span></td>
 								<th></th>
 							</tr>
 
 							<tr>
 								<th>Product Form</th>
-								<td>Plate</td>
+								<td><span id="product"></span></td>
 								<th>UNITS</th>
 							</tr>
 
 							<tr>
 								<th>Alloy Design./UNS No.</th>
-								<td>K01700</td>
+								<td><span id="alloy"></span></td>
 								<th></th>
 							</tr>
 
 							<tr>
 								<th>Class/ Condition/ Temper</th>
-								<td>…</td>
+								<td><span id="classc"></span></td>
 								<th></th>
 							</tr>
 
 							<tr>
 								<th>P-No.</th>
-								<td>1</td>
+								<td><span id="pno"></span></td>
 								<th></th>
 							</tr>
 
 							<tr>
 								<th>Group No.</th>
-								<td>1</td>
+								<td><span id="group"></span></td>
 								<th></th>
 							</tr>
 
 							<tr>
 								<th>MIN. Tensile Strength</th>
-								<td>310,3</td>
+								<td><span id="mintensile"></span></td>
 								<th>MPa</th>
 							</tr>
 
 							<tr>
 								<th>MIN. Yield Strength</th>
-								<td>165,5</td>
+								<td><span id="minyield"></span></td>
 								<th>MPa</th>
 							</tr>
 
 							<tr>
 								<th>VIII-1—Applic, And Max, Temp, Limit (°C)</th>
-								<td>NP</td>
+								<td><span id="viii"></span></td>
 								<th></th>
 							</tr>
 
@@ -2290,13 +2290,13 @@
 	<br>
 
 	<div id="sphericalArrow2" style="display: none;">
-	<section id="section07" class="Section">
-		<a href="#section08"><span></span></a>
-	</section>
-	<section id="section07" class="sectionUp">
-		<a href="#section06"><span></span></a>
-	</section>
-</div>
+		<section id="section07" class="Section">
+			<a href="#section08"><span></span></a>
+		</section>
+		<section id="section07" class="sectionUp">
+			<a href="#section06"><span></span></a>
+		</section>
+	</div>
 	<div class="pdf-page size-a4" id="SPHERICAL_page2" style="display:none;">
 		<main>
 			<div class="titulo-pagina">
@@ -2789,13 +2789,13 @@
 	<br id="brh">
 
 	<div id="torisphericalArrow" style="display: none;">
-	<section id="section10" class="Section">
-		<a href="#section11"><span></span></a>
-	</section>
-	<section id="section10" class="sectionUp">
-		<a href="#section09"><span></span></a>
-	</section>
-</div>
+		<section id="section10" class="Section">
+			<a href="#section11"><span></span></a>
+		</section>
+		<section id="section10" class="sectionUp">
+			<a href="#section09"><span></span></a>
+		</section>
+	</div>
 	<div class="pdf-page size-a4" id="TORISPHERICAL_HEADS_page" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
@@ -3071,12 +3071,12 @@
 	<br id="brh">
 
 	<div id="torisphericalArrow2" style="display: none;">
-	<section id="section11" class="Section">
-		<a href="#section12"><span></span></a>
-	</section>
-	<section id="section11" class="sectionUp">
-		<a href="#section10"><span></span></a>
-	</section>
+		<section id="section11" class="Section">
+			<a href="#section12"><span></span></a>
+		</section>
+		<section id="section11" class="sectionUp">
+			<a href="#section10"><span></span></a>
+		</section>
 	</div>
 	<div class="pdf-page size-a4" id="TORISPHERICAL_HEADS_page2" style="display:none;">
 		<main>
@@ -3226,7 +3226,7 @@
 		const db = getFirestore(app);
 
 
-		window.onload = function() {
+		
 			/*getDoc(doc(db,'Planilha sem título - Página1 (5)','1')).then(docSnap => {
 				if(docSnap.exists()) {
 					console.log('aaa', docSnap.data())
@@ -3235,17 +3235,61 @@
 				}
 			})*/
 
-			const q = query(collection(db, "Planilha sem título - Página1 (5)"), where("ID","==",1));
+			/*Nominal Composition
+			Product Form
+			Alloy Design./UNS No.
+			Class/ Condition/ Temper
+			P-No.
+			Group No.
+			MIN. Tensile Strength
+			MIN. Yield Strength
+			VIII-1—Applic, And Max, Temp, Limit (°C)*/
+
+			var nominal;
+			var product;
+			var alloy;
+			var classc;
+			var pno;
+			var group;
+			var mintensile;
+			var minyield;
+			var viii;
+
+			document.getElementById("selectopt").addEventListener("change",myScript)
+			
+			function myScript(){
+				var escolha = document.getElementById("selectopt")
+				var opcaoValor = escolha.options[escolha.selectedIndex].value;
+				console.log(opcaoValor)
+				const q = query(collection(db, "Planilha sem título - Página1 (5)"), where("Name","==",opcaoValor));
 
 			getDocs(q).then(docSnap => {
 				let teste = []
 				docSnap.forEach((doc) => {
 					teste.push({ ...doc.data(), id:doc.id})
 				})
-				console.log("Data: ",teste)
-			})
-		}
-	  </script>
+				var nominal = teste[0]["NominalComposition"]
+				var product = teste[0]["ProductForm"]
+				var alloy = teste[0]["AlloyDesigUNSNo"]
+				var classc = teste[0]["ClassConditionTemper"]
+				var pno = teste[0]["PNo"]
+				var group = teste[0]["GroupNo"]
+				var mintensile = teste[0]["MinTensileStrengthMPa"]
+				var minyield = teste[0]["MinYieldStrengthksi"]
+				var viii= teste[0]["VIII1ApplicandMaxTempLimitC"]
+
+				document.getElementById("nominal").innerHTML = nominal;
+				document.getElementById("product").innerHTML = product;
+				document.getElementById("alloy").innerHTML = alloy;
+				document.getElementById("classc").innerHTML = classc;
+				document.getElementById("pno").innerHTML = pno;
+				document.getElementById("group").innerHTML = group;
+				document.getElementById("mintensile").innerHTML = mintensile;
+				document.getElementById("minyield").innerHTML = minyield;
+				document.getElementById("viii").innerHTML = viii;
+			});
+		}	
+	</script>
 
 
 
