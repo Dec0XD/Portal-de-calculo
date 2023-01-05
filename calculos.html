@@ -3189,4 +3189,65 @@
 
 
 	<script src="calculo.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="module">
+		// Import the functions you need from the SDKs you need
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+		import { getFirestore, getDoc, doc, query, collection, where, getDocs } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
+		// TODO: Add SDKs for Firebase products that you want to use
+		// https://firebase.google.com/docs/web/setup#available-libraries
+	  
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		const firebaseConfig = {
+		  apiKey: "AIzaSyASGKLqo_obfha9tkTLRUAo9CJJM-L48_w",
+		  authDomain: "wisecalc.firebaseapp.com",
+		  databaseURL: "https://wisecalc-default-rtdb.firebaseio.com",
+		  projectId: "wisecalc",
+		  storageBucket: "wisecalc.appspot.com",
+		  messagingSenderId: "703173561741",
+		  appId: "1:703173561741:web:4cc2df8b19c4b1f53ac1c4",
+		  measurementId: "G-XH8CH8VWBQ"
+		};
+	  
+		// Initialize Firebase
+		const app = initializeApp(firebaseConfig);
+		const db = getFirestore(app);
+
+
+		window.onload = function() {
+			/*getDoc(doc(db,'Planilha sem título - Página1 (5)','1')).then(docSnap => {
+				if(docSnap.exists()) {
+					console.log('aaa', docSnap.data())
+				} else {
+					console.log("erro")
+				}
+			})*/
+
+			const q = query(collection(db, "Planilha sem título - Página1 (5)"), where("ID","==",1));
+
+			getDocs(q).then(docSnap => {
+				let teste = []
+				docSnap.forEach((doc) => {
+					teste.push({ ...doc.data(), id:doc.id})
+				})
+				console.log("Data: ",teste)
+			})
+		}
+	  </script>
+
+
+
+
 </body>
