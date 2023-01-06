@@ -394,7 +394,8 @@ table th {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 600px) {
+
+@media screen and (min-width:320) and (max-width: 480px) {
   page[size="A4"] {
     width: 21cm;
     height: 29.7cm;
@@ -608,5 +609,5 @@ body {
 
 .contatoBtMais{
   margin-left: 30px;  
-  color: ;
+  color: black;
 }
