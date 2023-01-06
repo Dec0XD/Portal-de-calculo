@@ -345,7 +345,7 @@
 						<td>
 							<div class="input-group">
 								<div class="input-box">
-									<input id="contas" type="number" required="">
+									<input id="contas" type="number" required="" class="designinternal">
 								</div>
 							</div>
 						</td>
@@ -369,7 +369,7 @@
 						<td>Design Temperature</td>
 						<th>DT ≤</th>
 						<td>
-							<select>
+							<select id="designtemperature">
 								<option>37,78</option>
 								<option>65,56</option>
 								<option>93,33</option>
@@ -434,7 +434,7 @@
 						<td>
 							<div class="input-group">
 								<div class="input-box">
-									<input id="contas" type="number" required="">
+									<input id="contas" type="number" required="" class="densityconta">
 								</div>
 						</td>
 						<td>Kg/m^3</td>
@@ -1492,7 +1492,7 @@
 							<tr>
 								<th>Design Temperature</th>
 								<td>DT</td>
-								<th>260,00</th>
+								<th><span id="designtemp"></span></th>
 								<td>°C</td>
 							</tr>
 
@@ -1525,28 +1525,28 @@
 							<tr>
 								<th>Fluid Density</th>
 								<td>ρ</td>
-								<td>1000</td>
+								<td><span id="density"></span></td>
 								<td>kg/m^3</td>
 							</tr>
 
 							<tr>
 								<th>Design Pressure On The Top Of The Vessel</th>
 								<td>Pint</td>
-								<td>2</td>
+								<td><span id="designpressuretop"></span></td>
 								<td>MPa</td>
 							</tr>
 
 							<tr>
 								<th>Design Pressure</th>
 								<td>P</td>
-								<td>2</td>
+								<td><span id="designpressure"></span></td>
 								<td>MPa</td>
 							</tr>
 
 							<tr>
 								<th>Admissible Stress @ Design Temperature</th>
 								<td>Sh</td>
-								<td>88,94</td>
+								<td><span id="admissibledesign"></span></td>
 								<td>MPa</td>
 							</tr>
 
@@ -3256,6 +3256,10 @@
 			var viii;
 
 			document.getElementById("selectopt").addEventListener("change",myScript)
+			document.getElementById("designtemperature").addEventListener("change",myScript)
+			document.querySelector(".densityconta").addEventListener("keydown",myScript)
+			document.querySelector(".designinternal").addEventListener("keydown",myScript)
+			document.getElementById("LIQUID_COLUMN_VALUE").addEventListener("keydown",myScript)
 			
 			function myScript(){
 				var escolha = document.getElementById("selectopt")
@@ -3287,7 +3291,50 @@
 				document.getElementById("mintensile").innerHTML = mintensile;
 				document.getElementById("minyield").innerHTML = minyield;
 				document.getElementById("viii").innerHTML = viii;
+
+				var designt = document.getElementById("designtemperature")
+				var designtemp = designt.options[designt.selectedIndex].value;
+
+				if(viii=="NP"){
+					document.getElementById("designtemp").innerHTML = viii
+				} else if (viii>=designtemp){
+					document.getElementById("designtemp").innerHTML = designtemp
+				} else if (viii<=designtemp){
+					document.getElementById("designtemp").innerHTML = "TEMPERATURE OVER MATERIAL LIMIT"
+				}
+
+				var density = document.querySelector(".densityconta")
+				var densityt = density.value
+
+				document.getElementById("density").innerHTML = densityt
+
+				var designpressure = document.querySelector(".designinternal")
+				var designpressuretop = designpressure.value
+
+				document.getElementById("designpressuretop").innerHTML = designpressuretop
+
+				var liquid_column = document.getElementById("LIQUID_COLUMN_VALUE")
+				var liquid_column_value = liquid_column.value
+
+				var liquid_column_num = parseFloat(liquid_column_value)
+				var designpressuretopnum = parseFloat(designpressuretop)
+				var densitynum = parseFloat(densityt)
+
+				var designpressure = (liquid_column_num*densitynum*9.81)+designpressuretopnum
+				var designpressurerounded = designpressure.toFixed(3)
+
+				document.getElementById("designpressure").innerHTML =  designpressurerounded
+
+				if(viii<=designtemp){
+					document.getElementById("admissibledesign").innerHTML = "..."
+				}
+
+				// Não consegui fazer a parte do admissible stress pra baixo ainda
+
+
 			});
+
+			
 		}	
 	</script>
 
