@@ -460,7 +460,7 @@
 						<td>
 							<div class="input-group">
 								<div class="input-box">
-									<input id="contas" type="number" required="">
+									<input id="contas" type="number" required="" class="corrosionallow">
 								</div>
 						</td>
 						<td>mm</td>
@@ -487,28 +487,28 @@
 						<th>-</th>
 						<td>
 							<div id="opt_A">
-								<select>
+								<select id="optA">
 									<option>Full_A</option>
 									<option>Spot_A</option>
 									<option>None_A</option>
 								</select>
 							</div>
 							<div id="opt_B" style="display: none;">
-								<select>
+								<select id="optB">
 									<option>Full_B</option>
 									<option>Spot_B</option>
 									<option>None_B</option>
 								</select>
 							</div>
 							<div id="opt_C" style="display: none;">
-								<select>
+								<select id="optC">
 									<option>Full_C</option>
 									<option>Spot_C</option>
 									<option>None_C</option>
 								</select>
 							</div>
 							<div id="opt_D" style="display: none;">
-								<select>
+								<select id="optD">
 									<option>Full_D</option>
 									<option>Spot_D</option>
 									<option>None_D</option>
@@ -1502,7 +1502,8 @@
 								<td>
 									<div class="input-group">
 										<div class="input-box">
-											<input id="INSIDE_DIAMETER _VALUE" type="number" required="">
+											<input id="INSIDE_DIAMETER_VALUE" type="number" required=""
+												class="INSIDE_DIAMETER_VALUEclass">
 										</div>
 									</div>
 								</td>
@@ -1515,7 +1516,8 @@
 								<td>
 									<div class="input-group">
 										<div class="input-box">
-											<input id="LIQUID_COLUMN_VALUE" type="number" required="">
+											<input id="LIQUID_COLUMN_VALUE" type="number" required=""
+												class="LIQUID_COLUMN_VALUEclass">
 										</div>
 									</div>
 								</td>
@@ -1560,21 +1562,21 @@
 							<tr>
 								<th>Inside Radios</th>
 								<td>Ri</td>
-								<td>410</td>
+								<td><span id="insideradios"></span></td>
 								<td>mm</td>
 							</tr>
 
 							<tr>
 								<th>Inside Radios Corroded</th>
 								<td>Ric</td>
-								<td>413</td>
+								<td><span id="insideradioscorroded"></span></td>
 								<td>mm</td>
 							</tr>
 
 							<tr>
 								<th>Corrosion Allowance</th>
 								<td>CA</td>
-								<td>3</td>
+								<td><span id="corrosionallowance"></span></td>
 								<td>mm</td>
 							</tr>
 
@@ -1611,7 +1613,7 @@
 					<tr>
 						<th>Nominal Thickness Minus Corrosion Allowance</th>
 						<td>t'</td>
-						<td>12,9</td>
+						<td><span id="nominalthick"></span></td>
 						<td>mm</td>
 					</tr>
 
@@ -1619,9 +1621,43 @@
 						<th>Welded Joint Efficiency</th>
 						<td>E</td>
 						<td>
-							<select>
+							<select id="Full" class="selectjoint">
 								<option>1</option>
-								<option>0,90</option>
+								<option>0,9</option>
+							</select>
+							<select id="Spot" class="selectjoint" style="display: none;">
+								<option>0,85</option>
+								<option>0,8</option>
+							</select>
+							<select id="NoneA" class="selectjoint" style="display: none;">
+								<option>0,7</option>
+								<option>0,65</option>
+								<option>0,6</option>
+								<option>0,55</option>
+								<option>0,45</option>
+							</select>
+
+							<select id="NoneB" class="selectjoint" style="display: none;">
+								<option>0,7</option>
+								<option>0,65</option>
+								<option>0,6</option>
+								<option>0,55</option>
+								<option>0,5</option>
+								<option>0,45</option>
+							</select>
+
+							<select id="NoneC" class="selectjoint" style="display: none;">
+								<option>0,7</option>
+								<option>0,65</option>
+								<option>0,6</option>
+								<option>0,55</option>
+								<option>0,5</option>
+							</select>
+
+							<select id="NoneD" class="selectjoint" style="display: none;">
+								<option>0,7</option>
+								<option>0,65</option>
+							</select>
 						</td>
 						<td>coef.</td>
 					</tr>
@@ -1630,8 +1666,7 @@
 						<th>Nominal Thickness</th>
 						<td>tn</td>
 						<td>
-							<select>
-								<option>ASTM_A20</option>
+							<select id="nominalthickness">
 								<option>4,76</option>
 								<option>6,35</option>
 								<option>7,94</option>
@@ -1639,6 +1674,68 @@
 								<option>11,11</option>
 								<option>12,7</option>
 								<option>14,29</option>
+								<option>15,88</option>
+								<option>19,05</option>
+								<option>22,23</option>
+								<option>25,4</option>
+								<option>28,58</option>
+								<option>31,75</option>
+								<option>38,1</option>
+								<option>44,45</option>
+								<option>50,8</option>
+								<option>5,3</option>
+								<option>5,6</option>
+								<option>6</option>
+								<option>6,3</option>
+								<option>6,7</option>
+								<option>7,1</option>
+								<option>7,5</option>
+								<option>8</option>
+								<option>8,5</option>
+								<option>9</option>
+								<option>9,5</option>
+								<option>10</option>
+								<option>10,6</option>
+								<option>11,2</option>
+								<option>11,8</option>
+								<option>12,5</option>
+								<option>13,2</option>
+								<option>14</option>
+								<option>15</option>
+								<option>16</option>
+								<option>17</option>
+								<option>18</option>
+								<option>19</option>
+								<option>20</option>
+								<option>21,2</option>
+								<option>22,4</option>
+								<option>23,6</option>
+								<option>25</option>
+								<option>26,5</option>
+								<option>28</option>
+								<option>30</option>
+								<option>31,5</option>
+								<option>33,5</option>
+								<option>35,5</option>
+								<option>37,5</option>
+								<option>40</option>
+								<option>42,5</option>
+								<option>45</option>
+								<option>47,5</option>
+								<option>50</option>
+								<option>53</option>
+								<option>56</option>
+								<option>60</option>
+								<option>63</option>
+								<option>67</option>
+								<option>71</option>
+								<option>75</option>
+								<option>80</option>
+								<option>85</option>
+								<option>90</option>
+								<option>95</option>
+								<option>100</option>
+							</select>
 						</td>
 						<td>coef.</td>
 					</tr>
@@ -3260,6 +3357,14 @@
 			document.querySelector(".densityconta").addEventListener("keydown",myScript)
 			document.querySelector(".designinternal").addEventListener("keydown",myScript)
 			document.getElementById("LIQUID_COLUMN_VALUE").addEventListener("keydown",myScript)
+			document.getElementById("INSIDE_DIAMETER_VALUE").addEventListener("keydown",myScript)
+			document.querySelector(".corrosionallow").addEventListener("keydown",myScript)
+			document.getElementById("optA").addEventListener("change",myScript)
+			document.getElementById("optB").addEventListener("change",myScript)
+			document.getElementById("optC").addEventListener("change",myScript)
+			document.getElementById("optD").addEventListener("change",myScript)
+			document.getElementById("select_join").addEventListener("change",myScript)
+			document.getElementById("nominalthickness").addEventListener("change",myScript)
 			
 			function myScript(){
 				var escolha = document.getElementById("selectopt")
@@ -3313,7 +3418,7 @@
 
 				document.getElementById("designpressuretop").innerHTML = designpressuretop
 
-				var liquid_column = document.getElementById("LIQUID_COLUMN_VALUE")
+				var liquid_column = document.querySelector(".LIQUID_COLUMN_VALUEclass")
 				var liquid_column_value = liquid_column.value
 
 				var liquid_column_num = parseFloat(liquid_column_value)
@@ -3321,15 +3426,143 @@
 				var densitynum = parseFloat(densityt)
 
 				var designpressure = (liquid_column_num*densitynum*9.81)+designpressuretopnum
-				var designpressurerounded = designpressure.toFixed(3)
 
-				document.getElementById("designpressure").innerHTML =  designpressurerounded
+				document.getElementById("designpressure").innerHTML =  designpressure
 
 				if(viii<=designtemp){
 					document.getElementById("admissibledesign").innerHTML = "..."
 				}
 
 				// Não consegui fazer a parte do admissible stress pra baixo ainda
+
+				var inside_diameter = document.querySelector(".INSIDE_DIAMETER_VALUEclass")
+				var inside_diameter_value = inside_diameter.value
+				var inside_diameter_num = parseFloat(inside_diameter_value)
+
+				document.getElementById("insideradios").innerHTML = inside_diameter_num/2
+
+				var corrosionallowance = document.querySelector(".corrosionallow")
+				var corrosionall = corrosionallowance.value
+
+				document.getElementById("corrosionallowance").innerHTML = corrosionall
+
+				var corrosionallnum = parseFloat(corrosionall)
+
+				document.getElementById("insideradioscorroded").innerHTML = (inside_diameter_num/2)+corrosionallnum
+				var opc_join = document.getElementById("select_join")
+				var join = opc_join.options[opc_join.selectedIndex].value;				
+
+				if (join=="Join_A") {
+					var opt_A = document.getElementById("optA")
+					var optA = opt_A.options[opt_A.selectedIndex].value;
+
+					
+					if (optA=="Full_A"){
+						document.getElementById("Full").style = "display: inline;"
+						document.getElementById("Spot").style = "display: none"
+						document.getElementById("NoneA").style = "display: none"
+						document.getElementById("NoneB").style = "display: none"
+						document.getElementById("NoneC").style = "display: none"
+						document.getElementById("NoneD").style = "display: none"
+					} else if (optA=="Spot_A") {
+						document.getElementById("Full").style = "display: none"
+						document.getElementById("Spot").style = "display: inline"
+						document.getElementById("NoneA").style = "display: none"
+						document.getElementById("NoneB").style = "display: none"
+						document.getElementById("NoneC").style = "display: none"
+						document.getElementById("NoneD").style = "display: none"
+					} else if (optA=="None_A") {
+						document.getElementById("Full").style = "display: none"
+						document.getElementById("Spot").style = "display: none"
+						document.getElementById("NoneA").style = "display: inline"
+						document.getElementById("NoneB").style = "display: none"
+						document.getElementById("NoneC").style = "display: none"
+						document.getElementById("NoneD").style = "display: none"
+					}
+
+				} else if (join == "Join_B") {
+					var opt_B = document.getElementById("optB")
+					var optB = opt_B.options[opt_B.selectedIndex].value;
+					if (optB=="Full_B"){
+						document.getElementById("Full").style = "display: inline;"
+						document.getElementById("Spot").style = "display: none"
+						document.getElementById("NoneA").style = "display: none"
+						document.getElementById("NoneB").style = "display: none"
+						document.getElementById("NoneC").style = "display: none"
+						document.getElementById("NoneD").style = "display: none"
+					} else if (optB=="Spot_B") {
+						document.getElementById("Full").style = "display: none"
+						document.getElementById("Spot").style = "display: inline"
+						document.getElementById("NoneA").style = "display: none"
+						document.getElementById("NoneB").style = "display: none"
+						document.getElementById("NoneC").style = "display: none"
+						document.getElementById("NoneD").style = "display: none"
+					} else if (optB=="None_B") {
+						document.getElementById("Full").style = "display: none"
+						document.getElementById("Spot").style = "display: none"
+						document.getElementById("NoneA").style = "display: none"
+						document.getElementById("NoneB").style = "display: inline"
+						document.getElementById("NoneC").style = "display: none"
+						document.getElementById("NoneD").style = "display: none"
+					}
+				} else if (join == "Join_C") {
+					var opt_C = document.getElementById("optC")
+					var optC = opt_C.options[opt_C.selectedIndex].value;
+					if (optC=="Full_C"){
+						document.getElementById("Full").style = "display: inline;"
+						document.getElementById("Spot").style = "display: none"
+						document.getElementById("NoneA").style = "display: none"
+						document.getElementById("NoneB").style = "display: none"
+						document.getElementById("NoneC").style = "display: none"
+						document.getElementById("NoneD").style = "display: none"
+					} else if (optC=="Spot_C") {
+						document.getElementById("Full").style = "display: none"
+						document.getElementById("Spot").style = "display: inline"
+						document.getElementById("NoneA").style = "display: none"
+						document.getElementById("NoneB").style = "display: none"
+						document.getElementById("NoneC").style = "display: none"
+						document.getElementById("NoneD").style = "display: none"
+					} else if (optC=="None_C") {
+						document.getElementById("Full").style = "display: none"
+						document.getElementById("Spot").style = "display: none"
+						document.getElementById("NoneA").style = "display: none"
+						document.getElementById("NoneB").style = "display: none"
+						document.getElementById("NoneC").style = "display: inline"
+						document.getElementById("NoneD").style = "display: none"
+					}
+				} else if (join == "Join_D") {
+					var opt_D = document.getElementById("optD")
+					var optD = opt_D.options[opt_D.selectedIndex].value;
+					if (optD=="Full_D"){
+						document.getElementById("Full").style = "display: inline;"
+						document.getElementById("Spot").style = "display: none"
+						document.getElementById("NoneA").style = "display: none"
+						document.getElementById("NoneB").style = "display: none"
+						document.getElementById("NoneC").style = "display: none"
+						document.getElementById("NoneD").style = "display: none"
+					} else if (optD=="Spot_D") {
+						document.getElementById("Full").style = "display: none"
+						document.getElementById("Spot").style = "display: inline"
+						document.getElementById("NoneA").style = "display: none"
+						document.getElementById("NoneB").style = "display: none"
+						document.getElementById("NoneC").style = "display: none"
+						document.getElementById("NoneD").style = "display: none"
+					} else if (optD=="None_D") {
+						document.getElementById("Full").style = "display: none"
+						document.getElementById("Spot").style = "display: none"
+						document.getElementById("NoneA").style = "display: none"
+						document.getElementById("NoneB").style = "display: none"
+						document.getElementById("NoneC").style = "display: none"
+						document.getElementById("NoneD").style = "display: inline"
+					}
+				}
+
+				var nominalthickness = document.getElementById("nominalthickness")
+				var nominalthicknessvalue = nominalthickness.options[nominalthickness.selectedIndex].value;
+				var nominalthicknessnum = parseFloat(nominalthicknessvalue)
+				
+
+				document.getElementById("nominalthick").innerHTML = nominalthicknessnum-corrosionallnum
 
 
 			});
