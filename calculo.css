@@ -192,7 +192,7 @@ body {
 
 main {
   width: 100%;
-  min-height: 90vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -394,7 +394,8 @@ table th {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 600px) {
+
+@media screen and (min-width:400) and (max-width: 900px) {
   page[size="A4"] {
     width: 21cm;
     height: 29.7cm;
@@ -608,5 +609,5 @@ body {
 
 .contatoBtMais{
   margin-left: 30px;  
-  color: ;
+  color: black;
 }
