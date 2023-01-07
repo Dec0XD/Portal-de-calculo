@@ -607,7 +607,36 @@ body {
 	transition:transform .5s ease-in;
 }
 
-.contatoBtMais{
-  margin-left: 30px;  
-  color: black;
+.contatoBtMais{ 
+  color: #fff;
+  display: block;
+  background-color: #161F30;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  outline: none;
+  padding: 15px 50px;
+  margin: 20px;
+  width: 20%;
+  border: 2px solid #fff;
+  cursor: pointer;
 }
+.contatoBtMenos{  
+  color: #fff;
+  display: block;
+  background-color: #161F30;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  outline: none;
+  padding: 15px 50px;
+  margin: 20px;
+  width: 20%;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #26a96a;
+}
+
