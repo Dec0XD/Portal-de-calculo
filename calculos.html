@@ -1555,7 +1555,7 @@
 							<tr>
 								<th>Admissible Stress @ Room Temperature</th>
 								<td>Sc</td>
-								<td>88,94</td>
+								<td><span id="admissibleroom"></span></td>
 								<td>MPa</td>
 							</tr>
 
@@ -1743,14 +1743,8 @@
 					<tr>
 						<th>Design Validation</th>
 						<td>-</td>
-						<td>InValid Nominal Thickness</td>
+						<td><span id="designvalidation"></span></td>
 						<!-- "Valid Nominal Thickness"; "INValid Nominal Thickness"-->
-						<td>-</td>
-					</tr>
-					<tr>
-						<th>Design Validation</th>
-						<td>-</td>
-						<td>for Maximum Circumferential Stress</td>
 						<td>-</td>
 					</tr>
 
@@ -1770,7 +1764,7 @@
 							</div>
 						</td>
 						<td>t</td>
-						<td>13,476</td>
+						<td><span id="longitudinaljoints"></span></td>
 						<td>mm</td>
 					</tr>
 
@@ -1786,7 +1780,7 @@
 							</div>
 						</td>
 						<td>MAWPc</td>
-						<td>0.951</td>
+						<td><span id="workingmaximum"></span></td>
 						<td>MPa</td>
 					</tr>
 
@@ -1801,7 +1795,7 @@
 							</div>
 						</td>
 						<td>HTP</td>
-						<td>10,949</td>
+						<td><span id="hidrostatictest"></span></td>
 						<td>MPa</td>
 					</tr>
 
@@ -1812,7 +1806,7 @@
 							</div>
 						</td>
 						<td>PTP</td>
-						<td>9,262</td>
+						<td><span id="pneumatictest"></span></td>
 						<td>MPa</td>
 					</tr>
 
@@ -3363,6 +3357,12 @@
 			document.getElementById("optB").addEventListener("change",myScript)
 			document.getElementById("optC").addEventListener("change",myScript)
 			document.getElementById("optD").addEventListener("change",myScript)
+			document.getElementById("Full").addEventListener("change",myScript)
+			document.getElementById("Spot").addEventListener("change",myScript)
+			document.getElementById("NoneA").addEventListener("change",myScript)
+			document.getElementById("NoneB").addEventListener("change",myScript)
+			document.getElementById("NoneC").addEventListener("change",myScript)
+			document.getElementById("NoneD").addEventListener("change",myScript)
 			document.getElementById("select_join").addEventListener("change",myScript)
 			document.getElementById("nominalthickness").addEventListener("change",myScript)
 			
@@ -3386,6 +3386,7 @@
 				var mintensile = teste[0]["MinTensileStrengthMPa"]
 				var minyield = teste[0]["MinYieldStrengthksi"]
 				var viii= teste[0]["VIII1ApplicandMaxTempLimitC"]
+				
 
 				document.getElementById("nominal").innerHTML = nominal;
 				document.getElementById("product").innerHTML = product;
@@ -3399,12 +3400,13 @@
 
 				var designt = document.getElementById("designtemperature")
 				var designtemp = designt.options[designt.selectedIndex].value;
-
+				var viii_number = parseInt(viii)
+				var designtemp_number = parseInt(designtemp)
 				if(viii=="NP"){
 					document.getElementById("designtemp").innerHTML = viii
-				} else if (viii>=designtemp){
+				} else if (viii_number>=designtemp_number){
 					document.getElementById("designtemp").innerHTML = designtemp
-				} else if (viii<=designtemp){
+				} else if (viii_number<designtemp_number){
 					document.getElementById("designtemp").innerHTML = "TEMPERATURE OVER MATERIAL LIMIT"
 				}
 
@@ -3429,9 +3431,7 @@
 
 				document.getElementById("designpressure").innerHTML =  designpressure
 
-				if(viii<=designtemp){
-					document.getElementById("admissibledesign").innerHTML = "..."
-				}
+				
 
 				// Não consegui fazer a parte do admissible stress pra baixo ainda
 
@@ -3447,10 +3447,12 @@
 				document.getElementById("corrosionallowance").innerHTML = corrosionall
 
 				var corrosionallnum = parseFloat(corrosionall)
+				var insideradioscorroded = (inside_diameter_num/2)+corrosionallnum
 
-				document.getElementById("insideradioscorroded").innerHTML = (inside_diameter_num/2)+corrosionallnum
+				document.getElementById("insideradioscorroded").innerHTML = insideradioscorroded
 				var opc_join = document.getElementById("select_join")
-				var join = opc_join.options[opc_join.selectedIndex].value;				
+				var join = opc_join.options[opc_join.selectedIndex].value;			
+
 
 				if (join=="Join_A") {
 					var opt_A = document.getElementById("optA")
@@ -3464,6 +3466,10 @@
 						document.getElementById("NoneB").style = "display: none"
 						document.getElementById("NoneC").style = "display: none"
 						document.getElementById("NoneD").style = "display: none"
+
+						var join_e = document.getElementById("Full")
+						var join_escolhido = join_e.options[join_e.selectedIndex].value;
+
 					} else if (optA=="Spot_A") {
 						document.getElementById("Full").style = "display: none"
 						document.getElementById("Spot").style = "display: inline"
@@ -3471,6 +3477,10 @@
 						document.getElementById("NoneB").style = "display: none"
 						document.getElementById("NoneC").style = "display: none"
 						document.getElementById("NoneD").style = "display: none"
+
+						var join_e = document.getElementById("Spot")
+						var join_escolhido = join_e.options[join_e.selectedIndex].value;
+						
 					} else if (optA=="None_A") {
 						document.getElementById("Full").style = "display: none"
 						document.getElementById("Spot").style = "display: none"
@@ -3478,6 +3488,10 @@
 						document.getElementById("NoneB").style = "display: none"
 						document.getElementById("NoneC").style = "display: none"
 						document.getElementById("NoneD").style = "display: none"
+
+						var join_e = document.getElementById("NoneA")
+						var join_escolhido = join_e.options[join_e.selectedIndex].value;
+
 					}
 
 				} else if (join == "Join_B") {
@@ -3490,6 +3504,10 @@
 						document.getElementById("NoneB").style = "display: none"
 						document.getElementById("NoneC").style = "display: none"
 						document.getElementById("NoneD").style = "display: none"
+
+						var join_e = document.getElementById("Full")
+						var join_escolhido = join_e.options[join_e.selectedIndex].value;
+
 					} else if (optB=="Spot_B") {
 						document.getElementById("Full").style = "display: none"
 						document.getElementById("Spot").style = "display: inline"
@@ -3497,6 +3515,10 @@
 						document.getElementById("NoneB").style = "display: none"
 						document.getElementById("NoneC").style = "display: none"
 						document.getElementById("NoneD").style = "display: none"
+						
+						var join_e = document.getElementById("Spot")
+						var join_escolhido = join_e.options[join_e.selectedIndex].value;
+
 					} else if (optB=="None_B") {
 						document.getElementById("Full").style = "display: none"
 						document.getElementById("Spot").style = "display: none"
@@ -3504,6 +3526,10 @@
 						document.getElementById("NoneB").style = "display: inline"
 						document.getElementById("NoneC").style = "display: none"
 						document.getElementById("NoneD").style = "display: none"
+
+						var join_e = document.getElementById("NoneB")
+						var join_escolhido = join_e.options[join_e.selectedIndex].value;
+
 					}
 				} else if (join == "Join_C") {
 					var opt_C = document.getElementById("optC")
@@ -3515,6 +3541,10 @@
 						document.getElementById("NoneB").style = "display: none"
 						document.getElementById("NoneC").style = "display: none"
 						document.getElementById("NoneD").style = "display: none"
+
+						var join_e = document.getElementById("Full")
+						var join_escolhido = join_e.options[join_e.selectedIndex].value;
+
 					} else if (optC=="Spot_C") {
 						document.getElementById("Full").style = "display: none"
 						document.getElementById("Spot").style = "display: inline"
@@ -3522,6 +3552,10 @@
 						document.getElementById("NoneB").style = "display: none"
 						document.getElementById("NoneC").style = "display: none"
 						document.getElementById("NoneD").style = "display: none"
+
+						var join_e = document.getElementById("Spot")
+						var join_escolhido = join_e.options[join_e.selectedIndex].value;
+						
 					} else if (optC=="None_C") {
 						document.getElementById("Full").style = "display: none"
 						document.getElementById("Spot").style = "display: none"
@@ -3529,6 +3563,10 @@
 						document.getElementById("NoneB").style = "display: none"
 						document.getElementById("NoneC").style = "display: inline"
 						document.getElementById("NoneD").style = "display: none"
+
+						var join_e = document.getElementById("NoneC")
+						var join_escolhido = join_e.options[join_e.selectedIndex].value;
+
 					}
 				} else if (join == "Join_D") {
 					var opt_D = document.getElementById("optD")
@@ -3540,6 +3578,10 @@
 						document.getElementById("NoneB").style = "display: none"
 						document.getElementById("NoneC").style = "display: none"
 						document.getElementById("NoneD").style = "display: none"
+
+						var join_e = document.getElementById("Full")
+						var join_escolhido = join_e.options[join_e.selectedIndex].value;
+
 					} else if (optD=="Spot_D") {
 						document.getElementById("Full").style = "display: none"
 						document.getElementById("Spot").style = "display: inline"
@@ -3547,6 +3589,10 @@
 						document.getElementById("NoneB").style = "display: none"
 						document.getElementById("NoneC").style = "display: none"
 						document.getElementById("NoneD").style = "display: none"
+
+						var join_e = document.getElementById("Spot")
+						var join_escolhido = join_e.options[join_e.selectedIndex].value;
+
 					} else if (optD=="None_D") {
 						document.getElementById("Full").style = "display: none"
 						document.getElementById("Spot").style = "display: none"
@@ -3554,6 +3600,10 @@
 						document.getElementById("NoneB").style = "display: none"
 						document.getElementById("NoneC").style = "display: none"
 						document.getElementById("NoneD").style = "display: inline"
+
+						var join_e = document.getElementById("NoneD")
+						var join_escolhido = join_e.options[join_e.selectedIndex].value;
+
 					}
 				}
 
@@ -3564,7 +3614,75 @@
 
 				document.getElementById("nominalthick").innerHTML = nominalthicknessnum-corrosionallnum
 
+				var  designtempfull =  designtemp
+				var designtempconsult = designtempfull.replace(",",".")
+				var admissibleroom = teste[0]["37.78"]
+				var admissibleroomvirg = admissibleroom.toString().replace(".",",")
+				document.getElementById("admissibleroom").innerHTML = admissibleroomvirg
+				
+				if(viii<=designtemp){
+					document.getElementById("admissibledesign").innerHTML = "..."
+				} else {
+					var admissibledesign = teste[0][designtempconsult]
+					var admissibledesignvirg = admissibledesign.toString().replace(".",",")
+					document.getElementById("admissibledesign").innerHTML = admissibledesignvirg
+				}
+				var welded_escolhido;
 
+
+
+				var join_calculo = join_escolhido.replace(",",".")
+				var join_calculo_valor = parseFloat(join_calculo)
+				var corrosionall_calculo = parseFloat(corrosionall)
+				console.log(join_calculo)
+				console.log(join_calculo_valor)
+				if(designpressure<(0.385*admissibledesign*join_calculo_valor)){
+					var calculolongitudinal = ((designpressure*insideradioscorroded)/((admissibledesign*join_calculo_valor)-(0.6*designpressure)))+corrosionall_calculo
+					document.getElementById("longitudinaljoints").innerHTML = calculolongitudinal
+				} else {
+					document.getElementById("longitudinaljoints").innerHTML = "Division 1 cannot be applied according to the UG - 27 (1)"
+				}
+
+				var valid;
+				if(nominalthicknessnum>calculolongitudinal){
+					document.getElementById("designvalidation").innerHTML = "VALID NOMINAL THICKNESS"
+					valid = 1;
+				} else {
+					document.getElementById("designvalidation").innerHTML = "INVALID NOMINAL THICKNESS"
+					valid = 0
+				}
+
+
+
+				var thicknessminus = nominalthicknessnum-corrosionallnum
+				if(nominalthicknessnum<=calculolongitudinal){
+					document.getElementById("workingmaximum").innerHTML = "INVALID NOMINAL THICKNESS"
+				} else if (nominalthicknessnum==0){
+					document.getElementById("workingmaximum").innerHTML = "0"
+				} else if(thicknessminus<(0.5*insideradioscorroded)){
+					var calculo2 = (admissibledesign*join_calculo_valor*thicknessminus)/((insideradioscorroded)+(0.6*thicknessminus))
+					document.getElementById("workingmaximum").innerHTML = calculo2
+				} else {
+					document.getElementById("workingmaximum").innerHTML = "Division 1 cannot be applied according to the UG - 27 (1)"
+				}
+
+
+				if(valid == 0){
+					document.getElementById("hidrostatictest").innerHTML = "INVALID NOMINAL THICKNESS"
+				} else {
+					var calculo3 = 1.3*calculo2*(admissibleroom/admissibledesign)
+					document.getElementById("hidrostatictest").innerHTML =  calculo3
+				}
+
+				if(valid == 0){
+					document.getElementById("pneumatictest").innerHTML = "INVALID NOMINAL THICKNESS"
+				} else {
+					var calculo4 = 1.1*calculo2*(admissibleroom/admissibledesign)
+					document.getElementById("pneumatictest").innerHTML =  calculo4
+				}
+
+
+				
 			});
 
 			
