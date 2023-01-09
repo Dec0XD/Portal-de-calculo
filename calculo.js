@@ -165,37 +165,7 @@
      	c.insertAfter(f);
      });
 
-     document.getElementById("select-asme").addEventListener("change", function () {
-     	var option = document.getElementById("select-asme").value
-     	fetch("https://api.apispreadsheets.com/data/TKn49vQz9XA74Jlg/", {
-     		method: "POST",
-     		body: JSON.stringify({
-     			"data": {
-     				"Choosed": option
-     			},
-     			"query": "select * from TKn49vQz9XA74Jlg where Choosed<>''"
-     		}),
-     	}).then(res => {
-     		if (res.status === 201) {
-     			console.log("Success")
-     		} else {
-     			console.log("Error")
-     		}
-     	})
-
-     	fetch("https://api.apispreadsheets.com/data/TKn49vQz9XA74Jlg/?dataFormat=column&query=select Desc from TKn49vQz9XA74Jlg").then(res => {
-     		if (res.status === 200) {
-     			// SUCCESS
-     			res.json().then(data => {
-     				const yourData = data
-     				console.log(yourData)
-     			}).catch(err => console.log(err))
-     		} else {
-     			// ERROR
-     		}
-     	})
-
-     })
+     
 
      function up(max) {
      	document.getElementById("myNumber").value = parseInt(document.getElementById("myNumber").value) + 1;
@@ -210,15 +180,3 @@
      		document.getElementById("myNumber").value = min;
      	}
      }
-
-
-
-
-     const selection = document.querySelector('.section')
-
-     selection = addEventListener('click', () => {
-     	window.scroll({
-     		top: window.innerHeight,
-     		behavior: "smooth"
-     	})
-     })
