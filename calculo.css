@@ -538,7 +538,7 @@ body {
 }
 
 
-.section a {
+.section a, .sectionUp a  {
   padding-top: 60px;
 }
 .section a span {
@@ -555,13 +555,7 @@ body {
   animation: sdb04 2s infinite;
   box-sizing: border-box;
 }
-
-
-
   
-.sectionUp a {
-  padding-top: 60px;
-}
 .sectionUp a span {
   position: absolute;
   width: 24px;
@@ -607,21 +601,7 @@ body {
 	transition:transform .5s ease-in;
 }
 
-.contatoBtMais{ 
-  color: #fff;
-  display: block;
-  background-color: #161F30;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  outline: none;
-  padding: 15px 50px;
-  margin: 20px;
-  width: 20%;
-  border: 2px solid #fff;
-  cursor: pointer;
-}
-.contatoBtMenos{  
+.contatoBtMais, .contatoBtMenos{ 
   color: #fff;
   display: block;
   background-color: #161F30;

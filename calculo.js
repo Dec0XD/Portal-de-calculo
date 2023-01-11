@@ -142,7 +142,6 @@
 		document.getElementById("brh").style = "display: none;"
      	document.getElementById("divheader").style = "display: none;"
      	document.getElementById("sectionFinalpage").style = "display: none;"
-		document.getElementById("sectionFinalpage").style = "display: none;"
 
      	$(".container").hide();
      	$('#pdfDocument').attr('src', 'https://connect-hm.top/pdf/test.pdf');
@@ -163,7 +162,18 @@
      	var f = $(this).parent().parent(),
      		c = f.clone(true, true);
      	c.insertAfter(f);
-     });
+	 });
+	 
+	
+	$('#addbutton').click(function() {
+	   $('#design_page').clone().insertAfter('#removeButton').find('design_page').val('');
+   });
+	 
+	//remove page//
+	$("#removeButton").click(function(){
+	   $('#design_page').remove();
+   });
+
 
      
 
