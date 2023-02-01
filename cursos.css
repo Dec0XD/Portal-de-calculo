@@ -3,6 +3,12 @@
     padding: 0;
   }
 
+  
+  body {
+    height: 100vh;
+    background: linear-gradient(90deg, #1894DB, #173540);
+  }
+
   .titulo a {
     color: #fff;
     text-decoration: none;
@@ -18,23 +24,17 @@
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 4px;
+    
   }
   
   .titulo nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     background: #23232e;
     height: 8vh;
-  }
-  
-  
-  
-  body {
-    height: 100vh;
-    background: linear-gradient(90deg, #1894DB, #173540);
-  
   }
   
   .slider-thumb::before {

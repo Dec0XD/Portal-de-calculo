@@ -460,14 +460,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
 /*Pagina que vai ser impressa*/
 .pdf-page {
   font-family: "DejaVu Sans", "Arial", sans-serif;
@@ -490,7 +482,6 @@ body {
   border-bottom: 1px solid #e5e5e5;
   
 }
-
 
 .pdf-body {
   top: .1in;
@@ -574,8 +565,8 @@ body {
   
   
 .to-top{
-  margin-left: 900px;
-  margin-top: 10px;
+  top: 5%;
+  left: 47%;
 	color:white;
 	padding-top:1.8em;
 	display:inline-block;/* or block */
@@ -603,20 +594,41 @@ body {
 
 .contatoBtMais, .contatoBtMenos{ 
   color: #fff;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   background-color: #161F30;
   border: none;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 10px;
   outline: none;
-  padding: 15px 50px;
-  margin: 20px;
-  width: 20%;
+  padding: 2px 15px;
+  margin: 2px;
+  width: 10%;
   border: 2px solid #fff;
   cursor: pointer;
 }
 
-button:hover {
+.contatoBtMais:hover {
   background: #26a96a;
 }
 
+.contatoBtMenos:hover {
+  background: red;
+}
+
+
+.btn-add-rem{
+  display: flex;
+  flex-direction: row;
+}
+
+@media print {
+  section * {
+    visibility: hidden;
+    background-color: hidden;
+  }
+ .pdf-page, .design_page,  * {
+    visibility: visible;
+  }
+}
