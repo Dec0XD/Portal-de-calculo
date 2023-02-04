@@ -559,11 +559,9 @@
 			<a href="#divheader"><span></span></a>
 		</section>
 	</div>
-<<<<<<< HEAD
-	<div class="pdf-page size-a4" id="cilindrical_page" style="display:block; ">
-=======
-	<div class="pdf-page size-a4" id="cilindrical_page" style="display: none; ">
->>>>>>> c6af9c1fe5035ddd7d48cb1b134f06bfb4af81f3
+
+	<div class="pdf-page size-a4" id="cilindrical_page" style="display:none; ">
+
 		<main>
 			<div class="titulo-pagina">
 				<span class="company-logo">
@@ -1603,7 +1601,7 @@
 			<a href="#section02"><span></span></a>
 		</section>
 	</div>
-	<div class="pdf-page size-a4" id="cilindrical_page2" style="display:block; ">
+	<div class="pdf-page size-a4" id="cilindrical_page2" style="display:none; ">
 		<main>
 			<div class="titulo-pagina">
 				<span class="company-logo">
@@ -3641,11 +3639,9 @@
 
 	<br id="brh">
 
-<<<<<<< HEAD
+
 	<div id="conicalArrow2" style="display:none;">
-=======
-	<div id="conicalArrow2" style="display: none;">
->>>>>>> c6af9c1fe5035ddd7d48cb1b134f06bfb4af81f3
+
 		<section id="section05" class="Section">
 			<a href="#section06"><span></span></a>
 		</section>
@@ -5267,7 +5263,7 @@
 				if(isNaN(number_NominalThicknessMinus)){
 					document.getElementById("nominalthick").innerHTML = "..."
 				} else {
-					document.getElementById("nominalthick").innerHTML = number_NominalThicknessMinus
+					document.getElementById("nominalthick").innerHTML = number_NominalThicknessMinus.toFixed(3)
 				}
 				
 
@@ -5299,8 +5295,6 @@
 
 
 				// Atribuir valor ao campo "WORKING MAXIMUM ALLOWABLE PRESSURE CORRODED AND HOT"
-				console.log(number_NominalThickness)
-				console.log(calculolongitudinal)
 				if(verification==0){
 					document.getElementById("workingmaximum").innerHTML = "INVALID NOMINAL THICKNESS"
 				} else if (number_NominalThickness==0){
