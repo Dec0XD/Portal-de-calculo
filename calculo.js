@@ -158,20 +158,24 @@
 
 
      //add page//
-     $('.contatoBtMais').click(function (e) {
-     	var f = $(this).parent().parent(),
-     		c = f.clone(true, true);
-     	c.insertAfter(f);
-	 });
-	 
-	
-	$('#addbutton').click(function() {
-	   $('#design_page').clone().insertAfter('#removeButton').find('design_page').val('');
+	$('#addbuttonDesign').click(function() {
+	   $('#design_page').clone().insertAfter('.Section').find('#design_page').val('');
    });
 	 
 	//remove page//
-	$("#removeButton").click(function(){
-	   $('#design_page').remove();
+	$("#removeButtonDesign").click(function(){
+		$('#design_page').remove();
+	});
+
+	// add page Cilindrical
+$('#addbuttonCilindrical').click(function () {
+	$('#cilindrical_page').clone()
+	('#cilindrical_page2').clone().insertAfter('.Section').find('#design_page').val('');
+   });
+	 
+	//remove page//
+	$("#removeButtonCilindrical").click(function(){
+		$('#design_page').remove();
    });
 
 

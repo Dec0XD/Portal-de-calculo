@@ -1,35 +1,622 @@
-*{
-  margin: 0;
+* {
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'inter', sans-serif;
 }
 
-body{
-  background-color: black;
+body {
+  height: 10vh;
+  background: linear-gradient(90deg, #1894DB, #173540);
 }
 
-#img {
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
+/*CSS do Titulo*/
+.titulo a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.titulo a:hover {
+  opacity: 0.7;
+  color: #26a96a;
+}
+
+.titulo button {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+  font-family: 'inter', sans-serif;
+  font-size: 15px;
+}
+
+.titulo button:hover {
+  opacity: 0.7;
+  color: #26a96a;
+}
+
+.logo {
+  font-size: 31px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.titulo nav {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #23232e;
+  height: 8vh;
 }
 
-#img > img{
-  width: 60px;
-  margin-bottom: 20px;
-  animation: jumping 1s linear infinite;
+/*Navegação do Mobile --Titulo--*/
+.nav-list {
+  list-style: none;
+  display: flex;
+  z-index: 1;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
   cursor: pointer;
 }
 
-@keyframes jumping {
-  from{transform: translateY(-15px);}
-  50% {transform: translateY(0);}
-  to {transform: translateY(-15px);}
+
+/*Dropbar*/
+.container-dp {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 20px;
+  padding: 16px;
+  align-content: center;
 }
 
-#conteudo{
-  height: 100vh;
-  background-color: aliceblue;
+.dp-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dp-menu ul {
+  background-color: #161F30;
+}
+
+.dp-menu ul li {
+  display: inline;
+  position: relative;
+}
+
+.dp-menu ul li a {
+  right: 8px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  transition: background .6s;
+}
+
+.dp-menu ul li a:hover {
+  background-color: aquamarine;
+}
+
+/* sub menu*/
+
+.dp-menu ul ul {
+  display: none;
+  left: 0;
+  position: absolute;
+}
+
+.dp-menu ul li:hover ul {
+  display: block;
+}
+
+.dp-menu ul ul {
+  width: 185px;
+}
+
+.dp-menu ul ul li a {
+  display: block;
+}
+
+.switch {
+  display: flex;
+  float: right;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10%;
+}
+
+.switch .switch-text {
+  padding-right: 0.3rem;
+  font-size: 1.2rem;
+  right: 8px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.switch .switch-wrapper {
+  display: inline-block;
+  width: 55px;
+  height: 25px;
+  position: relative;
+}
+
+.switch .switch-wrapper .switch-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+  background-color: #F28705;
+}
+
+.switch .switch-wrapper input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch .switch-wrapper .switch-button::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  transition: .4s all ease;
+  background-color: #012340;
+}
+
+.switch .switch-wrapper input:checked+.switch-button {
+  background-color: #03A63C;
+}
+
+.switch .switch-wrapper input:checked+.switch-button::before {
+  transform: translatex(26px);
+}
+
+
+
+/*Formulario*/
+
+main {
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container-img-r {
+  display: flex;
+  justify-self: center;
+  width: 30px;
+  height: 30px;
+}
+
+.container-img-img {
+  display: flex;
+  justify-self: center;
+  width: 100px;
+  height: 130px;
+}
+
+.container-img-calc {
+  display: flex;
+  justify-self: center;
+  height: 37px;
+}
+
+.container-conical_calc {
+  display: flex;
+  justify-self: center;
+  height: 50px;
+}
+
+.container-spherical_calc {
+  display: flex;
+  justify-self: center;
+  height: 44px;
+}
+
+.form-header h1::after {
+  content: '';
+  display: flex;
+  width: 10rem;
+  height: 0.3rem;
+  background-color: #26a96a;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1px;
+}
+
+.input-box label,
+.gender-title h6 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.input-box input::placeholder {
+  color: #000000be;
+}
+
+.gender-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.62rem;
+  padding: 0 0.5rem;
+}
+
+.gender-input {
+  display: flex;
+  align-items: center;
+}
+
+.gender-input input {
+  margin-right: 0.35rem;
+}
+
+.gender-input label {
+  font-size: 0.81rem;
+  font-weight: 600;
+  color: #000;
+}
+
+/* pop up*/
+
+.modal-container {
+  width: 100vh;
+  position: fixed;
+  top: 30px;
+  display: none;
+  z-index: 999;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.active {
+  display: flex;
+}
+
+.active .modal {
+  animation: .4s;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.modal-container h1 {
+  color: #666;
+}
+
+.modal-container form {
+  background: linear-gradient(90deg, #161F30, #173540);
+  border-radius: 5px;
+  box-shadow: 0 1px 2px #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 10px;
+  padding: 20px;
+}
+
+.modal-container input,
+textarea,
+button {
+  background-color: #f7f7f7;
+  border: none;
+  border-radius: 5px;
+  color: #777;
+  font-size: 18px;
+  outline: none;
+  padding: 15px;
+  width: 100%;
+}
+
+.modal-container button {
+  color: #777;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin: auto;
+  table-layout: fixed;
+}
+
+
+
+table caption {
+  font-size: 0.3px;
+  margin: 0.5em 0 0.75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 0.35em;
+}
+
+table th,
+table td {
+  padding: 0.625px;
+  text-align: center;
+}
+
+table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+@media screen and (min-width:400) and (max-width: 900px) {
+  page[size="A4"] {
+    width: 21cm;
+    height: 29.7cm;
+  }
+
+  page {
+    display: flex;
+  }
+
+  table {
+    width: auto;
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+
+.contatoBtMais {
+  display: flex;
+}
+
+
+/*Pagina que vai ser impressa*/
+.pdf-page {
+  font-family: "DejaVu Sans", "Arial", sans-serif;
+}
+
+.pdf-page {
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #333;
+
+}
+
+.pdf-header {
+  position: relative;
+  top: .5in;
+  height: .6in;
+  left: .5in;
+  right: .5in;
+  border-bottom: 1px solid #e5e5e5;
+  
+}
+
+.pdf-body {
+  top: .1in;
+  bottom: 0in;
+  left: 0in;
+  right: 0in;
+  
+}
+
+.size-a4 {
+  width: 8.3in;
+  height: 11.7in;
+  
+}
+
+.company-logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #3aabf0;
+}
+
+
+.titulo-pagina {
+  margin-left: 20px;
+}
+
+.pdf-body th {
+  text-transform: capitalize;
+}
+
+
+
+.product {
+  width: 10%;
+  margin: 20px;
+  align-items: center;
+}
+.form-group {
+  width: 30%;
+  margin: 30px;
+  align-items: left;
+}
+.form-group .glyphicon {
+  color: #000;
+}
+
+
+.section a, .sectionUp a  {
+  padding-top: 60px;
+}
+.section a span {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin-top: 50px;
+  margin-left: 400px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb04 2s infinite;
+  animation: sdb04 2s infinite;
+  box-sizing: border-box;
+}
+  
+.sectionUp a span {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin-top: 50px;
+  margin-left: 470px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(135deg);
+  -webkit-animation: sdb04 2s infinite;
+  animation: sdb04 2s infinite;
+  box-sizing: border-box;
+}
+
+  
+  
+.to-top{
+  margin-left: 900px;
+  margin-top: 10px;
+	color:white;
+	padding-top:1.8em;
+	display:inline-block;/* or block */
+	position:relative;
+	border-color:white;
+	text-decoration:none;
+	transition:all .3s ease-out;
+}
+.to-top:before{
+	content:'▲';
+  text-align:center;
+	font-size:.9em;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-.7em;
+	border:solid .13em white;
+	border-radius:10em;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.3em;
+	border-color:inherit;
+	transition:transform .5s ease-in;
+}
+
+.contatoBtMais, .contatoBtMenos{ 
+  color: #fff;
+  display: block;
+  background-color: #161F30;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  outline: none;
+  padding: 15px 50px;
+  margin: 20px;
+  width: 20%;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #26a96a;
+}
+
+@media print {
+  section * {
+    visibility: hidden;
+    background-color: hidden;
+  }
+ .pdf-page, .design_page,  * {
+    visibility: visible;
+  }
 }
