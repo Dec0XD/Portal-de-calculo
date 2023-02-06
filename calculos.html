@@ -5539,8 +5539,8 @@
 
 		document.getElementById("select-conical").addEventListener("change",conical_Script)
 		document.querySelector(".conical_LiquidColumn").addEventListener("change",conical_Script)
-		document.querySelector(".conical_InsideDiameter").addEventListener("change",conical_Script)
-		document.querySelector(".input_HalfApleAxe").addEventListener("change",conical_Script)
+		document.querySelector(".conical_InsideDiameter").addEventListener("keydown",conical_Script)
+		document.querySelector(".input_HalfApleAxe").addEventListener("keydown",conical_Script)
 		document.getElementById("conical_select_nominalthickness").addEventListener("change",cylindrical_Script)
 		function conical_Script(){
 			var escolha = document.getElementById("select-conical")
