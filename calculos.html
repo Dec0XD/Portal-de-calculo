@@ -5870,7 +5870,7 @@
 					document.getElementById("conical_WorkingMaximum").innerHTML = "0"
 				} else {
 					var conical_WorkingMaximum = (2*conical_AdmissibleStressDesign*number_WeldedJoint*number_NominalThicknessMinus*Math.cos(number_HalfApleAxe)/(number_InsideDiameter+(1.2*number_NominalThicknessMinus*Math.cos(number_HalfApleAxe))))
-					document.getElementById("conical_WorkingMaximum").innerHTML = conical_WorkingMaximum
+					document.getElementById("conical_WorkingMaximum").innerHTML = conical_WorkingMaximum.toFixed(3)
 				}
 				
 
@@ -5879,7 +5879,7 @@
 					document.getElementById("conical_HidrostaticTest").innerHTML = "INVALID NOMINAL THICKNESS"
 				} else{
 					var conical_HidrostaticTest= 1.3*conical_WorkingMaximum*(number_AdmissibleStressRoom/conical_AdmissibleStressDesign)
-					document.getElementById("conical_HidrostaticTest").innerHTML = conical_HidrostaticTest
+					document.getElementById("conical_HidrostaticTest").innerHTML = conical_HidrostaticTest.toFixed(3)	
 				}
 
 				// Atribuir valor ao campo "HIDROSTATIC TEST PRESSURE" 
@@ -5887,7 +5887,7 @@
 					document.getElementById("conical_PneumaticTest").innerHTML = "INVALID NOMINAL THICKNESS"
 				} else{
 					var conical_PneumaticTest= 1.1*conical_WorkingMaximum*(number_AdmissibleStressRoom/conical_AdmissibleStressDesign)
-					document.getElementById("conical_PneumaticTest").innerHTML = conical_PneumaticTest
+					document.getElementById("conical_PneumaticTest").innerHTML = conical_PneumaticTest.toFixed(3)
 				}
 
 			})
